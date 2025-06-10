@@ -12,17 +12,18 @@ import forest.kiosk.service.KioskService;
 @Controller
 public class KioskController {
 
-        private static final Logger logger = LoggerFactory.getLogger(KioskController.class);
+	private static final Logger logger = LoggerFactory.getLogger(KioskController.class);
 
 	@Autowired
 	KioskService kioskService;
 
-        @RequestMapping(value="/nuriview_yi/selectKiosk.do")
-        public String selectKiosk(Model model){
-                logger.info("Fetching kiosk list");
-                model.addAttribute("results", kioskService.selectKioskList(null));
-                logger.info("Kiosk list view returned");
-                return "kiosk";
-        }
-}
+	@RequestMapping(value = "/nuriview_yi/selectKiosk.do")
+	public String selectKiosk(Model model) {
 
+		logger.info("Fetching kiosk list");
+		model.addAttribute("results", kioskService.selectKioskList(null));
+		logger.info("Kiosk list view returned");
+
+		return "kiosk";
+	}
+}

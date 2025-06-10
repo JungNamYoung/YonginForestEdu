@@ -30,25 +30,23 @@ public class LoginController {
 	@PostMapping("/login")
 	public String login(@RequestParam("username") String username, @RequestParam("password") String password,
 			HttpSession session, Model model) {
-		logger.info("User '{}' attempting to login", username);
+		logger.info("Attempting login for user {}", username);
 		UserVo user = userService.login(username, password);
 		if (user != null && Boolean.TRUE.equals(user.getEnabled())) {
 			session.setAttribute("loginUser", user);
-			logger.info("User '{}' logged in successfully", username);
+			logger.info("User {} logged in", username);
 			return "redirect:/nuriview_yi/selectKiosk.do";
 		}
-		logger.warn("Login failed for user '{}'", username);
+		logger.warn("Login failed for user {}", username);
 		model.addAttribute("error", "Invalid credentials");
 		return "login";
 	}
 
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
-		UserVo user = (UserVo) session.getAttribute("loginUser");
-		if (user != null) {
-			logger.info("User '{}' logged out", user.getUsername());
-		}
+		logger.info("Logging out current user");
 		session.invalidate();
 		return "redirect:/login";
 	}
+
 }
