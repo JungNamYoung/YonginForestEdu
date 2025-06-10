@@ -12,6 +12,6 @@ public class MainController {
 		if (session.getAttribute("loginUser") == null) {
 			return "redirect:/login";
 		}
-		return "main";
+		return "forest/main";
 	}
 }

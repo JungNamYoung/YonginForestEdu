@@ -27,6 +27,6 @@ public class KioskController {
 		model.addAttribute("results", kioskService.selectKioskList(null));
 		logger.info("Kiosk list view returned");
 
-		return "kiosk";
+		return "forest/kiosk";
 	}
 }

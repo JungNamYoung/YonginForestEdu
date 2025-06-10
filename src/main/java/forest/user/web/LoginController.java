@@ -27,12 +27,11 @@ public class LoginController {
 		if (session.getAttribute("loginUser") != null) {
 			return "redirect:/main";
 		}
-		return "login";
+		return "forest/login";
 	}
 
 	@PostMapping("/login")
-	public String login(@RequestParam("username") String username, @RequestParam("password") String password,
-			HttpSession session, Model model) {
+	public String login(@RequestParam("username") String username, @RequestParam("password") String password, HttpSession session, Model model) {
 		logger.info("Attempting login for user {}", username);
 		UserVo user = userService.login(username, password);
 		if (user != null && Boolean.TRUE.equals(user.getEnabled())) {
@@ -43,7 +42,7 @@ public class LoginController {
 		}
 		logger.warn("Login failed for user {}", username);
 		model.addAttribute("error", "Invalid credentials");
-		return "login";
+		return "forest/login";
 	}
 
 	@GetMapping("/logout")
