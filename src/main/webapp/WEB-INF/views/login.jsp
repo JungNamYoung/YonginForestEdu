@@ -9,8 +9,8 @@
 	integrity="sha384-XLm0yW4XUO2mZkLbjrKMgVZSBaXQ9DPefJ9vIvHyip2th0fD8OcTogQSCOf6yOKN"
 	crossorigin="anonymous" />
 </head>
-<body class="bg-light text-dark">
-	<div class="container py-5">
+<body class="bg-light text-dark d-flex align-items-center justify-content-center" style="min-height:100vh;">
+        <div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-6">
 				<div class="card shadow-sm">
