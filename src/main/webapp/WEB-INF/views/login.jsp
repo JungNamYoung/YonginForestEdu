@@ -9,8 +9,10 @@
 	integrity="sha384-XLm0yW4XUO2mZkLbjrKMgVZSBaXQ9DPefJ9vIvHyip2th0fD8OcTogQSCOf6yOKN"
 	crossorigin="anonymous" />
 </head>
-<body class="bg-light text-dark d-flex align-items-center justify-content-center" style="min-height:100vh;">
-        <div class="container">
+<body
+	class="bg-light text-dark d-flex align-items-center justify-content-center"
+	style="min-height: 100vh;">
+	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-6">
 				<div class="card shadow-sm">
@@ -19,14 +21,14 @@
 						<c:if test="${not empty error}">
 							<div class="alert alert-danger" role="alert">${error}</div>
 						</c:if>
-                                               <form method="post" action="<c:url value='/login'/>">
+						<form method="post" action="<c:url value='/login'/>">
 							<div class="mb-3">
 								<label class="form-label">Username</label> <input type="text"
-									class="form-control" name="username" />
+									class="form-control" name="username"  value="admin"/>
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Password</label> <input
-									type="password" class="form-control" name="password" />
+									type="password" class="form-control" name="password" value="1234"/>
 							</div>
 							<button type="submit" class="btn btn-primary w-100">Login</button>
 						</form>
