@@ -19,7 +19,7 @@
 						<c:if test="${not empty error}">
 							<div class="alert alert-danger" role="alert">${error}</div>
 						</c:if>
-						<form method="post" action="/login">
+                                               <form method="post" action="<c:url value='/login'/>">
 							<div class="mb-3">
 								<label class="form-label">Username</label> <input type="text"
 									class="form-control" name="username" />
