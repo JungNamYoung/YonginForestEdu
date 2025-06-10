@@ -1,6 +1,3 @@
-+52
--41
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -16,7 +13,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Admin</b>LTE</a>
+    <a href="#"><b>Admin</b>-Multics</a>
   </div>
   <div class="card">
     <div class="card-body login-card-body">

@@ -17,7 +17,7 @@ public class KioskController {
 	@Autowired
 	KioskService kioskService;
 
-	@RequestMapping(value = "/nuriview_yi/selectKiosk.do")
+	@RequestMapping(value = "/kiosk")
 	public String selectKiosk(Model model) {
 
 		logger.info("Fetching kiosk list");

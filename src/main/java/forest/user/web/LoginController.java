@@ -35,7 +35,7 @@ public class LoginController {
 		if (user != null && Boolean.TRUE.equals(user.getEnabled())) {
 			session.setAttribute("loginUser", user);
 			logger.info("User {} logged in", username);
-			return "redirect:/nuriview_yi/selectKiosk.do";
+			return "redirect:/kiosk";
 		}
 		logger.warn("Login failed for user {}", username);
 		model.addAttribute("error", "Invalid credentials");
