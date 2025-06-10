@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Admin-Multics</title>
+  <title>Admin-YonginForestEd</title>
   <link rel="stylesheet" href="<c:url value='/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css'/>">
   <link rel="stylesheet" href="<c:url value='/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'/>">
   <link rel="stylesheet" href="<c:url value='/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css'/>">
@@ -27,7 +27,7 @@
 
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="#" class="brand-link">
-      <span class="brand-text font-weight-light">Admin-Multics</span>
+      <span class="brand-text font-weight-light">Admin-YonginForestEd</span>
     </a>
     <div class="sidebar">
       <nav class="mt-2">
@@ -55,7 +55,7 @@
 
   <aside class="control-sidebar control-sidebar-dark"></aside>
   <footer class="main-footer">
-    <strong>&copy; 2024 <a href="#">Admin-Multics</a>.</strong> All rights reserved.
+    <strong>&copy; 2024 <a href="#">Admin-YonginForestEd</a>.</strong> All rights reserved.
   </footer>
 </div>
 <script src="<c:url value='/AdminLTE-3.2.0/plugins/jquery/jquery.min.js'/>"></script>

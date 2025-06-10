@@ -9,6 +9,6 @@
 </div>
 <section class="content">
   <div class="container-fluid">
-    <p>Welcome to the Admin-Multics dashboard.</p>
+    <p>Welcome to the Admin-YonginForestEd dashboard.</p>
   </div>
 </section>
