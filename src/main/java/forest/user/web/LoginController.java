@@ -23,7 +23,10 @@ public class LoginController {
 	UserService userService;
 
 	@GetMapping("/login")
-	public String loginForm() {
+	public String loginForm(HttpSession session) {
+		if (session.getAttribute("loginUser") != null) {
+			return "redirect:/main";
+		}
 		return "login";
 	}
 
@@ -34,6 +37,7 @@ public class LoginController {
 		UserVo user = userService.login(username, password);
 		if (user != null && Boolean.TRUE.equals(user.getEnabled())) {
 			session.setAttribute("loginUser", user);
+			session.setMaxInactiveInterval(30 * 60); // 30 minutes
 			logger.info("User {} logged in", username);
 			return "redirect:/kiosk";
 		}
