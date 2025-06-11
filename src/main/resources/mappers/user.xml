@@ -16,24 +16,42 @@
 		AND password = #{password}
 	</select>
 
-	<insert id="insertUser" parameterType="UserVo" useGeneratedKeys="true" keyProperty="userId">
-		INSERT INTO user (
-		username,
-		password,
-		email,
-		role,
-		enabled,
-		created_at,
-		updated_at
-		) VALUES (
-		#{username},
-		#{password},
-		#{email},
-		#{role},
-		#{enabled},
-		NOW(),
-		NOW()
-		)
-	</insert>
+        <insert id="insertUser" parameterType="UserVo" useGeneratedKeys="true" keyProperty="userId">
+                INSERT INTO user (
+                username,
+                password,
+                email,
+                role,
+                enabled,
+                created_at,
+                updated_at
+                ) VALUES (
+                #{username},
+                #{password},
+                #{email},
+                #{role},
+                #{enabled},
+                NOW(),
+                NOW()
+                )
+        </insert>
+
+        <select id="selectUserList" parameterType="map" resultType="UserVo">
+                SELECT
+                user_id,
+                username,
+                email,
+                role,
+                enabled,
+                created_at,
+                updated_at
+                FROM user
+                ORDER BY user_id
+                LIMIT #{limit} OFFSET #{offset}
+        </select>
+
+        <select id="countUsers" resultType="int">
+                SELECT COUNT(*) FROM user
+        </select>
 
 </mapper>
