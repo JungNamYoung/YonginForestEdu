@@ -31,4 +31,3 @@ function signOutOk(){
 		</div>
 	</div>
 </header>
-
