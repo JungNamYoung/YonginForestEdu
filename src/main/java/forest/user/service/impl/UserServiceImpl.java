@@ -39,4 +39,18 @@ public class UserServiceImpl implements UserService {
         logger.debug("register called for user '{}'", user.getUsername());
         return sqlSessionTemplate.insert("insertUser", user);
     }
+
+    @Override
+    public java.util.List<UserVo> selectUserList(int offset, int limit) {
+        Map<String, Object> param = new HashMap<>();
+        param.put("offset", offset);
+        param.put("limit", limit);
+        return sqlSessionTemplate.selectList("selectUserList", param);
+    }
+
+    @Override
+    public int countUsers() {
+        Integer cnt = sqlSessionTemplate.selectOne("countUsers");
+        return cnt == null ? 0 : cnt;
+    }
 }
