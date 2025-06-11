@@ -2,68 +2,68 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="KioskMapper">
 
-<select id="selectKioskList" parameterType="KioskCol" resultType="KioskVo">
-SELECT
-	center_id,
-	place_id,
-	kiosk_id,
-	kiosk_name,
-	kiosk_ip,
-	del_yn,
-	create_date,
-	create_user,
-	update_date,
-	update_user,
-	order_no
-FROM kiosk
-</select>
+	<select id="selectKioskList" parameterType="KioskCol" resultType="KioskVo">
+		SELECT
+		center_id,
+		place_id,
+		kiosk_id,
+		kiosk_name,
+		kiosk_ip,
+		del_yn,
+		create_date,
+		create_user,
+		update_date,
+		update_user,
+		order_no
+		FROM kiosk
+	</select>
 
-<insert id="insertKiosk" parameterType="KioskCol">
-INSERT INTO kiosk (
-	center_id,
-	place_id,
-	kiosk_id,
-	kiosk_name,
-	kiosk_ip,
-	del_yn,
-	create_date,
-	create_user,
-	update_date,
-	update_user,
-	order_no
- ) VALUES(
-	#{colCenterId},
-	#{colPlaceId},
-	#{colKioskId},
-	#{colKioskName},
-	#{colKioskIp},
-	#{colDelYn},
-	#{colCreateDate},
-	#{colCreateUser},
-	#{colUpdateDate},
-	#{colUpdateUser},
-	#{colOrderNo}
-)
-</insert>
+	<insert id="insertKiosk" parameterType="KioskCol">
+		INSERT INTO kiosk (
+		center_id,
+		place_id,
+		kiosk_id,
+		kiosk_name,
+		kiosk_ip,
+		del_yn,
+		create_date,
+		create_user,
+		update_date,
+		update_user,
+		order_no
+		) VALUES(
+		#{colCenterId},
+		#{colPlaceId},
+		#{colKioskId},
+		#{colKioskName},
+		#{colKioskIp},
+		#{colDelYn},
+		#{colCreateDate},
+		#{colCreateUser},
+		#{colUpdateDate},
+		#{colUpdateUser},
+		#{colOrderNo}
+		)
+	</insert>
 
-<update id="updateKiosk" parameterType="KioskCol">
-UPDATE kiosk SET
-	center_id=#{colCenterId},
-	place_id=#{colPlaceId},
-	kiosk_id=#{colKioskId},
-	kiosk_name=#{colKioskName},
-	kiosk_ip=#{colKioskIp},
-	del_yn=#{colDelYn},
-	create_date=#{colCreateDate},
-	create_user=#{colCreateUser},
-	update_date=#{colUpdateDate},
-	update_user=#{colUpdateUser},
-	order_no=#{colOrderNo}
-WHERE FALSE
-</update>
+	<update id="updateKiosk" parameterType="KioskCol">
+		UPDATE kiosk SET
+		center_id=#{colCenterId},
+		place_id=#{colPlaceId},
+		kiosk_id=#{colKioskId},
+		kiosk_name=#{colKioskName},
+		kiosk_ip=#{colKioskIp},
+		del_yn=#{colDelYn},
+		create_date=#{colCreateDate},
+		create_user=#{colCreateUser},
+		update_date=#{colUpdateDate},
+		update_user=#{colUpdateUser},
+		order_no=#{colOrderNo}
+		WHERE FALSE
+	</update>
 
-<delete id="deleteKiosk" parameterType="KioskCol">
-DELETE FROM kiosk WHERE FALSE
-</delete>
+	<delete id="deleteKiosk" parameterType="KioskCol">
+		DELETE FROM kiosk WHERE FALSE
+	</delete>
 
 </mapper>

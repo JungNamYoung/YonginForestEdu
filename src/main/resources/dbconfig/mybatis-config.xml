@@ -7,11 +7,12 @@
 	<settings>
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 	</settings>
-
 	<typeAliases>
 		<typeAlias alias="KioskCol" type="forest.kiosk.vo.KioskCol" />
 		<typeAlias alias="KioskVo" type="forest.kiosk.vo.KioskVo" />
-		<typeAlias alias="UserVo" type="forest.user.vo.UserVo"/>
+		<typeAlias alias="UserVo" type="forest.user.vo.UserVo" />
 	</typeAliases>
-
+<!-- 	<typeHandlers> -->
+<!-- 		<typeHandler handler="cuda.web.security.util.AesTypeHandler" /> -->
+<!-- 	</typeHandlers> -->
 </configuration>
