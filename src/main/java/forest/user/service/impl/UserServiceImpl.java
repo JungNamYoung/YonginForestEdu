@@ -33,4 +33,10 @@ public class UserServiceImpl implements UserService {
         logger.debug("login query returned {}", user != null ? "a user" : "null");
         return user;
     }
+
+    @Override
+    public int register(UserVo user) {
+        logger.debug("register called for user '{}'", user.getUsername());
+        return sqlSessionTemplate.insert("insertUser", user);
+    }
 }
