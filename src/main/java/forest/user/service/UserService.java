@@ -4,4 +4,5 @@ import forest.user.vo.UserVo;
 
 public interface UserService {
     UserVo login(String username, String password);
+    int register(UserVo user);
 }
