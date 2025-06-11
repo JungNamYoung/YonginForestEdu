@@ -27,6 +27,9 @@ public class UserServiceImpl implements UserService {
         param.put("username", username);
         param.put("password", password);
         UserVo user = sqlSessionTemplate.selectOne("selectUserByUsernameAndPassword", param);
+        if(user != null) {
+             user.setPassword(null);
+        }
         logger.debug("login query returned {}", user != null ? "a user" : "null");
         return user;
     }
