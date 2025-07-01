@@ -672,7 +672,7 @@ body.search-body.light-mode .container main .search__main--content .search__main
   transition: all 0.5s ease-in-out;
   border: 0.185185vw solid #6E7486;
   color: #1F2126;
-  background: url(/YonginForestEdu/assets/images/search_icon_normal.png) no-repeat 73.55vw center;
+  background: url(/YonginForestEdu/forest/assets/images/search_icon_normal.png) no-repeat 73.55vw center;
   background-size: 3.294662vw;
   background-color: #FFFFFF;
 }
@@ -690,7 +690,7 @@ body.search-body.light-mode .container main .search__main--content .search__main
 }
 body.search-body.light-mode .container main .search__main--content .search__main--searchContentArea .search__main--searchContentKeyboard input:focus-visible {
   transition: all 0.5s ease-in-out;
-  background: url(/YonginForestEdu/assets/images/search_icon_normal_focus.png) no-repeat 73.55vw center;
+  background: url(/YonginForestEdu/forest/assets/images/search_icon_normal_focus.png) no-repeat 73.55vw center;
   background-size: 3.294662vw;
   border: 0.185185vw solid #0D63BF;
 }
@@ -1131,7 +1131,7 @@ body.search-body.dark-mode .container main .search__main--content .search__main-
   transition: all 0.5s ease-in-out;
   border: 0.185185vw solid #B3B7C1;
   color: #F7F7F8;
-  background: url(/YonginForestEdu/assets/images/search_icon_dark.png) no-repeat 73.55vw center;
+  background: url(/YonginForestEdu/forest/assets/images/search_icon_dark.png) no-repeat 73.55vw center;
   background-color: #1F2126;
   background-size: 3.294662vw;
 }
@@ -1149,7 +1149,7 @@ body.search-body.dark-mode .container main .search__main--content .search__main-
 }
 body.search-body.dark-mode .container main .search__main--content .search__main--searchContentArea .search__main--searchContentKeyboard input:focus-visible {
   transition: all 0.5s ease-in-out;
-  background: url(/YonginForestEdu/assets/images/search_icon_dark_focus.png) no-repeat 73.55vw center;
+  background: url(/YonginForestEdu/forest/assets/images/search_icon_dark_focus.png) no-repeat 73.55vw center;
   background-size: 3.294662vw;
   border: 0.185185vw solid #FDDE47;
 }

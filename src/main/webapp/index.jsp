@@ -8,14 +8,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 <title>용인산림교육센터</title>
-<link rel="stylesheet" href="<c:url value="/css/swiper-bundle.min.css"/>">
-<link rel="stylesheet" href="<c:url value="/css/style.css"/>">
+<link rel="stylesheet" href="<c:url value="/forest/css/swiper-bundle.min.css"/>">
+<link rel="stylesheet" href="<c:url value="/forest/css/style.css"/>">
 </head>
 <body class="intro__body" onclick="mainPage()">
 	<div class="container page">
 		<header role="banner">
 			<div class="header__logoArea">
-				<img class="header__logo" src="<c:url value="/assets/images/용인시_심볼 1.png"/>" alt="용인시 공식 로고" />
+				<img class="header__logo" src="<c:url value="/forest/assets/images/용인시_심볼 1.png"/>" alt="용인시 공식 로고" />
 				<h1 class="header__title">용인산림교육센터</h1>
 			</div>
 			<div class="header__timeArea">
@@ -27,19 +27,19 @@
 				<div class="swiper mySwiper intro__main--swiper" role="region" aria-label="용인산림교육센터 홍보 슬라이드" aria-live="polite">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<img src="<c:url value="/assets/images/20200410172828763_SoPn7f.jpg"/>" alt="용인산림교육센터의 아름다운 전경 01">
+							<img src="<c:url value="/forest/assets/images/20200410172828763_SoPn7f.jpg"/>" alt="용인산림교육센터의 아름다운 전경 01">
 						</div>
 						<div class="swiper-slide">
-							<img src="<c:url value="/assets/images/20220720131153264_UP85Gq.jfif"/>" alt="용인산림교육센터의 넓은 전경 02">
+							<img src="<c:url value="/forest/assets/images/20220720131153264_UP85Gq.jfif"/>" alt="용인산림교육센터의 넓은 전경 02">
 						</div>
 						<div class="swiper-slide">
-							<img src="<c:url value="/assets/images/20220720131227388_MOVWSv.jfif"/>" alt="용인산림교육센터 숙박동의 외관">
+							<img src="<c:url value="/forest/assets/images/20220720131227388_MOVWSv.jfif"/>" alt="용인산림교육센터 숙박동의 외관">
 						</div>
 						<div class="swiper-slide">
-							<img src="<c:url value="/assets/images/20220720131314789_Kqfc9n.jfif"/>" alt="목재문화체험관 내부 모습">
+							<img src="<c:url value="/forest/assets/images/20220720131314789_Kqfc9n.jfif"/>" alt="목재문화체험관 내부 모습">
 						</div>
 						<div class="swiper-slide">
-							<img src="<c:url value="/assets/images/20220720132018901_DQxrRx.jfif"/>" alt="나눔숲복지센터의 외부 전경">
+							<img src="<c:url value="/forest/assets/images/20220720132018901_DQxrRx.jfif"/>" alt="나눔숲복지센터의 외부 전경">
 						</div>
 					</div>
 					<div class="swiper-controls" role="group" aria-label="슬라이드 제어">
@@ -72,8 +72,8 @@
 			</section>
 		</main>
 	</div>
-	<script src="<c:url value="/js/swiper-bundle.min.js"/>"></script>
-	<script src="<c:url value="/js/script.js"/>"></script>
+	<script src="<c:url value="/forest/js/swiper-bundle.min.js"/>"></script>
+	<script src="<c:url value="/forest/js/script.js"/>"></script>
 
 	<script>
         window.addEventListener('load', function () {
@@ -234,7 +234,7 @@
             const page = document.querySelector(".page");
             page.classList.add("fade-out");
             setTimeout(function () {
-                window.location.href = "<c:url value="/pages/main.jsp"/>";
+                window.location.href = "<c:url value="/forest/pages/main.jsp"/>";
             }, 1000);
         }
     </script>
