@@ -1,10 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>용인산림교육센터</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="<c:url value="/css/style.css"/>">
 </head>
 <body class="sub-body">
 
@@ -47,7 +51,7 @@
                                     <p>숲길등산</p>
                                 </div>
                                 <div class="main__contents--eduProgramQRcode">
-                                    <img src="/assets/images/forestRoadQR.png" alt="숲길등산 프로그램 QR 코드" class="qrcodeArea forestRoad-QRcode">
+                                    <img src="<c:url value="/assets/images/forestRoadQR.png"/>" alt="숲길등산 프로그램 QR 코드" class="qrcodeArea forestRoad-QRcode">
                                 </div>
                             </div>
                             <div class="main__contents--eduProgramContents">
@@ -86,7 +90,7 @@
                                     <p>숲해설</p>
                                 </div>
                                 <div class="main__contents--eduProgramQRcode">
-                                    <img src="/assets/images/forestCommentaryQR.png" alt="숲해설 프로그램 QR 코드" class="qrcodeArea forestCommentary-QRcode">
+                                    <img src="<c:url value="/assets/images/forestCommentaryQR.png"/>" alt="숲해설 프로그램 QR 코드" class="qrcodeArea forestCommentary-QRcode">
                                 </div>
                             </div>
                             <div class="main__contents--eduProgramContents">
@@ -122,7 +126,7 @@
                                     <p>산림치유</p>
                                 </div>
                                 <div class="main__contents--eduProgramQRcode">
-                                    <img src="/assets/images/forestHealingQR.png" alt="산림치유 프로그램 QR 코드" class="qrcodeArea forestHealing-QRcode">
+                                    <img src="<c:url value="/assets/images/forestHealingQR.png"/>" alt="산림치유 프로그램 QR 코드" class="qrcodeArea forestHealing-QRcode">
                                 </div>
                             </div>
                             <div class="main__contents--eduProgramContents">
@@ -161,7 +165,7 @@
                                     <p>목재문화체험</p>
                                 </div>
                                 <div class="main__contents--eduProgramQRcode">
-                                    <img src="/assets/images/woodQR.png" alt="목재문화체험 프로그램 QR 코드" class="qrcodeArea wood-QRcode">
+                                    <img src="<c:url value="/assets/images/woodQR.png"/>" alt="목재문화체험 프로그램 QR 코드" class="qrcodeArea wood-QRcode">
                                 </div>
                             </div>
                             <div class="main__contents--eduProgramContents">
@@ -175,9 +179,9 @@
                                     </li>
                                 </ul>
                                 <div class="main__contents--eduProgramContentsPhoto">
-                                    <img src="/assets/images/6c626d0b7f5ab8a472644126cd617b3011291bc7.png" alt="목재문화체험장 건물 외관 1" class="wood-buildingPhoto">
-                                    <img src="/assets/images/c12ddea9e19e4702ca8a101679d330230f3827a7.png" alt="목재문화체험장 내부 모습 2" class="wood-buildingPhoto">
-                                    <img src="/assets/images/c89377560650b16c653297fac67b6727838a5c64.png" alt="목재문화체험장 작업실 모습 3" class="wood-buildingPhoto">
+                                    <img src="<c:url value="/assets/images/6c626d0b7f5ab8a472644126cd617b3011291bc7.png"/>" alt="목재문화체험장 건물 외관 1" class="wood-buildingPhoto">
+                                    <img src="<c:url value="/assets/images/c12ddea9e19e4702ca8a101679d330230f3827a7.png"/>" alt="목재문화체험장 내부 모습 2" class="wood-buildingPhoto">
+                                    <img src="<c:url value="/assets/images/c89377560650b16c653297fac67b6727838a5c64.png"/>" alt="목재문화체험장 작업실 모습 3" class="wood-buildingPhoto">
                                 </div>
                                 <div class="main__contents--eduProgramInfoArea">
                                     <div class="main__contents--eduProgramInfo wood-Info">
@@ -192,7 +196,7 @@
                                     <p>행복한 숲, 너의 숲</p>
                                 </div>
                                 <div class="main__contents--eduProgramQRcode">
-                                    <img src="/assets/images/youForestQR.png" alt="행복한 숲, 너의 숲 프로그램 QR 코드" class="qrcodeArea youForest-QRcode">
+                                    <img src="<c:url value="/assets/images/youForestQR.png"/>" alt="행복한 숲, 너의 숲 프로그램 QR 코드" class="qrcodeArea youForest-QRcode">
                                 </div>
                             </div>
                             <div class="main__contents--eduProgramContents">
@@ -237,7 +241,7 @@
                                     <p>유아숲체험</p>
                                 </div>
                                 <div class="main__contents--eduProgramQRcode">
-                                    <img src="/assets/images/infantQR.png" alt="유아숲체험 프로그램 QR 코드" class="qrcodeArea infant-QRcode">
+                                    <img src="<c:url value="/assets/images/infantQR.png"/>" alt="유아숲체험 프로그램 QR 코드" class="qrcodeArea infant-QRcode">
                                 </div>
                             </div>
                             <div class="main__contents--eduProgramContents">
@@ -311,10 +315,10 @@
         <footer id="footer" role="contentinfo">
         </footer>
     </div>
-    <audio id="accessibilityAudio" src="/assets/mp3/1.출생신고_13s.mp3" aria-label="사이트 음성 안내"></audio> 
+    <audio id="accessibilityAudio" src="<c:url value="/assets/mp3/1.출생신고_13s.mp3"/>" aria-label="사이트 음성 안내"></audio> 
 
-    <script src="/js/script.js"></script>
-    <script src="/js/aside-accessibility.js"></script>
-    <script src="/js/sub-page.js"></script>
+    <script src="<c:url value="/js/script.js"/>"></script>
+    <script src="<c:url value="/js/aside-accessibility.js"/>"></script>
+    <script src="<c:url value="/js/sub-page.js"/>"></script>
 </body>
 </html>

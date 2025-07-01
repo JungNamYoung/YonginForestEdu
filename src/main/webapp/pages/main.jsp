@@ -1,16 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>용인산림교육센터</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="<c:url value="/css/style.css"/>">
 </head>
 <body class="main-body">
     <div class="container page">
         <header role="banner" aria-label="사이트 헤더">
             <a href="/pages/main.html" aria-label="메인 페이지로 이동">
-                <img class="header__logo" src="/assets/images/용인시_심볼 1.png" alt="용인시 로고" />
+                <img class="header__logo" src="<c:url value="/assets/images/용인시_심볼 1.png"/>" alt="용인시 로고" />
                 <h1 class="header__title">용인산림교육센터</h1>
             </a>
             <p id="current-time" class="current-time" aria-live="polite"></p>
@@ -97,7 +101,7 @@
                 </article>
                 <div class="main__content--videoArea">
                     <video id="sign-video" class="sign-video" muted aria-label="수어 안내 영상">
-                        <source src="/assets/video/nhm_welcome.webm" type="video/webm">
+                        <source src="<c:url value="/assets/video/nhm_welcome.webm"/>" type="video/webm">
                         <p>현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="/assets/video/nhm_welcome.webm">영상 다운로드</a></p>
                     </video>
                 </div>
@@ -136,7 +140,7 @@
         </footer>
     </div>
 
-    <script src="/js/script.js"></script>
+    <script src="<c:url value="/js/script.js"/>"></script>
 
     <script>
         const container = document.querySelector(".container");
@@ -333,7 +337,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace('/pages/센터소개.html');
+                location.replace("<c:url value='/pages/centerIntro.jsp'/>");
             }, 500); // 0.5초
         }
 
@@ -343,7 +347,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace('/pages/교육프로그램.html');
+                location.replace("<c:url value='/pages/educationProgram.jsp'/>");
             }, 500); // 0.5초
         }
 
@@ -353,7 +357,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace('/pages/시설안내.html');
+                location.replace("<c:url value='/pages/facilityGuide.jsp'/>");
             }, 500); // 0.5초
         }
 
@@ -363,7 +367,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace('/pages/층별안내.html');
+                location.replace("<c:url value='/pages/floorGuide.jsp'/>");
             }, 500); // 0.5초
         }
     </script>

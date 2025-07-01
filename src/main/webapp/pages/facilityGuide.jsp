@@ -1,10 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>용인산림교육센터</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="<c:url value="/css/style.css"/>">
 </head>
 <body class="sub-body">
 
@@ -139,10 +143,10 @@
         <footer id="footer" role="contentinfo">
         </footer>
     </div>
-    <audio id="accessibilityAudio" src="/assets/mp3/1.출생신고_13s.mp3" aria-label="사이트 음성 안내"></audio> 
+    <audio id="accessibilityAudio" src="<c:url value="/assets/mp3/1.출생신고_13s.mp3"/>" aria-label="사이트 음성 안내"></audio> 
 
-    <script src="/js/script.js"></script>
-    <script src="/js/aside-accessibility.js"></script>
-    <script src="/js/sub-page.js"></script>
+    <script src="<c:url value="/js/script.js"/>"></script>
+    <script src="<c:url value="/js/aside-accessibility.js"/>"></script>
+    <script src="<c:url value="/js/sub-page.js"/>"></script>
 </body>
 </html>

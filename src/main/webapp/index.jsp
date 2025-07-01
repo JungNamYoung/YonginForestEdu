@@ -234,7 +234,7 @@
             const page = document.querySelector(".page");
             page.classList.add("fade-out");
             setTimeout(function () {
-                window.location.href = "./pages/main.html";
+                window.location.href = "<c:url value="/pages/main.jsp"/>";
             }, 1000);
         }
     </script>
