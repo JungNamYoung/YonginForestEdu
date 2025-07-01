@@ -136,6 +136,6 @@ homeBtn.addEventListener("click", () => {
     page.classList.add("fade-out");
 
     setTimeout(function () {
-        location.replace('/pages/main.html');
+        location.replace(App.rootPath + '/pages/main.jsp');
     }, 500); // 0.5초
 });

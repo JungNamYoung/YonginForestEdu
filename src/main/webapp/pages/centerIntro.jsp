@@ -2,6 +2,9 @@
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<%@ include file="/cuda/jsp/js/Define.js.jsp" %>
+<%@ include file="/cuda/jsp/js/App.js.jsp" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -382,7 +385,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace('/pages/main.html');
+                location.replace("<c:url value="/pages/main.jsp"/>");
             }, 500); // 0.5초
         });
 

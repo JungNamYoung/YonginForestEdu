@@ -79,7 +79,7 @@ document.addEventListener("click", function(e) {
 //         nextPage.classList.add("fade-out");
 
 //     setTimeout(function () {
-//         location.replace('/pages/main.html');
+//         location.replace('/pages/main.jsp');
 //     }, 500); // 0.5초
     
 // });

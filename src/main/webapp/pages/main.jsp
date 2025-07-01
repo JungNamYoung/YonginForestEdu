@@ -2,6 +2,9 @@
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<%@ include file="/cuda/jsp/js/Define.js.jsp" %>
+<%@ include file="/cuda/jsp/js/App.js.jsp" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,7 +16,7 @@
 <body class="main-body">
     <div class="container page">
         <header role="banner" aria-label="사이트 헤더">
-            <a href="/pages/main.html" aria-label="메인 페이지로 이동">
+            <a href="<c:url value="/pages/main.jsp"/>" aria-label="메인 페이지로 이동">
                 <img class="header__logo" src="<c:url value="/assets/images/용인시_심볼 1.png"/>" alt="용인시 로고" />
                 <h1 class="header__title">용인산림교육센터</h1>
             </a>

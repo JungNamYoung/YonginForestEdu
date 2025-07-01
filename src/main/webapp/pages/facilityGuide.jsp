@@ -2,6 +2,10 @@
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+
+<%@ include file="/cuda/jsp/js/Define.js.jsp" %>
+<%@ include file="/cuda/jsp/js/App.js.jsp" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
