@@ -126,8 +126,8 @@
             const currentSlide = swiper.realIndex + 1;
 
             const paginationNumbers = document.querySelector(".swiper-pagination-numbers");
-            const currentSlideHTML = `<span class="current-slide">${currentSlide}</span>`;
-            const totalSlidesHTML = `<span class="total-slides">${totalSlides}</span>`;
+            const currentSlideHTML = `<span class="current-slide">\${currentSlide}</span>`;
+            const totalSlidesHTML = `<span class="total-slides">\${totalSlides}</span>`;
 
             paginationNumbers.innerHTML = currentSlideHTML + " / " + totalSlidesHTML;
 
@@ -222,7 +222,7 @@
             const hours = now.getHours().toString().padStart(2, '0');
             const minutes = now.getMinutes().toString().padStart(2, '0');
 
-            const formattedTime = `${year}. ${month}. ${date}(${dayOfWeek}) ${hours}:${minutes}`;
+            const formattedTime = `\${year}. \${month}. \${date}(\${dayOfWeek}) \${hours}:\${minutes}`;
             document.getElementById('header__time').textContent = formattedTime;
         }
 

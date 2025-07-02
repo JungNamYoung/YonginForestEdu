@@ -314,7 +314,7 @@
             const hours = String(koreaTime.getUTCHours()).padStart(2, '0');
             const minutes = String(koreaTime.getUTCMinutes()).padStart(2, '0');
 
-            const formatted = `${year}년 ${month}월 ${date}일 ${day} ${hours}시 ${minutes}분`;
+            const formatted = `\${year}년 \${month}월 \${date}일 \${day} \${hours}시 \${minutes}분`;
 
             document.getElementById('current-time').textContent = formatted;
         }
