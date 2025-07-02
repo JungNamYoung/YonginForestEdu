@@ -23,7 +23,6 @@
 			</ul>
 		</nav>
 
-
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
 			<a href="#" class="brand-link"> <span class="brand-text font-weight-light">Admin-YonginForestEd</span>
 			</a>
@@ -48,7 +47,9 @@
 								<li class="nav-item"><a href="<c:url value='/register'/>" class="nav-link ${param.submenu eq 'register' ? 'active':''}"> <i class="far fa-circle nav-icon"></i>
 										<p>사용자 등록</p>
 								</a></li>
-							</ul></li>
+							</ul>
+						</li>
+						
 					</ul>
 				</nav>
 			</div>
