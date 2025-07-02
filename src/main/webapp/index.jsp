@@ -2,6 +2,14 @@
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+
+<%
+	String imagesPath = application.getRealPath("/forest/assets/images");
+	java.io.File dir = new java.io.File(imagesPath);
+	String[] images = dir.list((d, name) -> new java.io.File(d, name).isFile());
+	request.setAttribute("images", images);
+%>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -25,22 +33,29 @@
 		<main role="main">
 			<section class="intro__main--area">
 				<div class="swiper mySwiper intro__main--swiper" role="region" aria-label="용인산림교육센터 홍보 슬라이드" aria-live="polite">
+<!-- 					<div class="swiper-wrapper"> -->
+<!-- 						<div class="swiper-slide"> -->
+<%-- 							<img src="<c:url value="/forest/assets/images/20200410172828763_SoPn7f.jpg"/>" alt="용인산림교육센터의 아름다운 전경 01"> --%>
+<!-- 						</div> -->
+<!-- 						<div class="swiper-slide"> -->
+<%-- 							<img src="<c:url value="/forest/assets/images/20220720131153264_UP85Gq.jfif"/>" alt="용인산림교육센터의 넓은 전경 02"> --%>
+<!-- 						</div> -->
+<!-- 						<div class="swiper-slide"> -->
+<%-- 							<img src="<c:url value="/forest/assets/images/20220720131227388_MOVWSv.jfif"/>" alt="용인산림교육센터 숙박동의 외관"> --%>
+<!-- 						</div> -->
+<!-- 						<div class="swiper-slide"> -->
+<%-- 							<img src="<c:url value="/forest/assets/images/20220720131314789_Kqfc9n.jfif"/>" alt="목재문화체험관 내부 모습"> --%>
+<!-- 						</div> -->
+<!-- 						<div class="swiper-slide"> -->
+<%-- 							<img src="<c:url value="/forest/assets/images/20220720132018901_DQxrRx.jfif"/>" alt="나눔숲복지센터의 외부 전경"> --%>
+<!-- 						</div> -->
+<!-- 					</div> -->
 					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="<c:url value="/forest/assets/images/20200410172828763_SoPn7f.jpg"/>" alt="용인산림교육센터의 아름다운 전경 01">
-						</div>
-						<div class="swiper-slide">
-							<img src="<c:url value="/forest/assets/images/20220720131153264_UP85Gq.jfif"/>" alt="용인산림교육센터의 넓은 전경 02">
-						</div>
-						<div class="swiper-slide">
-							<img src="<c:url value="/forest/assets/images/20220720131227388_MOVWSv.jfif"/>" alt="용인산림교육센터 숙박동의 외관">
-						</div>
-						<div class="swiper-slide">
-							<img src="<c:url value="/forest/assets/images/20220720131314789_Kqfc9n.jfif"/>" alt="목재문화체험관 내부 모습">
-						</div>
-						<div class="swiper-slide">
-							<img src="<c:url value="/forest/assets/images/20220720132018901_DQxrRx.jfif"/>" alt="나눔숲복지센터의 외부 전경">
-						</div>
+						<c:forEach var="img" items="${images}">
+							<div class="swiper-slide">
+								<img src="<c:url value="/forest/assets/images/${img}"/>" alt="${img}">
+							</div>
+						</c:forEach>
 					</div>
 					<div class="swiper-controls" role="group" aria-label="슬라이드 제어">
 						<div class="swiper-pagination-numbers" aria-label="현재 슬라이드 번호와 전체 슬라이드 개수"></div>

@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
@@ -32,8 +33,12 @@
 						<li class="nav-item"><a href="<c:url value='/main'/>" class="nav-link ${param.menu eq 'dashboard' ? 'active' : ''}"> <i class="nav-icon fas fa-tachometer-alt"></i>
 								<p>Dashboard</p>
 						</a></li>
+
 						<li class="nav-item"><a href="<c:url value='/kiosk'/>" class="nav-link ${param.menu eq 'kiosk' ? 'active' :''}"> <i class="nav-icon fas fa-desktop"></i>
 								<p>Kiosk</p>
+						</a></li>
+						<li class="nav-item"><a href="<c:url value='/images'/>" class="nav-link ${param.menu eq 'images' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>
+								<p>이미지 관리</p>
 						</a></li>
 						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}"><a href="#" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
 								<p>
@@ -47,9 +52,8 @@
 								<li class="nav-item"><a href="<c:url value='/register'/>" class="nav-link ${param.submenu eq 'register' ? 'active':''}"> <i class="far fa-circle nav-icon"></i>
 										<p>사용자 등록</p>
 								</a></li>
-							</ul>
-						</li>
-						
+							</ul></li>
+
 					</ul>
 				</nav>
 			</div>
