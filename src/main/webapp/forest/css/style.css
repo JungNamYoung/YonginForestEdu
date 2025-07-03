@@ -669,7 +669,7 @@ body.dark-mode .touch-effect {
 .main-body .container footer {
   width: 100%;
   height: 40.8333vh;
-  background: url(/YonginForestEdu/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg) no-repeat;
+/*   background: url(/YonginForestEdu/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg) no-repeat; */
   background-position: center center;
   background-size: cover;
   /* 원래 푸터 스타일 유지 */
@@ -1378,7 +1378,7 @@ body.dark-mode .touch-effect {
 .sub-body .container footer {
   width: 100%;
   height: 40.8333vh;
-  background: url(/YonginForestEdu/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg) no-repeat;
+/*   background: url(/YonginForestEdu/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg) no-repeat; */
   background-position: center center;
   background-size: cover;
   /* 원래 푸터 스타일 유지 */
@@ -1398,4 +1398,9 @@ body.dark-mode .touch-effect {
   display: none; /* 초기에는 높은 화면 아이콘 숨김 */
 }
 
-/*# sourceMappingURL=style.css.map */
+.footer-bg{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+}
+

@@ -139,8 +139,11 @@
                 <span class="lowScreenBtn-label">낮은 화면</span>
             </button>
         </aside>
-        <footer id="footer">
-        </footer>
+<!--         <footer id="footer" style="background-image:url('/YonginForestEdu/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg')"> -->
+<!--         </footer> -->
+		<footer id="footer">
+          <img class="footer-bg" src="<c:url value='/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg'/>" alt="">		
+		</footer>
     </div>
 
     <script src="<c:url value="/forest/js/script.js"/>"></script>
@@ -160,6 +163,7 @@
         const lowIcon = document.querySelector(".lowScreenBtn-icon");
         const highIcon = document.querySelector(".highScreenBtn-icon");
         const footer = document.getElementById("footer"); // footer 변수 선언 위치 변경
+        const footerBg = footer ? footer.querySelector('.footer-bg') : null; 
 
         // 비디오 상태를 로컬 스토리지에 저장하는 함수
         function saveVideoState() {
@@ -238,6 +242,7 @@
                         label && (label.innerText = "높은 화면");
                         lowIcon && (lowIcon.style.display = "none");
                         highIcon && (highIcon.style.display = "block");
+                        footerBg && (footerBg.src="<c:url value='/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg'/>");
                     } else {
                         container.appendChild(footer);
                         footer.dataset.moved = "false";
@@ -245,6 +250,7 @@
                         label && (label.innerText = "낮은 화면");
                         lowIcon && (lowIcon.style.display = "block");
                         highIcon && (highIcon.style.display = "none");
+                        footerBg && (footerBg.src="<c:url value='/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg'/>");
                     }
 
                     // 이동 후 부드러운 진입 애니메이션

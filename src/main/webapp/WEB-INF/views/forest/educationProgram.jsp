@@ -316,6 +316,7 @@
             </button>
         </aside>
         <footer id="footer" role="contentinfo">
+        <img class="footer-bg" src="<c:url value='/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg'/>" alt="">
         </footer>
     </div>
     <audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/1.출생신고_13s.mp3"/>" aria-label="사이트 음성 안내"></audio> 
