@@ -29,7 +29,7 @@
 					<div class="swiper-wrapper">
 						<c:forEach var="img" items="${images}">
 							<div class="swiper-slide">
-								<img src="<c:url value="/upload-images/${img}"/>" alt="${img}">
+								<img src="${img}" alt="${img}">
 							</div>
 						</c:forEach>
 					</div>

@@ -25,7 +25,7 @@ public class ImageController {
 	}
 
 	private File getImageDir() {
-		String realPath = servletContext.getRealPath("/upload-images");
+		String realPath = servletContext.getRealPath("/upload-images/index");
 		return new File(realPath);
 	}
 

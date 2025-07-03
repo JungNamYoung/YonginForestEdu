@@ -139,10 +139,9 @@
                 <span class="lowScreenBtn-label">낮은 화면</span>
             </button>
         </aside>
-<!--         <footer id="footer" style="background-image:url('/YonginForestEdu/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg')"> -->
-<!--         </footer> -->
+
 		<footer id="footer">
-          <img class="footer-bg" src="<c:url value='/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg'/>" alt="">		
+			<img class="footer-bg" src="${footerImgPath}" alt="">
 		</footer>
     </div>
 
@@ -242,7 +241,7 @@
                         label && (label.innerText = "높은 화면");
                         lowIcon && (lowIcon.style.display = "none");
                         highIcon && (highIcon.style.display = "block");
-                        footerBg && (footerBg.src="<c:url value='/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg'/>");
+                        footerBg && (footerBg.src="${footerImgPath}");
                     } else {
                         container.appendChild(footer);
                         footer.dataset.moved = "false";
@@ -250,7 +249,7 @@
                         label && (label.innerText = "낮은 화면");
                         lowIcon && (lowIcon.style.display = "block");
                         highIcon && (highIcon.style.display = "none");
-                        footerBg && (footerBg.src="<c:url value='/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg'/>");
+                        footerBg && (footerBg.src="${footerImgPath}");
                     }
 
                     // 이동 후 부드러운 진입 애니메이션

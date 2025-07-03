@@ -29,7 +29,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 		
 		TokenEx tokenEx = new TokenEx(Util.dirClass("config/config.txt"));
 		
-		MultipartConfigElement multipartConfig = new MultipartConfigElement(tokenEx.get("upload.dir"));
+		MultipartConfigElement multipartConfig = new MultipartConfigElement(tokenEx.get("upload.temp.dir"));
 		
 		registration.setMultipartConfig(multipartConfig);
 	}

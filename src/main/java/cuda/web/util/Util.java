@@ -28,10 +28,11 @@ import java.util.Map.Entry;
 import org.springframework.core.io.ClassPathResource;
 
 import cuda.web.define.Define;
+import jakarta.servlet.ServletContext;
 
 public class Util {
 
-	static public HashMap<String, Object> makeMap(Object... args) {
+	public static HashMap<String, Object> makeMap(Object... args) {
 
 		if (args.length % 2 != 0) {
 			Util.error(Define.ERR_EVEN);
@@ -51,7 +52,7 @@ public class Util {
 		return param;
 	}
 
-	static public HashMap<String, Object> MakeList(List<String> list) {
+	public static HashMap<String, Object> MakeList(List<String> list) {
 
 		List<String> typeList = new ArrayList<>();
 		HashMap<String, Object> param = new HashMap<String, Object>();
@@ -60,7 +61,7 @@ public class Util {
 		return param;
 	}
 
-	static public String parseLoc(String loc) {
+	public static String parseLoc(String loc) {
 
 		String location = loc.trim();
 
@@ -78,14 +79,14 @@ public class Util {
 		return result;
 	}
 
-	static public String methodName() {
+	public static String methodName() {
 
 		StackTraceElement[] stacks = Thread.currentThread().getStackTrace();
 
 		return Thread.currentThread().getStackTrace()[2].getMethodName() + "() : ";
 	}
 
-	static public boolean isNumber(String input) {
+	public static boolean isNumber(String input) {
 
 		if (input == null)
 			return false;
@@ -98,7 +99,7 @@ public class Util {
 		}
 	}
 
-	static public Float toFloat(Object obj) {
+	public static Float toFloat(Object obj) {
 
 		String input = (String) obj;
 
@@ -115,7 +116,7 @@ public class Util {
 		return 0f;
 	}
 
-	static public String toString(String num) {
+	public static String toString(String num) {
 
 		BigDecimal tmp;
 		try {
@@ -127,7 +128,7 @@ public class Util {
 		return tmp.toString();
 	}
 
-	static public String toString(Object obj) {
+	public static String toString(Object obj) {
 
 		String ret = Define.STR_BLANK;
 
@@ -143,18 +144,18 @@ public class Util {
 		return ret;
 	}
 
-	static public String cvtDate(Date date) {
+	public static String cvtDate(Date date) {
 		SimpleDateFormat tFormat = new SimpleDateFormat(Define.YMD);
 		return tFormat.format(date);
 	}
 
-	static public String getDate() {
+	public static String getDate() {
 		Date date = new Date();
 		SimpleDateFormat tFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");
 		return tFormat.format(date).toString();
 	}
 
-	static public String makeDir() {
+	public static String makeDir() {
 
 		LocalDateTime time = LocalDateTime.now();
 
@@ -166,7 +167,7 @@ public class Util {
 
 	}
 
-	static public Period calDate(Date date) {
+	public static Period calDate(Date date) {
 
 		Date now = new Date();
 
@@ -181,7 +182,7 @@ public class Util {
 		return diff;
 	}
 
-	static public boolean empty(String str) {
+	public static boolean empty(String str) {
 
 		if (str == null)
 			return true;
@@ -192,7 +193,7 @@ public class Util {
 		return false;
 	}
 
-	static public void merge(List<?> list, List<Object> result) {
+	public static void merge(List<?> list, List<Object> result) {
 		for (int i = 0; i < list.size(); ++i) {
 			// Map tMap = list.get(i);
 			result.add(list.get(i));
@@ -287,7 +288,7 @@ public class Util {
 		System.out.println(result);
 	}
 
-	static public String error(Exception e) {
+	public static String error(Exception e) {
 		String[] msgs = e.getMessage().split("\r\n###");
 		String msg = msgs[Define.MSG_INDEX];
 		return msg;
@@ -297,7 +298,7 @@ public class Util {
 
 	}
 
-	static public Method Method(Object ins, String name, Object... args) {
+	public static Method Method(Object ins, String name, Object... args) {
 
 		Class[] paraTypes = new Class[args.length];
 
@@ -315,7 +316,7 @@ public class Util {
 		return paraFunc;
 	}
 
-	static public Object[] Param(Object... args) {
+	public static Object[] Param(Object... args) {
 
 		Object[] params = new Object[args.length];
 
@@ -326,7 +327,7 @@ public class Util {
 		return params;
 	}
 
-	static public String now(String format) {
+	public static String now(String format) {
 		// SimpleDateFormat sdf = new SimpleDateFormat(Define.YMD_HMS_EX);
 		SimpleDateFormat sdf = new SimpleDateFormat(format);
 		Date now = new Date();
@@ -334,11 +335,11 @@ public class Util {
 		return str;
 	}
 
-	static public void print(String str) {
+	public static void print(String str) {
 		System.out.println(str);
 	}
 
-	static public String toCamel(String str, boolean upper) {
+	public static String toCamel(String str, boolean upper) {
 
 		String[] wordList = str.toLowerCase().split("_");
 
@@ -363,15 +364,15 @@ public class Util {
 		return finalStr;
 	}
 
-	static public String cap(String line) {
+	public static String cap(String line) {
 		return Character.toUpperCase(line.charAt(Define.INDEX_0)) + line.substring(Define.INDEX_1);
 	}
 
-	static public String uncap(String line) {
+	public static String uncap(String line) {
 		return Character.toLowerCase(line.charAt(Define.INDEX_0)) + line.substring(Define.INDEX_1);
 	}
 
-	static public String toType(String type) {
+	public static String toType(String type) {
 
 		String chanageType = type.toLowerCase();
 
@@ -431,7 +432,7 @@ public class Util {
 	// 서버 컴퓨터로 기준으로 전체 경로 얻기
 	// resource 경로에서 시작
 	// 예) dirResEx("komoran/userDic.txt")
-	static public String dirClass(String fileName) {
+	public static String dirClass(String fileName) {
 
 		ClassPathResource classPathResource = new ClassPathResource(fileName);
 
@@ -460,7 +461,7 @@ public class Util {
 //		
 //	}
 
-	static public String text(ArrayList<String> param) {
+	public static String text(ArrayList<String> param) {
 
 		String str = "";
 
@@ -471,7 +472,7 @@ public class Util {
 		return str;
 	}
 
-	static public String toText(Map<String, Object> map) {
+	public static String toText(Map<String, Object> map) {
 
 		String text = Define.STR_BLANK;
 
@@ -485,7 +486,7 @@ public class Util {
 		return text;
 	}
 
-	static public String removeSpace(String str) {
+	public static String removeSpace(String str) {
 
 		String result = str;
 
@@ -494,7 +495,7 @@ public class Util {
 		return result;
 	}
 
-	static public boolean isEmpty(Object obj) {
+	public static boolean isEmpty(Object obj) {
 
 		if (obj == null) {
 			return true;
@@ -512,11 +513,11 @@ public class Util {
 		return false;
 	}
 
-	static public boolean isNotEmpty(Object obj) {
+	public static boolean isNotEmpty(Object obj) {
 		return !isEmpty(obj);
 	}
 
-	static public boolean equal(Object obj, String str) {
+	public static boolean equal(Object obj, String str) {
 
 		if (obj == null)
 			return false;
@@ -532,14 +533,14 @@ public class Util {
 	}
 
 	// 리턴 예시 : D:\00_eGov_work\git_projects\geoje\GeojeChat
-	static public String dirCurrent() {
+	public static String dirCurrent() {
 
 		File file = new File("");
 
 		return file.getAbsolutePath();
 	}
 
-	static public Process run(String exe) {
+	public static Process run(String exe) {
 
 		Process ps = null;
 
@@ -552,7 +553,7 @@ public class Util {
 		return ps;
 	}
 
-	static public void send(String host, int port, String msg) {
+	public static void send(String host, int port, String msg) {
 		try (
 				// Socket socket = new Socket("localhost", 12345);
 				Socket socket = new Socket(host, port);
@@ -567,13 +568,31 @@ public class Util {
 		}
 	}
 
-	static public int toInt(Object object) {
+	public static int toInt(Object object) {
 		int value = Integer.parseInt(Util.toStr(object));
 		return value;
 	}
 
-	static public String toStr(Object obj) {
+	public static String toStr(Object obj) {
 		String str = String.valueOf(obj);
 		return str;
+	}
+	
+	public static List<String> getFiles(ServletContext servletContext, String dirEx){
+//		String dirEx = "/upload-images/index";
+		
+		String imagesPath = servletContext.getRealPath(dirEx);
+		
+		File dir = new File(imagesPath);
+		String[] images = dir.list((d, name) -> new File(d, name).isFile());
+		
+		List<String> results = new ArrayList<>();
+		
+		for(String image : images) {
+			results.add(servletContext.getContextPath() + dirEx + Define.SLASH +image);
+		}
+
+		//model.addAttribute("images", results);
+		return results;
 	}
 }
