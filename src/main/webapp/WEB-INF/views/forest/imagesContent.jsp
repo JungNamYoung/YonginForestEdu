@@ -26,7 +26,7 @@
 		<div class="row">
 			<c:forEach var="img" items="${images}">
 				<div class="col-md-3 text-center mb-4">
-					<img class="img-fluid" src="<c:url value='/forest/assets/images/${img}'/>" alt="${img}" />
+					<img class="img-fluid" src="<c:url value='/upload-images/${img}'/>" alt="${img}" />
 					<form method="post" action="<c:url value='/images/delete'/>" class="mt-2">
 						<input type="hidden" name="filename" value="${img}" />
 						<button type="submit" class="btn btn-danger btn-sm">삭제</button>

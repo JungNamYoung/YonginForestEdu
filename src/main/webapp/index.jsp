@@ -2,9 +2,8 @@
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-
 <%
-	String imagesPath = application.getRealPath("/forest/assets/images");
+	String imagesPath = application.getRealPath("/upload-images");
 	java.io.File dir = new java.io.File(imagesPath);
 	String[] images = dir.list((d, name) -> new java.io.File(d, name).isFile());
 	request.setAttribute("images", images);
@@ -53,7 +52,7 @@
 					<div class="swiper-wrapper">
 						<c:forEach var="img" items="${images}">
 							<div class="swiper-slide">
-								<img src="<c:url value="/forest/assets/images/${img}"/>" alt="${img}">
+								<img src="<c:url value="/upload-images/${img}"/>" alt="${img}">
 							</div>
 						</c:forEach>
 					</div>
