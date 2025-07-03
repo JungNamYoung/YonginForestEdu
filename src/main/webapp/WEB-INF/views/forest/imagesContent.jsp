@@ -6,7 +6,7 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1 class="m-0">메인 이미지 관리</h1>
+				<h1 class="m-0">대기화면 관리</h1>
 			</div>
 		</div>
 	</div>

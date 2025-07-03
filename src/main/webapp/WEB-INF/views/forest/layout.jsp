@@ -38,7 +38,7 @@
 								<p>Kiosk</p>
 						</a></li>
 						<li class="nav-item"><a href="<c:url value='/images'/>" class="nav-link ${param.menu eq 'images' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>
-								<p>이미지 관리</p>
+								<p>대기화면 관리</p>
 						</a></li>
 						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}"><a href="#" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
 								<p>
