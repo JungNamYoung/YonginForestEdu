@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import cuda.web.define.Define;
+import cuda.web.upload.vo.FileVo;
 import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
 
@@ -22,10 +23,10 @@ public class FacilityGuideController {
 	@GetMapping("/forest/facilityGuide")
 	public String facilityGuide(Model model) {
 		
-		List<String> results = Util.getFiles(servletContext, "/upload-images/main");		
+		List<FileVo> listFileVo = Util.getFiles(servletContext, "/upload-files/main");		
 		
-		if(results.size() > 0)		
-			model.addAttribute("footerImgPath", results.get(Define.INDEX_0));
+		if(listFileVo.size() > 0)		
+			model.addAttribute("footerImgPath", listFileVo.get(Define.INDEX_0).getPath());
 		else
 			model.addAttribute("footerImgPath");
 		

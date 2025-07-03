@@ -41,7 +41,7 @@
 								<p>대기화면 관리</p>
 						</a></li>
 						<li class="nav-item"><a href="<c:url value='/admin/footer-image'/>" class="nav-link ${param.menu eq 'footerImage' ? 'active' : ''}"> <i class="nav-icon fas fa-file-image"></i>
-								<p>이미지 관리</p>
+								<p>footer 이미지 관리</p>
 						</a></li>
 						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}"><a href="#" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
 								<p>

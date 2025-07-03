@@ -17,18 +17,19 @@
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/images/upload'/>" enctype="multipart/form-data">
 					<div class="form-group">
-						<label for="files">이미지 파일 선택</label> <input type="file" name="files" id="files" multiple class="form-control-file" />
+						<label for="files">이미지 파일 선택</label> 
+						<input type="file" name="files" id="files" multiple class="form-control-file" />
 					</div>
 					<button type="submit" class="btn btn-primary">업로드</button>
 				</form>
 			</div>
 		</div>
 		<div class="row">
-			<c:forEach var="img" items="${images}">
+			<c:forEach var="img" items="${listFileVo}">
 				<div class="col-md-3 text-center mb-4">
-					<img class="img-fluid" src="<c:url value='/upload-images/index/${img}'/>" alt="${img}" />
+					<img class="img-fluid" src="${img.getPath()}" alt="${img.getFilename()}" />
 					<form method="post" action="<c:url value='/admin/images/delete'/>" class="mt-2">
-						<input type="hidden" name="filename" value="${img}" />
+						<input type="hidden" name="filename" value="${img.getFilename()}" />
 						<button type="submit" class="btn btn-danger btn-sm">삭제</button>
 					</form>
 				</div>

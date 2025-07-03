@@ -26,8 +26,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.web.multipart.MultipartFile;
 
 import cuda.web.define.Define;
+import cuda.web.upload.vo.FileVo;
 import jakarta.servlet.ServletContext;
 
 public class Util {
@@ -578,21 +580,60 @@ public class Util {
 		return str;
 	}
 	
-	public static List<String> getFiles(ServletContext servletContext, String dirEx){
-//		String dirEx = "/upload-images/index";
+	public static List<FileVo> getFiles(ServletContext servletContext, String dirEx){
 		
 		String imagesPath = servletContext.getRealPath(dirEx);
 		
 		File dir = new File(imagesPath);
 		String[] images = dir.list((d, name) -> new File(d, name).isFile());
 		
-		List<String> results = new ArrayList<>();
+		List<FileVo> results = new ArrayList<>();
 		
 		for(String image : images) {
-			results.add(servletContext.getContextPath() + dirEx + Define.SLASH +image);
+			
+			FileVo fileVo  = new FileVo();
+			fileVo.setPath(servletContext.getContextPath() + dirEx + Define.SLASH +image);
+			fileVo.setFilename(image);
+			
+			//results.add(servletContext.getContextPath() + dirEx + Define.SLASH +image);
+			results.add(fileVo);
+			
 		}
 
-		//model.addAttribute("images", results);
 		return results;
+	}
+	
+	private static File getImageDir(ServletContext servletContext, String dirEx) {
+		//String realPath = servletContext.getRealPath("/upload-files/index");
+		String realPath = servletContext.getRealPath(dirEx);
+		return new File(realPath);
+	}
+	
+	public static void upload(List<MultipartFile> files, ServletContext servletContext, String dirEx) {
+		File dir = getImageDir(servletContext, dirEx);
+		
+		if (!dir.exists()) {
+			dir.mkdirs();
+		}
+		
+		for (MultipartFile file : files) {
+			if (!file.isEmpty()) {
+				File dest = new File(dir, file.getOriginalFilename());
+				try {
+					file.transferTo(dest);
+				}catch(Exception ex) {
+					ex.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	public static void delete(ServletContext servletContext, String dirParent, String filename) {
+		
+		File file = new File(getImageDir(servletContext, dirParent), filename);
+		
+		if (file.exists()) {
+			file.delete();
+		}
 	}
 }

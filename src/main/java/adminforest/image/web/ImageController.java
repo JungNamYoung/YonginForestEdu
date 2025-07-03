@@ -1,8 +1,5 @@
 package adminforest.image.web;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -12,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import cuda.web.upload.vo.FileVo;
+import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpSession;
 
@@ -24,39 +23,27 @@ public class ImageController {
 		this.servletContext = servletContext;
 	}
 
-	private File getImageDir() {
-		String realPath = servletContext.getRealPath("/upload-images/index");
-		return new File(realPath);
-	}
-
 	@GetMapping("/admin/images")
-	public String listImages(Model model, HttpSession session) {
+	public String listlistFileVo(Model model, HttpSession session) {
 		if (session.getAttribute("loginUser") == null) {
 			return "redirect:/admin/login";
 		}
-		File dir = getImageDir();
-		String[] names = dir.list((d, name) -> new File(d, name).isFile());
-		if (names != null) {
-			model.addAttribute("images", Arrays.asList(names));
-		}
+		
+		List<FileVo> listFileVo = Util.getFiles(servletContext, "/upload-files/index");
+		
+		model.addAttribute("listFileVo", listFileVo);
+		
 		return "adminforest/images";
 	}
 
 	@PostMapping("/admin/images/upload")
-	public String uploadImages(@RequestParam("files") List<MultipartFile> files, HttpSession session) throws IOException {
+	public String uploadlistFileVo(@RequestParam("files") List<MultipartFile> files, HttpSession session){
 		if (session.getAttribute("loginUser") == null) {
 			return "redirect:/admin/login";
 		}
-		File dir = getImageDir();
-		if (!dir.exists()) {
-			dir.mkdirs();
-		}
-		for (MultipartFile file : files) {
-			if (!file.isEmpty()) {
-				File dest = new File(dir, file.getOriginalFilename());
-				file.transferTo(dest);
-			}
-		}
+		
+		Util.upload(files, servletContext, "/upload-files/index");
+				
 		return "redirect:/admin/images";
 	}
 
@@ -65,10 +52,9 @@ public class ImageController {
 		if (session.getAttribute("loginUser") == null) {
 			return "redirect:/admin/login";
 		}
-		File file = new File(getImageDir(), filename);
-		if (file.exists()) {
-			file.delete();
-		}
+				
+		Util.delete(servletContext, "/upload-files/index", filename);
+		
 		return "redirect:/admin/images";
 	}
 }
