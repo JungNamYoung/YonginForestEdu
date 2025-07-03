@@ -385,7 +385,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace("<c:url value="/forest/pages/main.jsp"/>");
+                location.replace("<c:url value="/forest/main"/>");
             }, 500); // 0.5초
         });
 

@@ -72,18 +72,6 @@ document.addEventListener("click", function(e) {
     }, 600); // 애니메이션 종료 후 제거
 });
 
-
-// document.querySelector(".main__controls--homeBtn").addEventListener("click",  () => {
-//     const nextPage = document.querySelector(".page");
-            
-//         nextPage.classList.add("fade-out");
-
-//     setTimeout(function () {
-//         location.replace('/pages/main.jsp');
-//     }, 500); // 0.5초
-    
-// });
-
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
   });

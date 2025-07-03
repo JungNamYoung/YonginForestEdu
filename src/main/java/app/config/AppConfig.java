@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan(basePackages = { "adminforest", "cuda" })
+@ComponentScan(basePackages = { "adminforest", "cuda", "forest" })
 @EnableWebMvc
 @Import(MyBatisConfig.class)
 @EnableTransactionManagement

@@ -1,4 +1,4 @@
-package adminforest.main.web;
+package forest.web;
 
 import java.io.File;
 
@@ -17,7 +17,7 @@ public class IndexController {
 		this.servletContext = servletContext;
 	}
 
-	@GetMapping("/index")
+	@GetMapping("/forest/index")
 	public String index(Model model) {
 
 		String imagesPath = servletContext.getRealPath("/upload-images");
@@ -26,6 +26,6 @@ public class IndexController {
 
 		model.addAttribute("images", images);
 
-		return "adminforest/index";
+		return "forest/index";
 	}
 }

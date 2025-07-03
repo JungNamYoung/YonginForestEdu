@@ -46,7 +46,7 @@
           <ul class="pagination justify-content-center">
             <c:forEach var="p" begin="1" end="${totalPages}">
               <li class="page-item ${p == currentPage ? 'active' : ''}">
-                <a class="page-link" href="<c:url value='/users?page=${p}'/>">${p}</a>
+                <a class="page-link" href="<c:url value='/admin/users?page=${p}'/>">${p}</a>
               </li>
             </c:forEach>
           </ul>

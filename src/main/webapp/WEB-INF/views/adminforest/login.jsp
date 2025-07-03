@@ -22,7 +22,7 @@
       <c:if test="${not empty error}">
         <div class="alert alert-danger" role="alert">${error}</div>
       </c:if>
-      <form method="post" action="<c:url value='/login'/>">
+      <form method="post" action="<c:url value='/admin/login'/>">
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Username" name="username" value="admin">
           <div class="input-group-append">

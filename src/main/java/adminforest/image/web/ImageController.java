@@ -29,10 +29,10 @@ public class ImageController {
 		return new File(realPath);
 	}
 
-	@GetMapping("/images")
+	@GetMapping("/admin/images")
 	public String listImages(Model model, HttpSession session) {
 		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/login";
+			return "redirect:/admin/login";
 		}
 		File dir = getImageDir();
 		String[] names = dir.list((d, name) -> new File(d, name).isFile());
@@ -42,10 +42,10 @@ public class ImageController {
 		return "adminforest/images";
 	}
 
-	@PostMapping("/images/upload")
+	@PostMapping("/admin/images/upload")
 	public String uploadImages(@RequestParam("files") List<MultipartFile> files, HttpSession session) throws IOException {
 		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/login";
+			return "redirect:/admin/login";
 		}
 		File dir = getImageDir();
 		if (!dir.exists()) {
@@ -57,18 +57,18 @@ public class ImageController {
 				file.transferTo(dest);
 			}
 		}
-		return "redirect:/images";
+		return "redirect:/admin/images";
 	}
 
-	@PostMapping("/images/delete")
+	@PostMapping("/admin/images/delete")
 	public String deleteImage(@RequestParam("filename") String filename, HttpSession session) {
 		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/login";
+			return "redirect:/admin/login";
 		}
 		File file = new File(getImageDir(), filename);
 		if (file.exists()) {
 			file.delete();
 		}
-		return "redirect:/images";
+		return "redirect:/admin/images";
 	}
 }

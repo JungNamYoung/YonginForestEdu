@@ -18,10 +18,10 @@ public class KioskController {
 	@Autowired
 	KioskService kioskService;
 
-	@GetMapping("/kiosk")
+	@GetMapping("/admin/kiosk")
 	public String selectKiosk(Model model, HttpSession session) {
 		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/login";
+			return "redirect:/admin/login";
 		}
 		logger.info("Fetching kiosk list");
 		model.addAttribute("results", kioskService.selectKioskList(null));

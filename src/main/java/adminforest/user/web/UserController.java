@@ -18,11 +18,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/users")
+    @GetMapping("/admin/users")
     public String list(@RequestParam(name = "page", defaultValue = "1") int page,
                        Model model, HttpSession session) {
         if (session.getAttribute("loginUser") == null) {
-            return "redirect:/login";
+            return "redirect:/admin/login";
         }
         int pageSize = 10;
         int offset = (page - 1) * pageSize;

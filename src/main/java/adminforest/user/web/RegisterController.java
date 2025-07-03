@@ -15,19 +15,19 @@ public class RegisterController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/register")
+    @GetMapping("/admin/register")
     public String registerForm() {
         return "adminforest/register";
     }
 
-    @PostMapping("/register")
+    @PostMapping("/admin/register")
     public String register(UserVo user, Model model) {
         try {
             user.setRole("USER");
             user.setEnabled(true);
             userService.register(user);
             //return "redirect:/login";
-            return "redirect:/register";
+            return "redirect:/admin/register";
         } catch (Exception e) {
             model.addAttribute("error", "Registration failed");
             return "adminforest/register";

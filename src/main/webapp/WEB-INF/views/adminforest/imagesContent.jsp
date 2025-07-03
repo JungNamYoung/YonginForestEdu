@@ -15,7 +15,7 @@
 	<div class="container-fluid">
 		<div class="card mb-3">
 			<div class="card-body">
-				<form method="post" action="<c:url value='/images/upload'/>" enctype="multipart/form-data">
+				<form method="post" action="<c:url value='/admin/images/upload'/>" enctype="multipart/form-data">
 					<div class="form-group">
 						<label for="files">이미지 파일 선택</label> <input type="file" name="files" id="files" multiple class="form-control-file" />
 					</div>
@@ -27,7 +27,7 @@
 			<c:forEach var="img" items="${images}">
 				<div class="col-md-3 text-center mb-4">
 					<img class="img-fluid" src="<c:url value='/upload-images/${img}'/>" alt="${img}" />
-					<form method="post" action="<c:url value='/images/delete'/>" class="mt-2">
+					<form method="post" action="<c:url value='/admin/images/delete'/>" class="mt-2">
 						<input type="hidden" name="filename" value="${img}" />
 						<button type="submit" class="btn btn-danger btn-sm">삭제</button>
 					</form>

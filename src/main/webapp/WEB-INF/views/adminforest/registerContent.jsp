@@ -19,7 +19,7 @@
 				<c:if test="${not empty error}">
 					<div class="alert alert-danger" role="alert">${error}</div>
 				</c:if>
-				<form method="post" action="<c:url value='/register'/>">
+				<form method="post" action="<c:url value='/admin/register'/>">
 					<div class="input-group mb-3">
 						<input type="text" class="form-control" placeholder="Username" name="username" required>
 						<div class="input-group-append">
@@ -51,7 +51,7 @@
 						</div>
 					</div>
 				</form>
-				<a href="<c:url value='/login'/>" class="text-center">I already have a membership</a>
+				<a href="<c:url value='/admin/login'/>" class="text-center">I already have a membership</a>
 			</div>
 		</div>
 	</div>
