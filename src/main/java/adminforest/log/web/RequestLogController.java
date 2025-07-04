@@ -55,13 +55,14 @@ public class RequestLogController {
 
 	@GetMapping("/admin/logs")
 	public String list(@RequestParam(name = "from", required = false) String from, @RequestParam(name = "to", required = false) String to, Model model, HttpSession session) throws ParseException {
+		
 		if (session.getAttribute("loginUser") == null) {
 			return "redirect:/admin/login";
 		}
 
 		Date fromDate = from == null ? startOfDay(new Date(System.currentTimeMillis() - 7L * 24 * 3600 * 1000)) : parseStartOfDay(from);
 		Date toDate = to == null ? endOfDay(new Date()) : parseEndOfDay(to);
-		
+
 		List<RequestStatVo> list = requestStatService.selectStats(fromDate, toDate);
 
 		model.addAttribute("stats", list);
@@ -73,19 +74,21 @@ public class RequestLogController {
 
 	@GetMapping("/admin/logs/excel")
 	public void excel(@RequestParam(name = "from") String from, @RequestParam(name = "to") String to, HttpServletResponse response) throws ParseException, IOException {
-		
+
 		Date fromDate = parseStartOfDay(from);
 		Date toDate = parseEndOfDay(to);
 
 		List<RequestStatVo> list = requestStatService.selectStats(fromDate, toDate);
 
-		response.setContentType("application/vnd.ms-excel");
+		response.setCharacterEncoding("MS949");
+		response.setContentType("application/vnd.ms-excel; charset=MS949");
 		response.setHeader("Content-Disposition", "attachment;filename=logs.csv");
+
 		PrintWriter out = response.getWriter();
 		out.println("Controller,Method,Name, Count");
 
 		for (RequestStatVo vo : list) {
-			out.printf("%s, %s, %s, %d \n", vo.getController(), vo.getMethod(), vo.getNameText() == null ? "" : vo.getNameText(), vo.getCount() == null ? 0 : vo.getCount());
+			out.printf("%s, %s, %s, %d \r\n", vo.getController(), vo.getMethod(), vo.getNameText() == null ? "" : vo.getNameText(), vo.getCount() == null ? 0 : vo.getCount());
 		}
 
 		out.flush();
