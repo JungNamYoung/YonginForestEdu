@@ -20,6 +20,7 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class RequestLogController {
+	
 	@Autowired
 	RequestStatService requestStatService;
 
@@ -28,31 +29,38 @@ public class RequestLogController {
 	}
 
 	@GetMapping("/admin/logs")
-	public String list(@RequestParam(required = false) String from, @RequestParam(required = false) String to, Model model, HttpSession session) throws ParseException {
+	public String list(@RequestParam(name="from", required = false) String from, @RequestParam(name="to", required = false) String to, Model model, HttpSession session) throws ParseException {
 		if (session.getAttribute("loginUser") == null) {
 			return "redirect:/admin/login";
 		}
 		Date fromDate = from == null ? new Date(System.currentTimeMillis() - 7L * 24 * 3600 * 1000) : parse(from);
 		Date toDate = to == null ? new Date() : parse(to);
+		
 		List<RequestStatVo> list = requestStatService.selectStats(fromDate, toDate);
+		
 		model.addAttribute("stats", list);
 		model.addAttribute("from", new SimpleDateFormat("yyyy-MM-dd").format(fromDate));
 		model.addAttribute("to", new SimpleDateFormat("yyyy-MM-dd").format(toDate));
+		
 		return "adminforest/requestLog";
 	}
 
 	@GetMapping("/admin/logs/excel")
-	public void excel(@RequestParam String from, @RequestParam String to, HttpServletResponse response) throws ParseException, IOException {
+	public void excel(@RequestParam(name="from") String from, @RequestParam(name="to") String to, HttpServletResponse response) throws ParseException, IOException {
 		Date fromDate = parse(from);
 		Date toDate = parse(to);
+		
 		List<RequestStatVo> list = requestStatService.selectStats(fromDate, toDate);
+		
 		response.setContentType("application/vnd.ms-excel");
 		response.setHeader("Content-Disposition", "attachment;filename=logs.csv");
 		PrintWriter out = response.getWriter();
 		out.println("Controller,Method,Name, Count");
+		
 		for (RequestStatVo vo : list) {
 			out.printf("%s, %s, %s, %d \n", vo.getController(), vo.getMethod(), vo.getNameText() == null ? "" : vo.getNameText(), vo.getCount() == null ? 0 : vo.getCount());
 		}
+		
 		out.flush();
 	}
 }
