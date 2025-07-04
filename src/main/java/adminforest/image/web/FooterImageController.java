@@ -25,7 +25,6 @@ public class FooterImageController {
 		this.servletContext = servletContext;
 	}
 
-
 	@GetMapping("/admin/footer-image")
 	public String showForm(Model model, HttpSession session) {
 		

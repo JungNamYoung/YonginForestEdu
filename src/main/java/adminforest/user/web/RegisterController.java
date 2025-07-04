@@ -26,9 +26,10 @@ public class RegisterController {
             user.setRole("USER");
             user.setEnabled(true);
             userService.register(user);
-            //return "redirect:/login";
+            
             return "redirect:/admin/register";
         } catch (Exception e) {
+        	
             model.addAttribute("error", "Registration failed");
             return "adminforest/register";
         }

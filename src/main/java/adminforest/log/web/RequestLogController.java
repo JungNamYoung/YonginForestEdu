@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import adminforest.log.service.RequestStatService;
 import adminforest.log.vo.RequestStatVo;
+import cuda.web.define.Define;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
@@ -46,11 +47,11 @@ public class RequestLogController {
 	}
 
 	private Date parseStartOfDay(String s) throws ParseException {
-		return startOfDay(new SimpleDateFormat("yyyy-MM-dd").parse(s));
+		return startOfDay(new SimpleDateFormat(Define.YMD).parse(s));
 	}
 
 	private Date parseEndOfDay(String s) throws ParseException {
-		return endOfDay(new SimpleDateFormat("yyyy-MM-dd").parse(s));
+		return endOfDay(new SimpleDateFormat(Define.YMD).parse(s));
 	}
 
 	@GetMapping("/admin/logs")
@@ -62,8 +63,8 @@ public class RequestLogController {
 		List<RequestStatVo> list = requestStatService.selectStats(fromDate, toDate);
 
 		model.addAttribute("stats", list);
-		model.addAttribute("from", new SimpleDateFormat("yyyy-MM-dd").format(fromDate));
-		model.addAttribute("to", new SimpleDateFormat("yyyy-MM-dd").format(toDate));
+		model.addAttribute("from", new SimpleDateFormat(Define.YMD).format(fromDate));
+		model.addAttribute("to", new SimpleDateFormat(Define.YMD).format(toDate));
 
 		return "adminforest/requestLog";
 	}
