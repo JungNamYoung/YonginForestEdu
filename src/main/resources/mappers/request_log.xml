@@ -14,4 +14,16 @@
 		NOW()
 		)
 	</insert>
+	<select id="selectRequestLogStats" parameterType="map" resultType="RequestStatVo">
+		SELECT
+		rl.controller,
+		rl.method,
+		rn.name_text,
+		COUNT(*) AS count
+		FROM request_log rl
+		LEFT JOIN request_name rn ON rl.controller = rn.controller AND rl.method=rn.method
+		WHERE rl.created_at BETWEEN #{from} AND #{to}
+		GROUP BY rl.controller, rl.method, rn.name_text
+		ORDER BY count DESC
+	</select>
 </mapper>

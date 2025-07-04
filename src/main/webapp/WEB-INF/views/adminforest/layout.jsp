@@ -43,6 +43,9 @@
 						<li class="nav-item"><a href="<c:url value='/admin/footer-image'/>" class="nav-link ${param.menu eq 'footerImage' ? 'active' : ''}"> <i class="nav-icon fas fa-file-image"></i>
 								<p>footer 이미지 관리</p>
 						</a></li>
+						<li class="nav-item"><a href="<c:url value='/admin/logs'/>" class="nav-link ${param.menu eq 'logs' ? 'active' : ''}"> <i class="nav-icon fas fa-book"></i>
+								<p>로그</p>
+						</a></li>
 						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}"><a href="#" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
 								<p>
 									Users <i class="right fas fa-angle-left"></i>

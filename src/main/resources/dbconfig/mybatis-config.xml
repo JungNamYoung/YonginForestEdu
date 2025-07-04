@@ -12,5 +12,6 @@
 		<typeAlias alias="KioskVo" type="adminforest.kiosk.vo.KioskVo" />
 		<typeAlias alias="UserVo" type="adminforest.user.vo.UserVo" />
 		<typeAlias alias="RequestLogVo" type="forest.log.vo.RequestLogVo"/>
+		<typeAlias alias="RequestStatVo" type="adminforest.log.vo.RequestStatVo"/>
 	</typeAliases>
 </configuration>
