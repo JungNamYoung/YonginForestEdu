@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -20,47 +21,73 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class RequestLogController {
-	
+
 	@Autowired
 	RequestStatService requestStatService;
 
-	private Date parse(String s) throws ParseException {
-		return new SimpleDateFormat("yyyy-MM-dd").parse(s);
+	private Date startOfDay(Date d) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(d);
+		cal.set(Calendar.HOUR_OF_DAY, 0);
+		cal.set(Calendar.MINUTE, 0);
+		cal.set(Calendar.SECOND, 0);
+		cal.set(Calendar.MILLISECOND, 0);
+		return cal.getTime();
+	}
+
+	private Date endOfDay(Date d) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(d);
+		cal.set(Calendar.HOUR_OF_DAY, 23);
+		cal.set(Calendar.MINUTE, 59);
+		cal.set(Calendar.SECOND, 59);
+		cal.set(Calendar.MILLISECOND, 999);
+		return cal.getTime();
+	}
+
+	private Date parseStartOfDay(String s) throws ParseException {
+		return startOfDay(new SimpleDateFormat("yyyy-MM-dd").parse(s));
+	}
+
+	private Date parseEndOfDay(String s) throws ParseException {
+		return endOfDay(new SimpleDateFormat("yyyy-MM-dd").parse(s));
 	}
 
 	@GetMapping("/admin/logs")
-	public String list(@RequestParam(name="from", required = false) String from, @RequestParam(name="to", required = false) String to, Model model, HttpSession session) throws ParseException {
+	public String list(@RequestParam(name = "from", required = false) String from, @RequestParam(name = "to", required = false) String to, Model model, HttpSession session) throws ParseException {
 		if (session.getAttribute("loginUser") == null) {
 			return "redirect:/admin/login";
 		}
-		Date fromDate = from == null ? new Date(System.currentTimeMillis() - 7L * 24 * 3600 * 1000) : parse(from);
-		Date toDate = to == null ? new Date() : parse(to);
+
+		Date fromDate = from == null ? startOfDay(new Date(System.currentTimeMillis() - 7L * 24 * 3600 * 1000)) : parseStartOfDay(from);
+		Date toDate = to == null ? endOfDay(new Date()) : parseEndOfDay(to);
 		
 		List<RequestStatVo> list = requestStatService.selectStats(fromDate, toDate);
-		
+
 		model.addAttribute("stats", list);
 		model.addAttribute("from", new SimpleDateFormat("yyyy-MM-dd").format(fromDate));
 		model.addAttribute("to", new SimpleDateFormat("yyyy-MM-dd").format(toDate));
-		
+
 		return "adminforest/requestLog";
 	}
 
 	@GetMapping("/admin/logs/excel")
-	public void excel(@RequestParam(name="from") String from, @RequestParam(name="to") String to, HttpServletResponse response) throws ParseException, IOException {
-		Date fromDate = parse(from);
-		Date toDate = parse(to);
+	public void excel(@RequestParam(name = "from") String from, @RequestParam(name = "to") String to, HttpServletResponse response) throws ParseException, IOException {
 		
+		Date fromDate = parseStartOfDay(from);
+		Date toDate = parseEndOfDay(to);
+
 		List<RequestStatVo> list = requestStatService.selectStats(fromDate, toDate);
-		
+
 		response.setContentType("application/vnd.ms-excel");
 		response.setHeader("Content-Disposition", "attachment;filename=logs.csv");
 		PrintWriter out = response.getWriter();
 		out.println("Controller,Method,Name, Count");
-		
+
 		for (RequestStatVo vo : list) {
 			out.printf("%s, %s, %s, %d \n", vo.getController(), vo.getMethod(), vo.getNameText() == null ? "" : vo.getNameText(), vo.getCount() == null ? 0 : vo.getCount());
 		}
-		
+
 		out.flush();
 	}
 }
