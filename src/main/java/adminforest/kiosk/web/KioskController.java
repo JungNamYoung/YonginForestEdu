@@ -20,9 +20,7 @@ public class KioskController {
 
 	@GetMapping("/admin/kiosk")
 	public String selectKiosk(Model model, HttpSession session) {
-		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/admin/login";
-		}
+		
 		logger.info("Fetching kiosk list");
 		model.addAttribute("results", kioskService.selectKioskList(null));
 		logger.info("Kiosk list view returned");

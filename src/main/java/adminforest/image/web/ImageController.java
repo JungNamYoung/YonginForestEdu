@@ -25,10 +25,7 @@ public class ImageController {
 
 	@GetMapping("/admin/images")
 	public String listlistFileVo(Model model, HttpSession session) {
-		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/admin/login";
-		}
-		
+
 		List<FileVo> listFileVo = Util.getFiles(servletContext, "/upload-files/index");
 		
 		model.addAttribute("listFileVo", listFileVo);
@@ -38,10 +35,7 @@ public class ImageController {
 
 	@PostMapping("/admin/images/upload")
 	public String uploadlistFileVo(@RequestParam("files") List<MultipartFile> files, HttpSession session){
-		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/admin/login";
-		}
-		
+
 		Util.upload(files, servletContext, "/upload-files/index");
 				
 		return "redirect:/admin/images";
@@ -49,9 +43,6 @@ public class ImageController {
 
 	@PostMapping("/admin/images/delete")
 	public String deleteImage(@RequestParam("filename") String filename, HttpSession session) {
-		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/admin/login";
-		}
 				
 		Util.delete(servletContext, "/upload-files/index", filename);
 		

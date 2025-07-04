@@ -25,34 +25,9 @@ public class FooterImageController {
 		this.servletContext = servletContext;
 	}
 
-//	private File getUploadDir() {
-//		String realPath = servletContext.getRealPath("/upload-files");
-//		return new File(realPath);
-//	}
-//
-//	private String getConfigFilePath() {
-//		return Util.dirClass(CONFIG_PATH);
-//	}
-//
-//	private String readCurrentImage() {
-//		java.util.List<String> list = FileEx.readEx(getConfigFilePath(), false);
-//		if (!list.isEmpty()) {
-//			return list.get(0);
-//		}
-//		return "";
-//	}
-//
-//	private void writeCurrentImage(String path) throws IOException {
-//		java.util.List<String> lines = java.util.Collections.singletonList(path);
-//		Files.write(new File(getConfigFilePath()).toPath(), lines);
-//	}
 
 	@GetMapping("/admin/footer-image")
 	public String showForm(Model model, HttpSession session) {
-		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/admin/login";
-		}
-		//model.addAttribute("currentImage", readCurrentImage());
 		
 		List<FileVo> listFileVo = Util.getFiles(servletContext, "/upload-files/main");
 		
@@ -66,9 +41,6 @@ public class FooterImageController {
 
 	@PostMapping("/admin/footer-image/upload")
 	public String upload(@RequestParam("files") List<MultipartFile> files, HttpSession session){
-		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/admin/login";
-		}
 		
 		Util.upload(files, servletContext, "/upload-files/main");
 				
@@ -77,9 +49,6 @@ public class FooterImageController {
 	
 	@PostMapping("/admin/footer-image/delete")
 	public String delete(@RequestParam("filename") String fileanem, HttpSession session) {
-		if(session.getAttribute("loginUser") == null) {
-			return "redirect:/admin/login";
-		}
 		
 		Util.delete(servletContext, "/upload-files/main", fileanem);
 		

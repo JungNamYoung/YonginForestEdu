@@ -21,9 +21,7 @@ public class UserController {
     @GetMapping("/admin/users")
     public String list(@RequestParam(name = "page", defaultValue = "1") int page,
                        Model model, HttpSession session) {
-        if (session.getAttribute("loginUser") == null) {
-            return "redirect:/admin/login";
-        }
+            
         int pageSize = 10;
         int offset = (page - 1) * pageSize;
         List<UserVo> users = userService.selectUserList(offset, pageSize);

@@ -11,11 +11,6 @@ public class DashBoardController {
 
 	@GetMapping("/admin/dashboard")
 	public String dashBoard(Model model, HttpSession session) {
-		if (session.getAttribute("loginUser") == null) {
-			return "redirect:/admin/login";
-		}
 		return "adminforest/dashBoard";
 	}
-
-	
 }

@@ -23,16 +23,13 @@ public class LoginController {
 	@Autowired
 	UserService userService;
 	
-//	@GetMapping("/admin")
-//	public String root() {
-//		return "redirect:/admin/login";
-//	}
-
 	@GetMapping("/admin/login")
 	public String loginForm(HttpSession session) {
+		
 		if (session.getAttribute("loginUser") != null) {
 			return "redirect:/admin/dashboard";
 		}
+		
 		return "adminforest/login";
 	}
 
