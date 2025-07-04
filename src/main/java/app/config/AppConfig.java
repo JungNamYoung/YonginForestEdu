@@ -18,6 +18,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @Import(MyBatisConfig.class)
 @EnableTransactionManagement
+@org.springframework.context.annotation.EnableAspectJAutoProxy
 public class AppConfig implements WebMvcConfigurer {
 	@Bean
 	public InternalResourceViewResolver viewResolver() {

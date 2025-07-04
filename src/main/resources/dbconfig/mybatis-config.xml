@@ -11,8 +11,6 @@
 		<typeAlias alias="KioskCol" type="adminforest.kiosk.vo.KioskCol" />
 		<typeAlias alias="KioskVo" type="adminforest.kiosk.vo.KioskVo" />
 		<typeAlias alias="UserVo" type="adminforest.user.vo.UserVo" />
+		<typeAlias alias="RequestLogVo" type="forest.log.vo.RequestLogVo"/>
 	</typeAliases>
-<!-- 	<typeHandlers> -->
-<!-- 		<typeHandler handler="cuda.web.security.util.AesTypeHandler" /> -->
-<!-- 	</typeHandlers> -->
 </configuration>
