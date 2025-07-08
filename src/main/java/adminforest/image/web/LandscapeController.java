@@ -16,37 +16,37 @@ import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
 
 @Controller
-public class ImageController {
+public class LandscapeController {
 
 	private final ServletContext servletContext;
 
-	public ImageController(ServletContext servletContext) {
+	public LandscapeController(ServletContext servletContext) {
 		this.servletContext = servletContext;
 	}
 
-	@GetMapping("/admin/images")
+	@GetMapping("/admin/landscape")
 	public String listlistFileVo(Model model) {
 
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_INDEX);
 		
 		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 		
-		return "adminforest/images";
+		return "adminforest/landscape";
 	}
 
-	@PostMapping("/admin/images/upload")
+	@PostMapping("/admin/landscape/upload")
 	public String uploadlistFileVo(@RequestParam("files") List<MultipartFile> files){
 
 		Util.upload(files, servletContext, AdminForest.UPLOAD_INDEX);
 				
-		return Define.REDIRECT + "/admin/images";
+		return Define.REDIRECT + "/admin/landscape";
 	}
 
-	@PostMapping("/admin/images/delete")
+	@PostMapping("/admin/landscape/delete")
 	public String deleteImage(@RequestParam("filename") String filename) {
 				
 		Util.delete(servletContext, AdminForest.UPLOAD_INDEX, filename);
 		
-		return Define.REDIRECT + "/admin/images";
+		return Define.REDIRECT + "/admin/landscape";
 	}
 }

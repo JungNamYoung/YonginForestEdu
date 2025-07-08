@@ -16,15 +16,15 @@ import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
 
 @Controller
-public class OneImageController {
+public class PortraitController {
 
 	private final ServletContext servletContext;
 	
-	public OneImageController(ServletContext servletContext) {
+	public PortraitController(ServletContext servletContext) {
 		this.servletContext = servletContext;
 	}
 	
-	@GetMapping("/admin/one-image")
+	@GetMapping("/admin/portrait")
 	public String oneImage(Model model){
 		
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_ONE_IMAGE);
@@ -35,22 +35,22 @@ public class OneImageController {
 		else
 			model.addAttribute(AdminForest.LIST_FILE_VO);
 		
-		return "adminforest/oneImage";
+		return "adminforest/portrait";
 	}
 	
-	@PostMapping("/admin/one-image/upload")
+	@PostMapping("/admin/portrait/upload")
 	public String upload(@RequestParam("files") List<MultipartFile> files) {
 		
 		Util.upload(files, servletContext, AdminForest.UPLOAD_ONE_IMAGE);
 		
-		return Define.REDIRECT + "/admin/one-image";
+		return Define.REDIRECT + "/admin/portrait";
 	}
 	
-	@PostMapping("/admin/one-image/delete")
+	@PostMapping("/admin/portrait/delete")
 	public String delete(@RequestParam("filename") String filename) {
 		
 		Util.delete(servletContext, AdminForest.UPLOAD_ONE_IMAGE, filename);
 		
-		return Define.REDIRECT + "/admin/one-image";
+		return Define.REDIRECT + "/admin/portrait";
 	}
 }
