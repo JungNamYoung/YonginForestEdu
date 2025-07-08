@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import adminforest.define.AdminForest;
+import cuda.web.define.Define;
 import cuda.web.upload.vo.FileVo;
 import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
-import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class ImageController {
@@ -24,28 +25,28 @@ public class ImageController {
 	}
 
 	@GetMapping("/admin/images")
-	public String listlistFileVo(Model model, HttpSession session) {
+	public String listlistFileVo(Model model) {
 
-		List<FileVo> listFileVo = Util.getFiles(servletContext, "/upload-files/index");
+		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_INDEX);
 		
-		model.addAttribute("listFileVo", listFileVo);
+		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 		
 		return "adminforest/images";
 	}
 
 	@PostMapping("/admin/images/upload")
-	public String uploadlistFileVo(@RequestParam("files") List<MultipartFile> files, HttpSession session){
+	public String uploadlistFileVo(@RequestParam("files") List<MultipartFile> files){
 
-		Util.upload(files, servletContext, "/upload-files/index");
+		Util.upload(files, servletContext, AdminForest.UPLOAD_INDEX);
 				
-		return "redirect:/admin/images";
+		return Define.REDIRECT + "/admin/images";
 	}
 
 	@PostMapping("/admin/images/delete")
-	public String deleteImage(@RequestParam("filename") String filename, HttpSession session) {
+	public String deleteImage(@RequestParam("filename") String filename) {
 				
-		Util.delete(servletContext, "/upload-files/index", filename);
+		Util.delete(servletContext, AdminForest.UPLOAD_INDEX, filename);
 		
-		return "redirect:/admin/images";
+		return Define.REDIRECT + "/admin/images";
 	}
 }

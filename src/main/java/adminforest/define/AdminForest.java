@@ -7,7 +7,11 @@ public class AdminForest {
 	public static String UPLOAD_DIR = "upload.temp.dir";
 	public static String DEFAUT_PAGE = "default.page";
 	public static String DEFAUT_PAGE_FILE = "config/defaultPage.txt";
-	
+	public static String LIST_FILE_VO="listFileVo";
 	
 	// domain
+	public static String UPLOAD_INDEX = "/upload-files/image-landscape";
+	public static String UPLOAD_FOOTER= "/upload-files/image-footer";
+	public static String UPLOAD_ONE_IMAGE = "/upload-files/image-one";
+	
 }

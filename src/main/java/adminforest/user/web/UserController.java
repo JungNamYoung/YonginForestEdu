@@ -20,7 +20,7 @@ public class UserController {
 
     @GetMapping("/admin/users")
     public String list(@RequestParam(name = "page", defaultValue = "1") int page,
-                       Model model, HttpSession session) {
+                       Model model) {
             
         int pageSize = 10;
         int offset = (page - 1) * pageSize;

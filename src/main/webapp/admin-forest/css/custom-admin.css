@@ -1,0 +1,15 @@
+html{
+ font-size:0.9rem;
+}
+
+input, select, textarea, button{
+ font-size:0.9rem;
+}
+
+.table td, .table th{
+ font-size:0.9rem;
+}
+
+label, .form-control, .nav-link, .sidebar-menu li a {
+ font-size:0.9rem;
+}

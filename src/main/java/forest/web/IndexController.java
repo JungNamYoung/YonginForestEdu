@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import adminforest.define.AdminForest;
 import cuda.web.upload.vo.FileVo;
 import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
@@ -22,7 +23,7 @@ public class IndexController {
 	@GetMapping("/forest/index")
 	public String index(Model model) {
 		
-		List<FileVo> listFileVo = Util.getFiles(servletContext, "/upload-files/index");
+		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_INDEX);
 
 		model.addAttribute("images", listFileVo);
 

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import adminforest.define.AdminForest;
 import cuda.web.define.Define;
 import cuda.web.upload.vo.FileVo;
 import cuda.web.util.Util;
@@ -22,7 +23,7 @@ public class EducationProgramController {
 	
 	@GetMapping("/forest/educationProgram")
 	public String educationProgram(Model model) {
-		List<FileVo> listFileVo = Util.getFiles(servletContext, "/upload-files/main");		
+		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
 		
 		if(listFileVo.size() > 0)		
 			model.addAttribute("footerImgPath", listFileVo.get(Define.INDEX_0).getPath());

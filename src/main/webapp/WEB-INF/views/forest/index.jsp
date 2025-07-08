@@ -225,7 +225,7 @@
             const page = document.querySelector(".page");
             page.classList.add("fade-out");
             setTimeout(function () {
-                window.location.href = "<c:url value="/forest/main"/>";
+                window.location.href = "<c:url value="/forest/footer"/>";
             }, 1000);
         }
     </script>

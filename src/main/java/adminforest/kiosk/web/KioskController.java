@@ -19,7 +19,7 @@ public class KioskController {
 	KioskService kioskService;
 
 	@GetMapping("/admin/kiosk")
-	public String selectKiosk(Model model, HttpSession session) {
+	public String selectKiosk(Model model) {
 		
 		logger.info("Fetching kiosk list");
 		model.addAttribute("results", kioskService.selectKioskList(null));

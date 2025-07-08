@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpSession;
 public class DashBoardController {
 
 	@GetMapping("/admin/dashboard")
-	public String dashBoard(Model model, HttpSession session) {
+	public String dashBoard(Model model) {
 		return "adminforest/dashBoard";
 	}
 }

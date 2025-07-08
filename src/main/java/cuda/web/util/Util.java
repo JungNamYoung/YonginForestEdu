@@ -604,7 +604,6 @@ public class Util {
 	}
 	
 	private static File getImageDir(ServletContext servletContext, String dirEx) {
-		//String realPath = servletContext.getRealPath("/upload-files/index");
 		String realPath = servletContext.getRealPath(dirEx);
 		return new File(realPath);
 	}

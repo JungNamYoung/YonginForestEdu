@@ -25,7 +25,7 @@
 			</div>
 		</header>
 		<main role="main">
-			<img src="<c:url value='/forest/assets/images/eorininal_poseuteo.jpg'/>">
+			<img src="${oneImagePath}"/>
 		</main>
 	</div>
 </body>

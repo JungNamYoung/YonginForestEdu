@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import adminforest.setting.service.SettingService;
-import jakarta.servlet.http.HttpSession;
+import cuda.web.define.Define;
 
 @Controller
 public class SettingController {
@@ -19,14 +19,14 @@ public class SettingController {
 	}
 
 	@GetMapping("/admin/main-page")
-	public String showForm(Model model, HttpSession session) {
+	public String showForm(Model model) {
 		model.addAttribute("defaultPage", settingService.getDefaultPage());
 		return "adminforest/mainPage";
 	}
 
 	@PostMapping("/admin/main-page")
-	public String update(@RequestParam("page") String page, HttpSession session) {
+	public String update(@RequestParam("page") String page) {
 		settingService.setDefaultPage(page);
-		return "redirect:/admin/main-page";
+		return Define.REDIRECT + "/admin/main-page";
 	}
 }

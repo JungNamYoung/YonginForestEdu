@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import adminforest.user.service.UserService;
 import adminforest.user.vo.UserVo;
+import cuda.web.define.Define;
 
 @Controller
 public class RegisterController {
@@ -27,7 +28,7 @@ public class RegisterController {
             user.setEnabled(true);
             userService.register(user);
             
-            return "redirect:/admin/register";
+            return Define.REDIRECT + "/admin/register";
         } catch (Exception e) {
         	
             model.addAttribute("error", "Registration failed");

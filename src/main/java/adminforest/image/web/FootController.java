@@ -9,48 +9,47 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import adminforest.define.AdminForest;
 import cuda.web.define.Define;
 import cuda.web.upload.vo.FileVo;
 import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
-import jakarta.servlet.http.HttpSession;
 
 @Controller
-public class FooterImageController {
+public class FootController {
 
 	private final ServletContext servletContext;
-	private static final String CONFIG_PATH = "config/footerImage.txt";
 
-	public FooterImageController(ServletContext servletContext) {
+	public FootController(ServletContext servletContext) {
 		this.servletContext = servletContext;
 	}
 
 	@GetMapping("/admin/footer-image")
-	public String showForm(Model model, HttpSession session) {
+	public String showForm(Model model) {
 		
-		List<FileVo> listFileVo = Util.getFiles(servletContext, "/upload-files/main");
+		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);
 		
 		if(listFileVo.size() > Define.COUNT_0)
-			model.addAttribute("listFileVo", listFileVo);
+			model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 		else
-			model.addAttribute("listFileVo");
+			model.addAttribute(AdminForest.LIST_FILE_VO);
 		
 		return "adminforest/footerImage";
 	}
 
 	@PostMapping("/admin/footer-image/upload")
-	public String upload(@RequestParam("files") List<MultipartFile> files, HttpSession session){
+	public String upload(@RequestParam("files") List<MultipartFile> files){
 		
-		Util.upload(files, servletContext, "/upload-files/main");
+		Util.upload(files, servletContext, AdminForest.UPLOAD_FOOTER);
 				
-		return "redirect:/admin/footer-image";
+		return Define.REDIRECT + "/admin/footer-image";
 	}
 	
 	@PostMapping("/admin/footer-image/delete")
-	public String delete(@RequestParam("filename") String fileanem, HttpSession session) {
+	public String delete(@RequestParam("filename") String fileanem) {
 		
-		Util.delete(servletContext, "/upload-files/main", fileanem);
+		Util.delete(servletContext, AdminForest.UPLOAD_FOOTER, fileanem);
 		
-		return "redirect:/admin/footer-image";
+		return Define.REDIRECT + "/admin/footer-image";
 	}
 }

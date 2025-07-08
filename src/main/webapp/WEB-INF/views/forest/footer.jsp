@@ -16,7 +16,7 @@
 <body class="main-body">
     <div class="container page">
         <header role="banner" aria-label="사이트 헤더">
-            <a href="<c:url value="/forest/main"/>" aria-label="메인 페이지로 이동">
+            <a href="<c:url value="/forest/footer"/>" aria-label="메인 페이지로 이동">
                 <img class="header__logo" src="<c:url value="/forest/assets/images/용인시_심볼 1.png"/>" alt="용인시 로고" />
                 <h1 class="header__title">용인산림교육센터</h1>
             </a>

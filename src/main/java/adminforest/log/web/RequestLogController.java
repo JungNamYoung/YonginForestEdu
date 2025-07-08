@@ -55,7 +55,7 @@ public class RequestLogController {
 	}
 
 	@GetMapping("/admin/logs")
-	public String list(@RequestParam(name = "from", required = false) String from, @RequestParam(name = "to", required = false) String to, Model model, HttpSession session) throws ParseException {
+	public String list(@RequestParam(name = "from", required = false) String from, @RequestParam(name = "to", required = false) String to, Model model) throws ParseException {
 
 		Date fromDate = from == null ? startOfDay(new Date(System.currentTimeMillis() - 7L * 24 * 3600 * 1000)) : parseStartOfDay(from);
 		Date toDate = to == null ? endOfDay(new Date()) : parseEndOfDay(to);

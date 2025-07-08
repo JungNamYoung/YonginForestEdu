@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="<c:url value='/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'/>">
 <link rel="stylesheet" href="<c:url value='/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css'/>">
 <link rel="stylesheet" href="<c:url value='/AdminLTE-3.2.0/dist/css/adminlte.min.css'/>">
+<link rel="stylesheet" href="<c:url value='/admin-forest/css/custom-admin.css'/>">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 	<div class="wrapper">
@@ -38,13 +40,17 @@
 								<p>Kiosk</p>
 						</a></li>
 						<li class="nav-item"><a href="<c:url value='/admin/images'/>" class="nav-link ${param.menu eq 'images' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>
-								<p>대기화면 관리</p>
+								<p>시작화면(가로형)</p>
 						</a></li>
+						<li class="nav-item"><a href="<c:url value='/admin/one-image'/>" class="nav-link ${param.menu eq 'one-image' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>
+								<p>시작화면(세로형)</p>
+						</a></li>
+						
 						<li class="nav-item"><a href="<c:url value='/admin/main-page'/>" class="nav-link ${param.menu eq 'mainPage' ? 'active' : '' }"> <i class="nav-icon fas fa-home"></i>
 								<p>시작화면 설정</p>
 						</a></li>
 						<li class="nav-item"><a href="<c:url value='/admin/footer-image'/>" class="nav-link ${param.menu eq 'footerImage' ? 'active' : ''}"> <i class="nav-icon fas fa-file-image"></i>
-								<p>footer 이미지 관리</p>
+								<p>footer 설정</p>
 						</a></li>
 						<li class="nav-item"><a href="<c:url value='/admin/logs'/>" class="nav-link ${param.menu eq 'logs' ? 'active' : ''}"> <i class="nav-icon fas fa-book"></i>
 								<p>로그</p>
