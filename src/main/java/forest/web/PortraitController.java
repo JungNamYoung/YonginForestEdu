@@ -13,18 +13,18 @@ import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
 
 @Controller
-public class EventController {
+public class PortraitController {
 	
 	private static ServletContext servletContext;
 	
-	public EventController(ServletContext servletContext) {
+	public PortraitController(ServletContext servletContext) {
 		this.servletContext = servletContext;
 	}
 
-	@GetMapping("/forest/event")
+	@GetMapping("/forest/portrait")
 	public String event(Model model) {
 		
-		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_ONE_IMAGE);
+		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
 		
 		if(listFileVo.size() > Define.COUNT_0) {
 			model.addAttribute("oneImagePath", listFileVo.get(Define.INDEX_0).getPath());
@@ -33,6 +33,6 @@ public class EventController {
 			model.addAttribute("oneImagePath");
 		}
 		
-		return "forest/event";
+		return "forest/portrait";
 	}
 }

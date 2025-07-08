@@ -357,10 +357,16 @@ body.dark-mode .touch-effect {
   transition: all 0.5s ease-in-out;
   color: #000000;
 }
+.intro__body .container main .intro__main--area .intro__main--swiper .swiper-controls .swiper-button-prev {
+  left: 0.260417vh;
+}
 .intro__body .container main .intro__main--area .intro__main--swiper .swiper-controls .swiper-button-prev::after {
   font-size: 1.041666vh;
   color: #F4F5F6;
   font-weight: 700;
+}
+.intro__body .container main .intro__main--area .intro__main--swiper .swiper-controls .swiper-button-next {
+  right: 0.260417vh;
 }
 .intro__body .container main .intro__main--area .intro__main--swiper .swiper-controls .swiper-button-next::after {
   font-size: 1.041666vh;
@@ -676,6 +682,7 @@ body.dark-mode .touch-effect {
   transition: all 0.5s ease-in-out; /* 부드러운 전환 효과 */
   opacity: 1; /* 기본 투명도 */
   transform: translateY(0); /* 기본 위치 */
+  overflow: hidden;
 }
 .main-body .container footer.moving-out {
   opacity: 0;
@@ -1385,6 +1392,7 @@ body.dark-mode .touch-effect {
   transition: all 0.5s ease-in-out; /* 부드러운 전환 효과 */
   opacity: 1; /* 기본 투명도 */
   transform: translateY(0); /* 기본 위치 */
+  overflow: hidden;
 }
 .sub-body .container footer.moving-out {
   opacity: 0;

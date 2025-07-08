@@ -12,21 +12,21 @@ import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
 
 @Controller
-public class IndexController {
+public class LandscapeController {
 
 	private final ServletContext servletContext;
 
-	public IndexController(ServletContext servletContext) {
+	public LandscapeController(ServletContext servletContext) {
 		this.servletContext = servletContext;
 	}
 
-	@GetMapping("/forest/index")
+	@GetMapping("/forest/landscape")
 	public String index(Model model) {
 		
-		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_INDEX);
+		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_LANDSCAPE);
 
 		model.addAttribute("images", listFileVo);
 
-		return "forest/index";
+		return "forest/landscape";
 	}
 }

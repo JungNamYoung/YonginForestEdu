@@ -102,7 +102,8 @@ class Treeview {
         return
       }
     }
-
+	
+    
     event.preventDefault()
 
     const parentLi = $relativeTarget.parents(SELECTOR_LI).first()

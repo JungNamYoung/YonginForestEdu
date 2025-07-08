@@ -1,1 +1,1 @@
-default.page=/forest/index
+default.page=/forest/landscape

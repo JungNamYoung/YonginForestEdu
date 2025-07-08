@@ -165,7 +165,6 @@
 @mixin footer {
     width: 100%;
     height: $length-1568;
-    background: url(/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
 
@@ -185,4 +184,5 @@
     .highScreenBtn-icon {
         display: none; /* 초기에는 높은 화면 아이콘 숨김 */
     }
+    overflow: hidden;
 }

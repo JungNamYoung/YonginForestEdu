@@ -166,10 +166,16 @@
   transition: all 0.5s ease-in-out;
   color: #000000;
 }
+.intro__body .container main .intro__main--area .intro__main--swiper .swiper-controls .swiper-button-prev {
+  left: 0.260417vh;
+}
 .intro__body .container main .intro__main--area .intro__main--swiper .swiper-controls .swiper-button-prev::after {
   font-size: 1.041666vh;
   color: #F4F5F6;
   font-weight: 700;
+}
+.intro__body .container main .intro__main--area .intro__main--swiper .swiper-controls .swiper-button-next {
+  right: 0.260417vh;
 }
 .intro__body .container main .intro__main--area .intro__main--swiper .swiper-controls .swiper-button-next::after {
   font-size: 1.041666vh;
@@ -191,6 +197,7 @@
   font-size: 1.5625vh;
   color: #F4F5F6;
   margin-top: 1.25vh;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=intro.css.map */

@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>용인산림교육센터</title>
+    <link rel="stylesheet" href="<c:url value="/forest/css/swiper-bundle.min.css"/>">
     <link rel="stylesheet" href="<c:url value="/forest/css/style.css"/>">
 </head>
 <body class="sub-body">
@@ -156,13 +157,18 @@
                 <span class="lowScreenBtn-label">화면 높이 조절</span>
             </button>
         </aside>
-        <footer id="footer" role="contentinfo">
-<%--         <img class="footer-bg" src="<c:url value='/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg'/>" alt=""> --%>
-			<img class="footer-bg" src="${footerImgPath}" alt="">
+        <footer id="footer">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+		 <div class="swiper-slide">	<img class="footer-bg" src="${footerImgPath}" alt=""></div>
+                </div>
+            </div>
         </footer>
     </div>
     <audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/1.출생신고_13s.mp3"/>" aria-label="사이트 음성 안내" controls hidden></audio> 
 
+    <script src="<c:url value="/forest/js/swiper-bundle.min.js"/>"></script>
+    <script src="<c:url value="/forest/js/footer-swiper.js"/>"></script>
     <script src="<c:url value="/forest/js/script.js"/>"></script>
     <script src="<c:url value="/forest/js/sub-page.js"/>"></script>
 
@@ -387,7 +393,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace("<c:url value="/forest/footer"/>");
+                location.replace("<c:url value="/forest/main"/>");
             }, 500); // 0.5초
         });
 

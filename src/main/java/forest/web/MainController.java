@@ -14,15 +14,15 @@ import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
 
 @Controller
-public class FooterController {
+public class MainController {
 	
 	private static ServletContext servletContext;
 	
-	public FooterController(ServletContext servletContext) {
+	public MainController(ServletContext servletContext) {
 		this.servletContext = servletContext;
 	}
 
-	@GetMapping("/forest/footer")
+	@GetMapping("/forest/main")
 	public String main(Model model) {
 		
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
@@ -32,7 +32,7 @@ public class FooterController {
 		else
 			model.addAttribute("footerImgPath");
 		
-		return "forest/footer";
+		return "forest/main";
 	}
 
 }

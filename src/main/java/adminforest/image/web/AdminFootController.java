@@ -16,11 +16,11 @@ import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
 
 @Controller
-public class FootController {
+public class AdminFootController {
 
 	private final ServletContext servletContext;
 
-	public FootController(ServletContext servletContext) {
+	public AdminFootController(ServletContext servletContext) {
 		this.servletContext = servletContext;
 	}
 

@@ -16,18 +16,18 @@ import cuda.web.util.Util;
 import jakarta.servlet.ServletContext;
 
 @Controller
-public class LandscapeController {
+public class AdminLandscapeController {
 
 	private final ServletContext servletContext;
 
-	public LandscapeController(ServletContext servletContext) {
+	public AdminLandscapeController(ServletContext servletContext) {
 		this.servletContext = servletContext;
 	}
 
 	@GetMapping("/admin/landscape")
 	public String listlistFileVo(Model model) {
 
-		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_INDEX);
+		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_LANDSCAPE);
 		
 		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 		
@@ -37,7 +37,7 @@ public class LandscapeController {
 	@PostMapping("/admin/landscape/upload")
 	public String uploadlistFileVo(@RequestParam("files") List<MultipartFile> files){
 
-		Util.upload(files, servletContext, AdminForest.UPLOAD_INDEX);
+		Util.upload(files, servletContext, AdminForest.UPLOAD_LANDSCAPE);
 				
 		return Define.REDIRECT + "/admin/landscape";
 	}
@@ -45,7 +45,7 @@ public class LandscapeController {
 	@PostMapping("/admin/landscape/delete")
 	public String deleteImage(@RequestParam("filename") String filename) {
 				
-		Util.delete(servletContext, AdminForest.UPLOAD_INDEX, filename);
+		Util.delete(servletContext, AdminForest.UPLOAD_LANDSCAPE, filename);
 		
 		return Define.REDIRECT + "/admin/landscape";
 	}

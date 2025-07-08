@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import adminforest.setting.service.SettingService;
+import cuda.web.define.Define;
 
 @Controller
 public class HomeController {
@@ -16,6 +17,6 @@ public class HomeController {
 	@GetMapping("/forest/home")
 	public String home() {
 		String page = settingService.getDefaultPage();
-		return "redirect:" + page;
+		return Define.REDIRECT+ page;
 	}
 }

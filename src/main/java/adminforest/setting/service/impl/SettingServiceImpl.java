@@ -25,7 +25,7 @@ public class SettingServiceImpl implements SettingService {
 			return page;
 		}
 		
-		return "/forest/index";
+		return "/forest/landscape";
 	}
 
 	@Override

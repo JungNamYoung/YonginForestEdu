@@ -589,6 +589,10 @@ public class Util {
 		
 		List<FileVo> results = new ArrayList<>();
 		
+		if(images == null) {
+			return results;
+		}
+		
 		for(String image : images) {
 			
 			FileVo fileVo  = new FileVo();

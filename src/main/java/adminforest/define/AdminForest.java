@@ -10,8 +10,8 @@ public class AdminForest {
 	public static String LIST_FILE_VO="listFileVo";
 	
 	// domain
-	public static String UPLOAD_INDEX = "/upload-files/image-landscape";
+	public static String UPLOAD_LANDSCAPE = "/upload-files/image-landscape";
 	public static String UPLOAD_FOOTER= "/upload-files/image-footer";
-	public static String UPLOAD_ONE_IMAGE = "/upload-files/image-one";
+	public static String UPLOAD_PORTRAIT = "/upload-files/image-portrait";
 	
 }
