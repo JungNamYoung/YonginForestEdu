@@ -56,7 +56,7 @@
 								<p>로그</p>
 						</a></li>
 						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}">
-							<a href="<c:url value='/admin/users'/>" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
+							<a href="#" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
 								<p>
 									Users <i class="right fas fa-angle-left"></i>
 								</p>
