@@ -145,14 +145,18 @@
                 <span class="lowScreenBtn-label">화면 높이 조절</span>
             </button>
         </aside>
-        <footer id="footer">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-        	<div class="swiper-slide"><img class="footer-bg" src="${footerImgPath}" alt=""></div>
-                </div>
-            </div>
-        </footer>
-    </div>
+		<footer id="footer">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<c:forEach var="img" items="${images}">
+						<div class="swiper-slide">
+							<img class="footer-bg" src="${img.getPath()}" alt="${img.getFilename()}">
+						</div>
+					</c:forEach>
+				</div>
+			</div>
+		</footer>
+	</div>
     <audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/1.출생신고_13s.mp3"/>" aria-label="사이트 음성 안내"></audio> 
 
     <script src="<c:url value="/forest/js/swiper-bundle.min.js"/>"></script>

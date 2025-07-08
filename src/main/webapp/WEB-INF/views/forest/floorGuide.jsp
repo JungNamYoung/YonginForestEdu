@@ -123,9 +123,11 @@
 		<footer id="footer" role="contentinfo">
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img class="footer-bg" src="${footerImgPath}" alt="">
-					</div>
+					<c:forEach var="img" items="${images}">
+						<div class="swiper-slide">
+							<img class="footer-bg" src="${img.getPath()}" alt="${img.getFilename()}">
+						</div>
+					</c:forEach>
 				</div>
 			</div>
 		</footer>

@@ -25,7 +25,7 @@ public class LandscapeController {
 		
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_LANDSCAPE);
 
-		model.addAttribute("images", listFileVo);
+		model.addAttribute(AdminForest.IMAGES, listFileVo);
 
 		return "forest/landscape";
 	}

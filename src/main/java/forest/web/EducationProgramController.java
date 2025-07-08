@@ -25,10 +25,7 @@ public class EducationProgramController {
 	public String educationProgram(Model model) {
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
 		
-		if(listFileVo.size() > 0)		
-			model.addAttribute("footerImgPath", listFileVo.get(Define.INDEX_0).getPath());
-		else
-			model.addAttribute("footerImgPath");
+		model.addAttribute(AdminForest.IMAGES, listFileVo);
 		
 		return "forest/educationProgram";
 	}

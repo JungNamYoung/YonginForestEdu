@@ -104,7 +104,7 @@ class Treeview {
     }
 	
     
-    event.preventDefault()
+//    event.preventDefault()
 
     const parentLi = $relativeTarget.parents(SELECTOR_LI).first()
     const isOpen = parentLi.hasClass(CLASS_NAME_OPEN)

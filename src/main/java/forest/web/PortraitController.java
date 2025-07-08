@@ -27,7 +27,7 @@ public class PortraitController {
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
 		
 		if(listFileVo.size() > Define.COUNT_0) {
-			model.addAttribute("oneImagePath", listFileVo.get(Define.INDEX_0).getPath());
+			model.addAttribute("oneImagePath", listFileVo);
 		}
 		else {
 			model.addAttribute("oneImagePath");
