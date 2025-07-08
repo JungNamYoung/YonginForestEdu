@@ -40,6 +40,9 @@
 						<li class="nav-item"><a href="<c:url value='/admin/images'/>" class="nav-link ${param.menu eq 'images' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>
 								<p>대기화면 관리</p>
 						</a></li>
+						<li class="nav-item"><a href="<c:url value='/admin/main-page'/>" class="nav-link ${param.menu eq 'mainPage' ? 'active' : '' }"> <i class="nav-icon fas fa-home"></i>
+								<p>시작화면 설정</p>
+						</a></li>
 						<li class="nav-item"><a href="<c:url value='/admin/footer-image'/>" class="nav-link ${param.menu eq 'footerImage' ? 'active' : ''}"> <i class="nav-icon fas fa-file-image"></i>
 								<p>footer 이미지 관리</p>
 						</a></li>

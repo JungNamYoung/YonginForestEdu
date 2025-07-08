@@ -8,10 +8,13 @@ import cuda.web.define.Define;
 
 public class TokenEx {
 
-	Map<String, String> map = new HashMap<>();
+	private Map<String, String> map = new HashMap<>();
+	
+	private String path;
 
 	public TokenEx(String path) {
 
+		this.path = path;
 		FileEx.exist(path);
 
 		ArrayList<String> list = FileEx.readEx(path, false);

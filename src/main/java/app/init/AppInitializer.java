@@ -2,6 +2,7 @@ package app.init;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import adminforest.define.AdminForest;
 import app.config.AppConfig;
 import cuda.web.util.TokenEx;
 import cuda.web.util.Util;
@@ -27,9 +28,9 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	@Override
 	protected void customizeRegistration(ServletRegistration.Dynamic registration) {
 		
-		TokenEx tokenEx = new TokenEx(Util.dirClass("config/config.txt"));
+		TokenEx tokenEx = new TokenEx(Util.dirResources(AdminForest.CONFIG_TXT));
 		
-		MultipartConfigElement multipartConfig = new MultipartConfigElement(tokenEx.get("upload.temp.dir"));
+		MultipartConfigElement multipartConfig = new MultipartConfigElement(tokenEx.get(AdminForest.UPLOAD_DIR));
 		
 		registration.setMultipartConfig(multipartConfig);
 	}

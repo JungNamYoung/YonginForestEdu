@@ -27,11 +27,17 @@ public class FileEx {
 		filePath = str;
 	}
 
-	public static void writeFile(String fileName, List<String> list) {
+	public static void writeFile(String filePath, List<String> list) {
+		
+		File parent = new File(filePath).getParentFile();
+		
+		if (!parent.exists()) {
+			parent.mkdirs();
+		}
 		
 		FileWriter fw = null;
 		try {
-			fw = new FileWriter(fileName, false);
+			fw = new FileWriter(filePath, false);
 			BufferedWriter bw = new BufferedWriter(fw);
 			
 			for(String str : list) {

@@ -434,7 +434,7 @@ public class Util {
 	// 서버 컴퓨터로 기준으로 전체 경로 얻기
 	// resource 경로에서 시작
 	// 예) dirResEx("komoran/userDic.txt")
-	public static String dirClass(String fileName) {
+	public static String dirResources(String fileName) {
 
 		ClassPathResource classPathResource = new ClassPathResource(fileName);
 
