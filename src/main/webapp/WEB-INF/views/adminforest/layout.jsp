@@ -55,11 +55,12 @@
 						<li class="nav-item"><a href="<c:url value='/admin/logs'/>" class="nav-link ${param.menu eq 'logs' ? 'active' : ''}"> <i class="nav-icon fas fa-book"></i>
 								<p>로그</p>
 						</a></li>
-						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}"><a href="#" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
+						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}">
+							<a href="<c:url value='/admin/users'/>" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
 								<p>
 									Users <i class="right fas fa-angle-left"></i>
 								</p>
-						</a>
+							</a>
 							<ul class="nav nav-treeview">
 								<li class="nav-item"><a href="<c:url value='/admin/users'/>" class="nav-link ${param.submenu eq 'userList' ? 'active': ''}"> <i class="far fa-circle nav-icon"></i>
 										<p>사용자 조회</p>
@@ -67,7 +68,8 @@
 								<li class="nav-item"><a href="<c:url value='/admin/register'/>" class="nav-link ${param.submenu eq 'register' ? 'active':''}"> <i class="far fa-circle nav-icon"></i>
 										<p>사용자 등록</p>
 								</a></li>
-							</ul></li>
+							</ul>
+						</li>
 					</ul>
 				</nav>
 			</div>
