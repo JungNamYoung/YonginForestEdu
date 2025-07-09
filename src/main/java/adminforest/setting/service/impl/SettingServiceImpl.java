@@ -1,40 +1,56 @@
 package adminforest.setting.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import adminforest.define.AdminForest;
 import adminforest.setting.service.SettingService;
-import cuda.web.util.FileEx;
-import cuda.web.util.TokenEx;
-import cuda.web.util.Util;
 
 @Service("settingService")
 public class SettingServiceImpl implements SettingService {
 
+	@Autowired
+	SqlSessionTemplate sqlSessionTemplate;
+
+	@Override
+	public String getValue(String key) {
+		return sqlSessionTemplate.selectOne("selectSetting", key);
+	}
+
+	@Override
+	public void setValue(String key, String value) {
+		Map<String, Object> param = new HashMap<>();
+		param.put("settingKey", key);
+		param.put("settingValue", value);
+		int updated = sqlSessionTemplate.update("updateSetting", param);
+		if (updated == 0) {
+			sqlSessionTemplate.insert("insertSetting", param);
+		}
+	}
+
 	@Override
 	public String getDefaultPage() {
-				
-		TokenEx tokenEx = new TokenEx(AdminForest.DEFAUT_PAGE_FILE);		
-		
-		String page = tokenEx.get(AdminForest.DEFAUT_PAGE);
-		
-		if (page.length() > 0) {
-			return page;
-		}
-		
-		return "/forest/landscape";
+		String page = getValue(AdminForest.DEFAUT_PAGE);
+		return (page != null && page.length() > 0) ? page : "/forest/landscape";
 	}
 
 	@Override
 	public void setDefaultPage(String page) {
-		String path = Util.dirResources(AdminForest.DEFAUT_PAGE_FILE);
+		setValue(AdminForest.DEFAUT_PAGE, page);
+	}
 
-		List<String> list = new ArrayList<>();
-		list.add(AdminForest.DEFAUT_PAGE + "=" + page);
-		
-		FileEx.writeFile(path, list);
+	@Override
+	public String getLandscapeType() {
+		String type = getValue(AdminForest.IMAGES);
+		return (type != null && !type.isBlank()) ? type : "images-rolling";
+	}
+
+	@Override
+	public void setLandscapeType(String type) {
+		setValue(AdminForest.IMAGES, type);
 	}
 }

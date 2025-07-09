@@ -29,7 +29,7 @@
 		</div>
 
 		<div class="card">
-			<div class="card-header">이미지 설정</div>
+			<div class="card-header bg-light">이미지 설정</div>
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/landscape-image'/>">
 					<div class="form-check">
@@ -44,7 +44,7 @@
 		</div>
 
 		<div class="card">
-			<div class="card-header">이미지 롤링</div>
+			<div class="card-header bg-light">이미지 롤링</div>
 			<div class="card-body">
 				<div class="row">
 					<c:forEach var="fileVo" items="${listFileVo}">
@@ -61,7 +61,7 @@
 		</div>
 
 		<div class="card">
-			<div class="card-header">이미지 고정형</div>
+			<div class="card-header bg-light">이미지 고정형</div>
 			<div class="card-body">
 				<div class="row">
 					<c:forEach var="fileVo" items="${listPortraitFileVo}">

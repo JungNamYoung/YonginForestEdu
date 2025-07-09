@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SettingMapper">
+	<select id="selectSetting" parameterType="string" resultType="string">
+		SELECT setting_value FROM setting WHERE setting_key = #{settingKey}
+	</select>
+
+	<insert id="insertSetting" parameterType="map">
+		INSERT INTO setting(
+		setting_key,
+		setting_value
+		) VALUES (
+		#{settingKey},
+		#{settingValue}
+		)
+	</insert>
+
+	<update id="updateSetting" parameterType="map">
+		UPDATE setting SET
+		setting_value = #{settingValue}
+		WHERE setting_key = #{settingKey}
+	</update>
+</mapper>

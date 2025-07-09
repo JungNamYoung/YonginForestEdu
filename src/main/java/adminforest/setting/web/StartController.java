@@ -28,24 +28,31 @@ public class StartController {
 
 	@GetMapping("/admin/start-page")
 	public String showForm(Model model) {
-		
+
 		model.addAttribute("startPage", settingService.getDefaultPage());
-		
+		model.addAttribute("landScapeImages", settingService.getLandscapeType());
+
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_LANDSCAPE);
-		
+
 		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
-		
+
 		listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
 		model.addAttribute(AdminForest.PORTRAIT_FILE_VO, listFileVo);
-		
+
 		return "adminforest/startPage";
 	}
 
 	@PostMapping("/admin/start-page")
 	public String update(@RequestParam("page") String page) {
-		
+
 		settingService.setDefaultPage(page);
-		
+
+		return Define.REDIRECT + "/admin/start-page";
+	}
+
+	@PostMapping("/admin/landscape-image")
+	public String updateImageType(@RequestParam("landScapeImages") String type) {
+		settingService.setLandscapeType(type);
 		return Define.REDIRECT + "/admin/start-page";
 	}
 }
