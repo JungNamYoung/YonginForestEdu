@@ -14,25 +14,20 @@ import jakarta.servlet.ServletContext;
 
 @Controller
 public class PortraitController {
-	
+
 	private static ServletContext servletContext;
-	
+
 	public PortraitController(ServletContext servletContext) {
 		this.servletContext = servletContext;
 	}
 
 	@GetMapping("/forest/portrait")
 	public String event(Model model) {
-		
+
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
-		
-//		if(listFileVo.size() > Define.COUNT_0) {
-			model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
-//		}
-//		else {
-//			model.addAttribute("oneImagePath");
-//		}
-		
+
+		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
+
 		return "forest/portrait";
 	}
 }

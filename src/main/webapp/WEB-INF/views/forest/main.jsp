@@ -366,7 +366,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace("<c:url value="/forest/centerIntro"/>");
+                location.replace("<c:url value="/forest/center-intro"/>");
             }, 500); // 0.5초
         }
 
@@ -376,7 +376,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace("<c:url value="/forest/educationProgram"/>");
+                location.replace("<c:url value="/forest/education-program"/>");
             }, 500); // 0.5초
         }
 
@@ -386,7 +386,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace("<c:url value="/forest/facilityGuide"/>");
+                location.replace("<c:url value="/forest/facility-guide"/>");
             }, 500); // 0.5초
         }
 
@@ -396,7 +396,7 @@
             page.classList.add("fade-out");
 
             setTimeout(function () {
-                location.replace("<c:url value="/forest/floorGuide"/>");
+                location.replace("<c:url value="/forest/floor-guide"/>");
             }, 500); // 0.5초
         }
     </script>

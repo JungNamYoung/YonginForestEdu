@@ -21,7 +21,7 @@ public class CenterIntroController {
 		this.servletContext = servletContext; 
 	}
 	
-	@GetMapping("/forest/centerIntro")
+	@GetMapping("/forest/center-intro")
 	public String centerIntro(Model model) {
 		
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		

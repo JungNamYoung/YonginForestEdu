@@ -21,7 +21,7 @@ public class EducationProgramController {
 		this.servletContext = servletContext; 
 	}
 	
-	@GetMapping("/forest/educationProgram")
+	@GetMapping("/forest/education-program")
 	public String educationProgram(Model model) {
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
 		

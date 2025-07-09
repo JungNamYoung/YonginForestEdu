@@ -12,9 +12,9 @@
 </div>
 <section class="content">
 	<div class="container-fluid">
-		<div class="card">
+		<div class="card d-none">
 			<div class="card-body">
-				<form method="post" action="<c:url value='/admin/startPage'/>">
+				<form method="post" action="<c:url value='/admin/start-page'/>">
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="page" id="pageIndex" value="/forest/landscape" ${startPage == '/forest/landscape' ? 'checked' : ''}> 
 						<label class="form-check-label" for="pageIndex">가로형(여러 이미지 롤링)</label>

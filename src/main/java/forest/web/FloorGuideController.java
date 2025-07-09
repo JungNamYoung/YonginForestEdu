@@ -21,7 +21,7 @@ public class FloorGuideController {
 		this.servletContext = servletContext; 
 	}
 	
-	@GetMapping("/forest/floorGuide")
+	@GetMapping("/forest/floor-guide")
 	public String floorGuide(Model model) {
 		List<FileVo> listFileVo= Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
 		

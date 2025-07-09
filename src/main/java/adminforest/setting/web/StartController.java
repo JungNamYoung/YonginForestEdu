@@ -26,7 +26,7 @@ public class StartController {
 		this.servletContext = servletContext;
 	}
 
-	@GetMapping("/admin/startPage")
+	@GetMapping("/admin/start-page")
 	public String showForm(Model model) {
 		
 		model.addAttribute("startPage", settingService.getDefaultPage());
@@ -41,9 +41,11 @@ public class StartController {
 		return "adminforest/startPage";
 	}
 
-	@PostMapping("/admin/startPage")
+	@PostMapping("/admin/start-page")
 	public String update(@RequestParam("page") String page) {
+		
 		settingService.setDefaultPage(page);
-		return Define.REDIRECT + "/admin/startPage";
+		
+		return Define.REDIRECT + "/admin/start-page";
 	}
 }
