@@ -1,4 +1,4 @@
-package adminforest.dashboard.web;
+package adminforest.menu.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +11,6 @@ public class DashBoardController {
 
 	@GetMapping("/admin/dashboard")
 	public String dashBoard(Model model) {
-		return "adminforest/dashBoard";
+		return "adminforest/dashboard";
 	}
 }

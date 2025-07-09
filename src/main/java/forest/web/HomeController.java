@@ -3,7 +3,7 @@ package forest.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import adminforest.setting.service.SettingService;
+import adminforest.menu.service.SettingService;
 import cuda.web.define.Define;
 
 @Controller

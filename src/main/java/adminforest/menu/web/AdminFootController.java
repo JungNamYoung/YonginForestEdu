@@ -1,4 +1,4 @@
-package adminforest.image.web;
+package adminforest.menu.web;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ public class AdminFootController {
 
 		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 
-		return "adminforest/footerImage";
+		return "adminforest/footer-image";
 	}
 
 	@PostMapping("/admin/footer-image/upload")

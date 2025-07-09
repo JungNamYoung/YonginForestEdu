@@ -66,7 +66,7 @@ public class RequestLogController {
 		model.addAttribute("from", new SimpleDateFormat(Define.YMD).format(fromDate));
 		model.addAttribute("to", new SimpleDateFormat(Define.YMD).format(toDate));
 
-		return "adminforest/requestLog";
+		return "adminforest/request-log";
 	}
 
 	@GetMapping("/admin/logs/excel")

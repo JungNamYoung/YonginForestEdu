@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import adminforest.define.AdminForest;
-import adminforest.setting.service.SettingService;
+import adminforest.menu.service.SettingService;
 import cuda.web.define.Define;
 import cuda.web.upload.vo.FileVo;
 import cuda.web.util.Util;
@@ -38,8 +38,6 @@ public class LandscapeController {
 		else {
 			Util.error(Define.ERR_CONDITION);
 		}
-		
-		
 
 		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);		
 				

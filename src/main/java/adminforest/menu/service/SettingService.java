@@ -1,4 +1,4 @@
-package adminforest.setting.service;
+package adminforest.menu.service;
 
 public interface SettingService {
 	String getValue(String key);

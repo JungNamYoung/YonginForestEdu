@@ -1,4 +1,4 @@
-package adminforest.setting.web;
+package adminforest.menu.web;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import adminforest.define.AdminForest;
-import adminforest.setting.service.SettingService;
+import adminforest.menu.service.SettingService;
 import cuda.web.define.Define;
 import cuda.web.upload.vo.FileVo;
 import cuda.web.util.Util;
@@ -37,9 +37,9 @@ public class StartController {
 		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 
 		listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
-		model.addAttribute(AdminForest.PORTRAIT_FILE_VO, listFileVo);
+		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 
-		return "adminforest/startPage";
+		return "adminforest/start-page";
 	}
 
 	@PostMapping("/admin/start-page")

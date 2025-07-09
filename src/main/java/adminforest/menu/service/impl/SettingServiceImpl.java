@@ -1,4 +1,4 @@
-package adminforest.setting.service.impl;
+package adminforest.menu.service.impl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import adminforest.define.AdminForest;
-import adminforest.setting.service.SettingService;
+import adminforest.menu.service.SettingService;
 
 @Service("settingService")
 public class SettingServiceImpl implements SettingService {

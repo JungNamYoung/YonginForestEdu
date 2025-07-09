@@ -1,4 +1,4 @@
-package adminforest.image.web;
+package adminforest.menu.web;
 
 import java.util.List;
 

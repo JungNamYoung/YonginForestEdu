@@ -46,8 +46,7 @@
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/landscape/images-rolling'/>" enctype="multipart/form-data">
 					<div class="form-group">
-						<label for="files"> 이미지 파일 선택</label> 
-						<input type="file" name="files" id="files" multiple class="form-control-file" />
+						<label for="files"> 이미지 파일 선택</label> <input type="file" name="files" id="files" multiple class="form-control-file" />
 					</div>
 					<button type="submit" class="btn btn-primary">업로드</button>
 				</form>
@@ -71,10 +70,12 @@
 		<div class="card">
 			<div class="card-header bg-info">이미지 고정형</div>
 			<div class="card-body">
+				<c:if test="${not empty errorFixed}">
+					<div class="alert alert-danger" role="alert">${errorFixed}</div>
+				</c:if>
 				<form method="post" action="<c:url value='/admin/landscape/image-fixed'/>" enctype="multipart/form-data">
 					<div class="form-group">
-						<label for="files"> 이미지 파일 선택</label> 
-						<input type="file" name="files" id="files" multiple class="form-control-file" />
+						<label for="files"> 이미지 파일 선택</label> <input type="file" name="files" id="files" multiple class="form-control-file" />
 					</div>
 					<button type="submit" class="btn btn-primary">업로드</button>
 				</form>
@@ -82,7 +83,7 @@
 			<h5 class="card-title mt-4 mb-2 border-top pb-2">업로드된 이미지</h5>
 			<div class="card-body">
 				<div class="row">
-					<c:forEach var="fileVo" items="${listPortraitFileVo}">
+					<c:forEach var="fileVo" items="${listFileVo}">
 						<div class="col-md-3 text-center mb-4">
 							<img class="img-fluid" src="${fileVo.getFilePath()}" alt="${fileVo.getFileName()}" />
 							<form method="post" action="<c:url value='/admin/landscape/image-fixed/delete'/>" class="mt-2">
