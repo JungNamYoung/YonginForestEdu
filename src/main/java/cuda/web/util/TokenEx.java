@@ -10,13 +10,14 @@ public class TokenEx {
 
 	private Map<String, String> map = new HashMap<>();
 	
-	private String path;
+//	private String path;
 
 	// path : "config/config.txt"
 	public TokenEx(String path) {
 		path = Util.dirResources(path);
 		
-		this.path = path;
+//		this.path = path;
+		
 		FileEx.exist(path);
 
 		ArrayList<String> list = FileEx.readEx(path, false);
