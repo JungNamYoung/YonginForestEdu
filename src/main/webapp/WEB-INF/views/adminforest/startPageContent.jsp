@@ -12,7 +12,7 @@
 </div>
 <section class="content">
 	<div class="container-fluid">
-		<div class="card d-none">
+		<div class="card">
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/start-page'/>">
 					<div class="form-check">
