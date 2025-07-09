@@ -50,18 +50,14 @@
 								<p>시작화면 설정</p>
 						</a></li>
 						
-						<li class="nav-item"><a href="<c:url value='/admin/main-page-ex'/>" class="nav-link ${param.menu eq 'mainPageEx' ? 'active' : ''}"> <i class="nav-icon fas fa-cubes"></i>
-						 	<p>시작화면 설정 ex</p>
-						</a>
-						</li>
 						<li class="nav-item"><a href="<c:url value='/admin/footer-image'/>" class="nav-link ${param.menu eq 'footerImage' ? 'active' : ''}"> <i class="nav-icon fas fa-file-image"></i>
 								<p>footer 설정</p>
 						</a></li>
 						<li class="nav-item"><a href="<c:url value='/admin/logs'/>" class="nav-link ${param.menu eq 'logs' ? 'active' : ''}"> <i class="nav-icon fas fa-book"></i>
 								<p>로그</p>
 						</a></li>
-						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}" onclick="location.href=<c:url value='/admin/users/'/>">
-							<a class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
+						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}" >
+							<a href="<c:url value='/admin/users'/>" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
 								<p>
 									Users <i class="right fas fa-angle-left"></i>
 								</p>
@@ -91,6 +87,7 @@
 	</div>
 	<script src="<c:url value='/AdminLTE-3.2.0/plugins/jquery/jquery.min.js'/>"></script>
 	<script src="<c:url value='/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js'/>"></script>
-	<script src="<c:url value='/AdminLTE-3.2.0/dist/js/adminlte.min.js'/>"></script>
+<%-- 	<script src="<c:url value='/AdminLTE-3.2.0/dist/js/adminlte.min.js'/>"></script> --%>
+	<script src="<c:url value='/AdminLTE-3.2.0-custom/js/adminlte.min.js'/>"></script>
 </body>
 </html>
