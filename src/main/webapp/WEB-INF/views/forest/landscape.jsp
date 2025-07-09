@@ -26,7 +26,7 @@
 		<main role="main">
 			<section class="intro__main--area">
 				<div class="swiper mySwiper intro__main--swiper" role="region" aria-label="용인산림교육센터 홍보 슬라이드" aria-live="polite">
-					<div class="swiper-wrapper">
+					<div class="swiper-wrapper" style="object-fit:contain;">
 						<c:forEach var="img" items="${images}">
 							<div class="swiper-slide">
 								<img src="${img.getFilePath()}" alt="${img.getFileName()}">
