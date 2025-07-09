@@ -29,11 +29,7 @@ public class AdminPortraitController {
 		
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
 		
-		if(listFileVo.size() > Define.COUNT_0) {
-			model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
-		}
-		else
-			model.addAttribute(AdminForest.LIST_FILE_VO);
+		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 		
 		return "adminforest/portrait";
 	}

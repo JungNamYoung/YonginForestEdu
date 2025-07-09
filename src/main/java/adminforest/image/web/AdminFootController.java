@@ -29,10 +29,10 @@ public class AdminFootController {
 		
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);
 		
-		if(listFileVo.size() > Define.COUNT_0)
+//		if(listFileVo.size() > Define.COUNT_0)
 			model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
-		else
-			model.addAttribute(AdminForest.LIST_FILE_VO);
+//		else
+//			model.addAttribute(AdminForest.LIST_FILE_VO);
 		
 		return "adminforest/footerImage";
 	}

@@ -46,17 +46,22 @@
 								<p>시작화면(세로형)</p>
 						</a></li>
 						
-						<li class="nav-item"><a href="<c:url value='/admin/main-page'/>" class="nav-link ${param.menu eq 'mainPage' ? 'active' : '' }"> <i class="nav-icon fas fa-home"></i>
+						<li class="nav-item"><a href="<c:url value='/admin/startPage'/>" class="nav-link ${param.menu eq 'startPage' ? 'active' : '' }"> <i class="nav-icon fas fa-home"></i>
 								<p>시작화면 설정</p>
 						</a></li>
+						
+						<li class="nav-item"><a href="<c:url value='/admin/main-page-ex'/>" class="nav-link ${param.menu eq 'mainPageEx' ? 'active' : ''}"> <i class="nav-icon fas fa-cubes"></i>
+						 	<p>시작화면 설정 ex</p>
+						</a>
+						</li>
 						<li class="nav-item"><a href="<c:url value='/admin/footer-image'/>" class="nav-link ${param.menu eq 'footerImage' ? 'active' : ''}"> <i class="nav-icon fas fa-file-image"></i>
 								<p>footer 설정</p>
 						</a></li>
 						<li class="nav-item"><a href="<c:url value='/admin/logs'/>" class="nav-link ${param.menu eq 'logs' ? 'active' : ''}"> <i class="nav-icon fas fa-book"></i>
 								<p>로그</p>
 						</a></li>
-						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}">
-							<a href="#" class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
+						<li class="nav-item has-treeview ${param.menu eq 'users' ? 'menu-open' : ''}" onclick="location.href=<c:url value='/admin/users/'/>">
+							<a class="nav-link ${param.menu eq 'users' ? 'active': ''}"> <i class="nav-icon fas fa-users"></i>
 								<p>
 									Users <i class="right fas fa-angle-left"></i>
 								</p>
@@ -68,8 +73,7 @@
 								<li class="nav-item"><a href="<c:url value='/admin/register'/>" class="nav-link ${param.submenu eq 'register' ? 'active':''}"> <i class="far fa-circle nav-icon"></i>
 										<p>사용자 등록</p>
 								</a></li>
-							</ul>
-						</li>
+							</ul></li>
 					</ul>
 				</nav>
 			</div>

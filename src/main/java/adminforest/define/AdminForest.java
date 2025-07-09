@@ -15,4 +15,6 @@ public class AdminForest {
 	public static String UPLOAD_FOOTER= "/upload-files/image-footer";
 	public static String UPLOAD_PORTRAIT = "/upload-files/image-portrait";
 	
+	public static String PORTRAIT_FILE_VO = "listPortraitFileVo";
+	
 }

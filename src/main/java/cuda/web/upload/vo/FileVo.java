@@ -2,22 +2,22 @@ package cuda.web.upload.vo;
 
 public class FileVo {
 
-	String path;
-	String filename;
+	String filePath;
+	String fileName;
 	
-	public void setPath(String path) {
-		this.path = path;
+	public void setFilePath(String path) {
+		this.filePath = path;
 	}
 
-	public void setFilename(String filename) {
-		this.filename = filename;
+	public void setFileName(String filename) {
+		this.fileName = filename;
 	}
 
-	public String getPath() {
-		return path;
+	public String getFilePath() {
+		return filePath;
 	}
 
-	public String getFilename() {
-		return  filename;
+	public String getFileName() {
+		return  fileName;
 	}
 }

@@ -25,11 +25,11 @@
 			</div>
 		</div>
 		<div class="row">
-			<c:forEach var="img" items="${listFileVo}">
+			<c:forEach var="fileVo" items="${listFileVo}">
 				<div class="col-md-3 text-center mb-4">
-					<img class="img-fluid" src="${img.getPath()}" alt="${img.getFilename()}" />
+					<img class="img-fluid" src="${fileVo.getFilePath()}" alt="${fileVo.getFileName()}" />
 					<form method="post" action="<c:url value='/admin/portrait/delete'/>" class="mt-2">
-						<input type="hidden" name="filename" value="${img.getFilename()}" />
+						<input type="hidden" name="filename" value="${fileVo.getFileName()}" />
 						<button type="submit" class="btn btn-danger btn-sm">삭제</button>
 					</form>
 				</div>

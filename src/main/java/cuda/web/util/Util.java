@@ -596,8 +596,8 @@ public class Util {
 		for(String image : images) {
 			
 			FileVo fileVo  = new FileVo();
-			fileVo.setPath(servletContext.getContextPath() + dirEx + Define.SLASH +image);
-			fileVo.setFilename(image);
+			fileVo.setFilePath(servletContext.getContextPath() + dirEx + Define.SLASH +image);
+			fileVo.setFileName(image);
 			
 			//results.add(servletContext.getContextPath() + dirEx + Define.SLASH +image);
 			results.add(fileVo);

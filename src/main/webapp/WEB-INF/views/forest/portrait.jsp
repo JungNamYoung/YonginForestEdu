@@ -9,8 +9,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 <title>용인산림교육센터</title>
-<%-- <link rel="stylesheet" href="<c:url value="/forest/css/swiper-bundle.min.css"/>"> --%>
-<%-- <link rel="stylesheet" href="<c:url value="/forest/css/style.css"/>"> --%>
 </head>
 
 <body class="intro__body">
@@ -25,7 +23,9 @@
 			</div>
 		</header>
 		<main role="main">
-			<img src="${oneImagePath}"/>
+			<c:forEach var ="fileVo" items="${listFileVo}">
+				<img src="${fileVo.getFilePath()}" alt="${fileVo.getFileName()}"/>
+			</c:forEach>
 		</main>
 	</div>
 </body>
