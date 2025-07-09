@@ -23,9 +23,9 @@ public class EducationProgramController {
 	
 	@GetMapping("/forest/education-program")
 	public String educationProgram(Model model) {
-		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
-		
-		model.addAttribute(AdminForest.IMAGES, listFileVo);
+//		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
+//		
+//		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 		
 		return "forest/educationProgram";
 	}

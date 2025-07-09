@@ -16,7 +16,9 @@ public class HomeController {
 
 	@GetMapping("/forest/home")
 	public String home() {
+		
 		String page = settingService.getDefaultPage();
-		return Define.REDIRECT+ page;
+		
+		return Define.REDIRECT + page;
 	}
 }

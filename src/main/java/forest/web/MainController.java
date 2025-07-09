@@ -27,7 +27,7 @@ public class MainController {
 		
 		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
 		
-		model.addAttribute(AdminForest.IMAGES, listFileVo);
+		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 				
 		return "forest/main";
 	}

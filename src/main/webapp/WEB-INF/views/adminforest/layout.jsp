@@ -39,7 +39,7 @@
 						<li class="nav-item"><a href="<c:url value='/admin/kiosk'/>" class="nav-link ${param.menu eq 'kiosk' ? 'active' :''}"> <i class="nav-icon fas fa-desktop"></i>
 								<p>Kiosk</p>
 						</a></li>
-						<li class="nav-item"><a href="<c:url value='/admin/landscape'/>" class="nav-link ${param.menu eq 'landscape' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>
+						<li class="nav-item d-none"><a href="<c:url value='/admin/landscape'/>" class="nav-link ${param.menu eq 'landscape' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>
 								<p>시작화면(가로형)</p>
 						</a></li>
 						<li class="nav-item d-none"><a href="<c:url value='/admin/portrait'/>" class="nav-link ${param.menu eq 'portrait' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>

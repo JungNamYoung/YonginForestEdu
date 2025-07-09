@@ -24,9 +24,9 @@ public class CenterIntroController {
 	@GetMapping("/forest/center-intro")
 	public String centerIntro(Model model) {
 		
-		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
-		
-		model.addAttribute(AdminForest.IMAGES, listFileVo);
+//		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
+//		
+//		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 		
 		return "forest/centerIntro";
 	}

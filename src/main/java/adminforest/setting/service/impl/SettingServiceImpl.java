@@ -34,23 +34,23 @@ public class SettingServiceImpl implements SettingService {
 
 	@Override
 	public String getDefaultPage() {
-		String page = getValue(AdminForest.DEFAUT_PAGE);
+		String page = getValue(AdminForest.KEY_DEFAUT_PAGE);
 		return (page != null && page.length() > 0) ? page : "/forest/landscape";
 	}
 
 	@Override
 	public void setDefaultPage(String page) {
-		setValue(AdminForest.DEFAUT_PAGE, page);
+		setValue(AdminForest.KEY_DEFAUT_PAGE, page);
 	}
 
 	@Override
 	public String getLandscapeType() {
-		String type = getValue(AdminForest.IMAGES);
-		return (type != null && !type.isBlank()) ? type : "images-rolling";
+		String type = getValue(AdminForest.KEY_LANDSCAPE_TYPE);
+		return (type != null && !type.isBlank()) ? type : AdminForest.VALUE_IMAGES_ROLLING;
 	}
 
 	@Override
 	public void setLandscapeType(String type) {
-		setValue(AdminForest.IMAGES, type);
+		setValue(AdminForest.KEY_LANDSCAPE_TYPE, type);
 	}
 }

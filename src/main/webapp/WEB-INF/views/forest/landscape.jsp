@@ -27,13 +27,13 @@
 			<section class="intro__main--area">
 				<div class="swiper mySwiper intro__main--swiper" role="region" aria-label="용인산림교육센터 홍보 슬라이드" aria-live="polite">
 					<div class="swiper-wrapper" style="object-fit:contain;">
-						<c:forEach var="img" items="${images}">
+						<c:forEach var="fileVo" items="${listFileVo}">
 							<div class="swiper-slide">
-								<img src="${img.getFilePath()}" alt="${img.getFileName()}">
+								<img src="${fileVo.getFilePath()}" alt="${fileVo.getFileName()}">
 							</div>
 						</c:forEach>
 					</div>
-					<div class="swiper-controls" role="group" aria-label="슬라이드 제어">
+					<div class="swiper-controls ${landscapeType=='image-fixed' ? 'd-none':''}" role="group" aria-label="슬라이드 제어">
 						<div class="swiper-pagination-numbers" aria-label="현재 슬라이드 번호와 전체 슬라이드 개수"></div>
 
 						<button class="swiper-autoplay-toggle" aria-label="슬라이드 자동 재생 시작 또는 정지">

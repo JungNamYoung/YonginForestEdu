@@ -1412,4 +1412,8 @@ body.dark-mode .touch-effect {
  object-fit:cover;
 }
 
+.d-none{
+	display:none !important;
+}
+
 /* sourceMappingURL=style.css.map */
