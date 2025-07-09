@@ -12,8 +12,10 @@ public class TokenEx {
 	
 	private String path;
 
+	// path : "config/config.txt"
 	public TokenEx(String path) {
-
+		path = Util.dirResources(path);
+		
 		this.path = path;
 		FileEx.exist(path);
 
@@ -30,8 +32,12 @@ public class TokenEx {
 	}
 
 	public String get(String key) {
-		if (map.containsKey(key) == false)
+		if (map.containsKey(key) == false) {
+			
+			Util.error(Define.ERR_CONDITION, key);
+			
 			return Define.STR_BLANK;
+		}
 		return map.get(key);
 	}
 }

@@ -262,10 +262,17 @@ public class Util {
 //			msg = Define.ERR_MSG + msgs[Define.INDEX_0];
 //		}
 
-		msg = Define.ERR_MSG;
+//		msg = Define.ERR_MSG;
 
 		for (String str : msgs) {
-			msg += (str + " | ");
+//			msg += (str + " = ");
+			
+			if(msg.length() > Define.COUNT_0) {
+				msg += (" = " + str);
+			}
+			else {
+				msg = str;
+			}
 		}
 
 		try {

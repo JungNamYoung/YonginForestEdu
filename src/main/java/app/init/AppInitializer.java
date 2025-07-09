@@ -30,7 +30,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	@Override
 	protected void customizeRegistration(ServletRegistration.Dynamic registration) {
 
-		TokenEx tokenEx = new TokenEx(Util.dirResources(AdminForest.CONFIG_TXT));
+		TokenEx tokenEx = new TokenEx(AdminForest.CONFIG_TXT);
 
 		String dir = tokenEx.get(AdminForest.UPLOAD_DIR);
 

@@ -14,15 +14,26 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import com.zaxxer.hikari.HikariDataSource;
 
+import adminforest.define.AdminForest;
+import cuda.web.util.TokenEx;
+
 @Configuration
 public class MyBatisConfig {
   @Bean
   public DataSource dataSource() {
     HikariDataSource ds = new HikariDataSource();
-    ds.setDriverClassName("org.mariadb.jdbc.Driver");
-    ds.setJdbcUrl("jdbc:mariadb://192.168.0.42:3307/yongin_forest_edu");
-    ds.setUsername("multics");
-    ds.setPassword("multics");
+//    ds.setDriverClassName("org.mariadb.jdbc.Driver");
+//    ds.setJdbcUrl("jdbc:mariadb://192.168.0.42:3307/yongin_forest_edu");
+//    ds.setUsername("multics");
+//    ds.setPassword("multics");
+
+    TokenEx tokenEx = new TokenEx("dbconfig/db.txt");
+    
+    ds.setDriverClassName(tokenEx.get(AdminForest.DB_DRIVER));
+    ds.setJdbcUrl(tokenEx.get(AdminForest.DB_URL));
+    ds.setUsername(tokenEx.get(AdminForest.DB_USER));
+    ds.setPassword(tokenEx.get(AdminForest.DB_PW));
+    
     return ds;
   }
 

@@ -117,6 +117,7 @@ public class Define {
 	public static final String ERR_NOT_NULL = "널이면 안됨";
 	public static final String ERR_NULL = "널임";
 	public static final String ERR_CONDITION = "해당하는 조건이 없음";
+//	public static final String ERR_CONDITION_EX = "해당하는 조건이 없음 : ";
 	public static final String HTTP_EX = "http://";
 	public static final String ERR_STR_BLANK = "문자열이 공백";
 	public static final String ERR_EVEN = "짝수가 아님";

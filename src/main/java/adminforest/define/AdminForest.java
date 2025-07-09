@@ -10,6 +10,11 @@ public class AdminForest {
 	public static String LIST_FILE_VO="listFileVo";
 	public static String IMAGES = "images";
 	
+	public static String DB_DRIVER="db.driver";
+	public static String DB_URL="db.url";
+	public static String DB_USER="db.user";
+	public static String DB_PW="db.pw";
+	
 	// domain
 	public static String UPLOAD_LANDSCAPE = "/upload-files/image-landscape";
 	public static String UPLOAD_FOOTER= "/upload-files/image-footer";

@@ -17,7 +17,7 @@ public class SettingServiceImpl implements SettingService {
 	@Override
 	public String getDefaultPage() {
 				
-		TokenEx tokenEx = new TokenEx(Util.dirResources(AdminForest.DEFAUT_PAGE_FILE));		
+		TokenEx tokenEx = new TokenEx(AdminForest.DEFAUT_PAGE_FILE);		
 		
 		String page = tokenEx.get(AdminForest.DEFAUT_PAGE);
 		

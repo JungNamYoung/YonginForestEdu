@@ -1,0 +1,4 @@
+db.driver=org.mariadb.jdbc.Driver
+db.url=jdbc:mariadb://192.168.0.42:3307/yongin_forest_edu
+db.user=multics
+db.pw=multics
