@@ -1,5 +1,7 @@
 package app.init;
 
+import java.io.File;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import adminforest.define.AdminForest;
@@ -27,11 +29,19 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
 	@Override
 	protected void customizeRegistration(ServletRegistration.Dynamic registration) {
-		
+
 		TokenEx tokenEx = new TokenEx(Util.dirResources(AdminForest.CONFIG_TXT));
-		
-		MultipartConfigElement multipartConfig = new MultipartConfigElement(tokenEx.get(AdminForest.UPLOAD_DIR));
-		
+
+		String dir = tokenEx.get(AdminForest.UPLOAD_DIR);
+
+		File file = new File(dir);
+
+		if (file.exists() == false) {
+			file.mkdirs();
+		}
+
+		MultipartConfigElement multipartConfig = new MultipartConfigElement(dir);
+
 		registration.setMultipartConfig(multipartConfig);
 	}
 }
