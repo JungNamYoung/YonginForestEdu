@@ -49,4 +49,37 @@ public class AdminLandscapeController {
 		
 		return Define.REDIRECT + "/admin/landscape";
 	}
+	
+	@PostMapping("/admin/landscape/images-rolling")
+	public String imagesRolling(@RequestParam("files") List<MultipartFile> files, Model model) {
+		
+		Util.upload(files, servletContext, AdminForest.UPLOAD_LANDSCAPE);
+		
+		return Define.REDIRECT + "/admin/start-page";
+	}
+	
+	@PostMapping("/admin/landscape/images-rolling/delete")
+	public String delete(@RequestParam("filename") String filename) {
+				
+		Util.delete(servletContext, AdminForest.UPLOAD_LANDSCAPE, filename);
+		
+		return Define.REDIRECT + "/admin/start-page";
+	}
+	
+	@PostMapping("/admin/landscape/image-fixed")
+	public String imageFixed(@RequestParam("files") List<MultipartFile> files, Model model) {
+		
+		Util.upload(files, servletContext, AdminForest.UPLOAD_PORTRAIT);
+		
+		return Define.REDIRECT + "/admin/start-page";
+	}
+	
+	@PostMapping("/admin/landscape/image-fixed/delete")
+	public String fixedDelete(@RequestParam("filename") String filename) {
+				
+		Util.delete(servletContext, AdminForest.UPLOAD_PORTRAIT, filename);
+		
+		return Define.REDIRECT + "/admin/start-page";
+	}
+	
 }
