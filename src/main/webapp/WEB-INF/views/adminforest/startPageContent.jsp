@@ -29,13 +29,14 @@
 		</div>
 
 		<div class="card">
+			<div class="card-header">이미지 설정</div>
 			<div class="card-body">
-				<form method="post" action="<c:url value='/admin/main-page-ex'/>">
+				<form method="post" action="<c:url value='/admin/landscape-image'/>">
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="page" id="pageIndex" value="/forest/landscape" ${startPage== '/forest/landscape' ? 'checked' : ''}> <label class="form-check-label" for="pageIndex">이미지 롤링</label>
+						<input class="form-check-input" type="radio" name="landScapeImages" id="images-rolling" value="images-rolling" ${landScapeImages== 'images-rolling' ? 'checked' : ''}> <label class="form-check-label" for="pageIndex">이미지 롤링</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="page" id="pageEvent" value="/forest/portrait" ${startPage == '/forest/portrait'?'checked':''}> <label class="form-check-label" for="pageEvent">고정형</label>
+						<input class="form-check-input" type="radio" name="landScapeImages" id="image-fixed" value="image-fixed" ${landScapeImages == 'image-fixed'?'checked':''}> <label class="form-check-label" for="pageEvent">고정형</label>
 					</div>
 					<button type="submit" class="btn btn-primary mt-3">선택</button>
 				</form>
@@ -43,6 +44,7 @@
 		</div>
 
 		<div class="card">
+			<div class="card-header">이미지 롤링</div>
 			<div class="card-body">
 				<div class="row">
 					<c:forEach var="fileVo" items="${listFileVo}">
@@ -59,6 +61,7 @@
 		</div>
 
 		<div class="card">
+			<div class="card-header">이미지 고정형</div>
 			<div class="card-body">
 				<div class="row">
 					<c:forEach var="fileVo" items="${listPortraitFileVo}">
