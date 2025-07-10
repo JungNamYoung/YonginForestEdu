@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* ?�트 ?�정 ?�작 */
-/* Pretendard GOV 글�??�작 */
+/* ?�트 ?�정 ?�작 */
+/* Pretendard GOV 글�??�작 */
 @font-face {
   font-family: "PretendardGOV";
   src: url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.woff2") format("woff2"), url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.woff") format("woff"), url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.ttf") format("truetype"), url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.otf") format("opentype");
@@ -64,14 +64,14 @@
   font-style: normal;
   font-display: swap;
 }
-/* PretendardGOV 글�?종료 */
+/* PretendardGOV 글�?종료 */
 body {
   font-family: "PretendardGOV", sans-serif;
   font-weight: 400;
 }
 
-/* ?�트 ?�정 종료 */
-/* reset.scss - ?�오?�크 ?�용, PretendardGOV 기�? */
+/* ?�트 ?�정 종료 */
+/* reset.scss - ?�오?�크 ?�용, PretendardGOV 기�? */
 *,
 *::before,
 *::after {
@@ -85,7 +85,7 @@ body {
 
 html, body {
   width: 100%;
-  height: calc(var(--vh) * 100); /* ?�크립트?�서 ?�정??--vh �??�용 */
+  height: calc(var(--vh) * 100); /* ?�크립트?�서 ?�정??--vh �??�용 */
   overflow: hidden;
   font-family: "PretendardGOV", sans-serif;
   font-weight: 400;
@@ -162,7 +162,7 @@ hr {
 }
 .page.fade-out, .nextPage.fade-out, .backPage.fade-out {
   opacity: 0;
-  transform: translateX(-200px); /* ?�이지가 ?�쪽?�로 ?�라?�드 */
+  transform: translateX(-200px); /* ?�이지가 ?�쪽?�로 ?�라?�드 */
 }
 
 .touch-effect {
@@ -674,22 +674,22 @@ body .touch-effect {
   height: 40.8333vh;
   background-position: center center;
   background-size: cover;
-  /* ?�래 ?�터 ?��????��? */
-  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
-  opacity: 1; /* 기본 ?�명??*/
-  transform: translateY(0); /* 기본 ?�치 */
+  /* ?�래 ?�터 ?��????��? */
+  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
+  opacity: 1; /* 기본 ?�명??*/
+  transform: translateY(0); /* 기본 ?�치 */
   overflow: hidden;
 }
 .main-body .container footer.moving-out {
   opacity: 0;
-  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
 }
 .main-body .container footer.moving-in {
   opacity: 1;
-  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
 }
 .main-body .container footer .highScreenBtn-icon {
-  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
+  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
 }
 
 .sub-body {
@@ -795,8 +795,8 @@ body .touch-effect {
   opacity: 0;
   visibility: hidden;
   transform: translateX(5.20833vh);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* ?�니메이???�성 추�? */
-  /* 기본?�으�??�겨�??�태 */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* ?�니메이???�성 추�? */
+  /* 기본?�으�??�겨�??�태 */
   position: absolute;
   left: 0;
   top: 0;
@@ -1013,7 +1013,7 @@ body .touch-effect {
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 ?�치 */
+  transform: translateX(5.20833vh); /* 초기 ?�치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div.active {
@@ -1082,7 +1082,7 @@ body .touch-effect {
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 ?�치 */
+  transform: translateX(5.20833vh); /* 초기 ?�치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div.active {
@@ -1187,7 +1187,7 @@ body .touch-effect {
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents {
   width: 100%;
-  height: 1136px;
+  height:29.5833vh;
   padding: 1.25vh;
   border: 0.0520833vh solid #CDD1D5;
   background-color: #FFFFFF;
@@ -1402,22 +1402,22 @@ body .touch-effect {
   height: 40.8333vh;
   background-position: center center;
   background-size: cover;
-  /* ?�래 ?�터 ?��????��? */
-  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
-  opacity: 1; /* 기본 ?�명??*/
-  transform: translateY(0); /* 기본 ?�치 */
+  /* ?�래 ?�터 ?��????��? */
+  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
+  opacity: 1; /* 기본 ?�명??*/
+  transform: translateY(0); /* 기본 ?�치 */
   overflow: hidden;
 }
 .sub-body .container footer.moving-out {
   opacity: 0;
-  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
 }
 .sub-body .container footer.moving-in {
   opacity: 1;
-  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
 }
 .sub-body .container footer .highScreenBtn-icon {
-  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
+  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
 }
 
 .footer-bg{

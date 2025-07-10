@@ -53,7 +53,7 @@
 								</div>
 							</div>
 							<div class="main__content--videoArea">
-								<video id="sign-video" class="sign-video center-sign-video" muted aria-label="수어 안내 영상">
+								<video id="sign-video" class="sign-video center-sign-video" aria-label="수어 안내 영상">
 									<source src="<c:url value="/forest/assets/video/ym_intro.mp4"/>" type="video/mp4">
 									<p>
 										현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="<c:url value="/forest/assets/video/nhm_welcome.webm"/>" target="_blank" title="수어 안내 영상 다운로드">영상 다운로드</a>
