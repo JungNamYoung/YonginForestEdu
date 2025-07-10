@@ -5,6 +5,8 @@ public class RequestStatVo{
  private String method;
  private String nameText;
  private Integer count;
+ private String uri;
+ 
  public String getController() {
 	return controller;
  }
@@ -28,5 +30,11 @@ public class RequestStatVo{
  }
  public void setCount(Integer count) {
 	this.count = count;
+ }
+ public String getUri() {
+	return uri;
+ }
+ public void setUri(String uri) {
+	this.uri = uri;
  }
 }

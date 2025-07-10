@@ -15,15 +15,29 @@
 		)
 	</insert>
 	<select id="selectRequestLogStats" parameterType="map" resultType="RequestStatVo">
+<!-- 		SELECT -->
+<!-- 		rl.controller, -->
+<!-- 		rl.method, -->
+<!-- 		rl.uri,		 -->
+<!-- 		rn.name_text,		 -->
+<!-- 		COUNT(*) AS count -->
+<!-- 		FROM request_log rl -->
+<!-- 		LEFT JOIN request_name rn ON rl.uri = rn.uri -->
+<!-- 		WHERE rl.created_at BETWEEN #{from} AND #{to} -->
+<!-- 		GROUP BY rl.controller, rl.method, rn.name_text -->
+<!-- 		ORDER BY count DESC -->
+
 		SELECT
 		rl.controller,
 		rl.method,
-		rn.name_text,
+		rl.uri,		
+		rn.name_text,		
 		COUNT(*) AS count
 		FROM request_log rl
-		LEFT JOIN request_name rn ON rl.controller = rn.controller AND rl.method=rn.method
+		LEFT JOIN request_name rn ON rl.uri = rn.uri
 		WHERE rl.created_at BETWEEN #{from} AND #{to}
-		GROUP BY rl.controller, rl.method, rn.name_text
+		GROUP BY rl.uri
 		ORDER BY count DESC
+		
 	</select>
 </mapper>

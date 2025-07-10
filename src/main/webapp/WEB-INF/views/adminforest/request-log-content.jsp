@@ -33,8 +33,9 @@
 					<table class="table table-striped table-sm">
 						<thead>
 							<tr>
-								<th>Controller</th>
-								<th>Method</th>
+								<th>uri</th>
+<!-- 								<th>Controller</th> -->
+<!-- 								<th>Method</th> -->
 								<th>이름</th>
 								<th>Count</th>
 							</tr>
@@ -42,8 +43,9 @@
 						<tbody>
 							<c:forEach var="s" items="${stats}">
 								<tr>
-									<td>${s.controller}</td>
-									<td>${s.method}</td>
+									<td>${s.uri}</td>
+<%-- 									<td>${s.controller}</td> --%>
+<%-- 									<td>${s.method}</td> --%>
 									<td>${s.nameText}</td>
 									<td>${s.count}</td>
 								</tr>

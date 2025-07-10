@@ -22,10 +22,6 @@ public class MyBatisConfig {
   @Bean
   public DataSource dataSource() {
     HikariDataSource ds = new HikariDataSource();
-//    ds.setDriverClassName("org.mariadb.jdbc.Driver");
-//    ds.setJdbcUrl("jdbc:mariadb://192.168.0.42:3307/yongin_forest_edu");
-//    ds.setUsername("multics");
-//    ds.setPassword("multics");
 
     TokenEx tokenEx = new TokenEx("dbconfig/db.txt");
     

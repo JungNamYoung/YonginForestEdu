@@ -29,8 +29,8 @@ public class RequestLoggingAspect {
 		}
 
 		RequestLogVo log = new RequestLogVo();
-		log.setController(joinPoint.getTarget().getClass().getSimpleName());
-		log.setMethod(joinPoint.getSignature().getName());
+//		log.setController(joinPoint.getTarget().getClass().getSimpleName());
+//		log.setMethod(joinPoint.getSignature().getName());
 		log.setUri(uri);
 		requestLogService.insert(log);
 	}
