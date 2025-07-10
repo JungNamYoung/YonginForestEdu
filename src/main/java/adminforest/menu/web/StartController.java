@@ -52,7 +52,9 @@ public class StartController {
 
 	@PostMapping("/admin/landscape-image")
 	public String updateImageType(@RequestParam("landScapeImages") String type) {
+		
 		settingService.setLandscapeType(type);
+		
 		return Define.REDIRECT + "/admin/start-page";
 	}
 }
