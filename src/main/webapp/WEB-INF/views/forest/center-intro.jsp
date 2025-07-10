@@ -5,6 +5,7 @@
 <%@ include file="/cuda/jsp/js/Define.js.jsp" %>
 <%@ include file="/cuda/jsp/js/App.js.jsp" %>
 
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -488,5 +489,8 @@
         });
         
     </script>
+    
+    <%@ include file="/cuda/jsp/js/tts.js.jsp" %>
+    
 </body>
 </html>

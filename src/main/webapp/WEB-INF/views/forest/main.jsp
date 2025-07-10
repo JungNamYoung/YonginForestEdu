@@ -2,17 +2,17 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<%@ include file="/cuda/jsp/js/Define.js.jsp" %>
-<%@ include file="/cuda/jsp/js/App.js.jsp" %>
+<%@ include file="/cuda/jsp/js/Define.js.jsp"%>
+<%@ include file="/cuda/jsp/js/App.js.jsp"%>
 
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <title>용인산림교육센터</title>
-    <link rel="stylesheet" href="<c:url value="/forest/css/swiper-bundle.min.css"/>">
-    <link rel="stylesheet" href="<c:url value="/forest/css/style.css"/>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>용인산림교육센터</title>
+<link rel="stylesheet" href="<c:url value="/forest/css/swiper-bundle.min.css"/>">
+<link rel="stylesheet" href="<c:url value="/forest/css/style.css"/>">
 </head>
 <body class="main-body">
 	<div class="container page">
@@ -168,7 +168,7 @@
 	<script src="<c:url value="/forest/js/footer-swiper.js"/>"></script>
 	<script src="<c:url value="/forest/js/script.js"/>"></script>
 
-    <script>
+	<script>
         const container = document.querySelector(".container");
 
         // 수어 영상 및 제어 버튼 요소 가져오기
@@ -400,5 +400,7 @@
             }, 500); // 0.5초
         }
     </script>
+    
+	<%@ include file="/cuda/jsp/js/tts.js.jsp" %>
 </body>
 </html>

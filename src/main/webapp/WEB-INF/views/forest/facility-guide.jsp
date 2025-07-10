@@ -189,5 +189,8 @@
         });
         
     </script>
+    
+    <%@ include file="/cuda/jsp/js/tts.js.jsp" %>
+    
 </body>
 </html>
