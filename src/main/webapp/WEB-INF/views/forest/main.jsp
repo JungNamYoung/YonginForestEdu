@@ -155,7 +155,7 @@
 		<footer id="footer">
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
-					<c:forEach var="img" items="${images}">
+					<c:forEach var="img" items="${listFileVo}">
 						<div class="swiper-slide">
 							<img class="footer-bg" src="${img.getFilePath()}" alt="${img.getFileName()}">
 						</div>

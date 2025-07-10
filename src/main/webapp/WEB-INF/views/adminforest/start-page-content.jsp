@@ -34,7 +34,7 @@
 						<input class="form-check-input" type="radio" name="landScapeImages" id="images-rolling" value="images-rolling" ${landScapeImages== 'images-rolling' ? 'checked' : ''}> <label class="form-check-label" for="pageIndex">이미지 롤링</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="landScapeImages" id="image-fixed" value="image-fixed" ${landScapeImages == 'image-fixed'?'checked':''}> <label class="form-check-label" for="pageEvent">고정형</label>
+						<input class="form-check-input" type="radio" name="landScapeImages" id="image-fixed" value="image-fixed" ${landScapeImages == 'image-fixed'?'checked':''}> <label class="form-check-label" for="pageEvent">이미지 고정형</label>
 					</div>
 					<button type="submit" class="btn btn-primary mt-3">선택</button>
 				</form>
@@ -83,11 +83,11 @@
 			<h5 class="card-title mt-4 mb-2 border-top pb-2">업로드된 이미지</h5>
 			<div class="card-body">
 				<div class="row">
-					<c:forEach var="fileVo" items="${listFileVo}">
+					<c:forEach var="portraitVo" items="${listPortraitVo}">
 						<div class="col-md-3 text-center mb-4">
-							<img class="img-fluid" src="${fileVo.getFilePath()}" alt="${fileVo.getFileName()}" />
+							<img class="img-fluid" src="${portraitVo.getFilePath()}" alt="${portraitVo.getFileName()}" />
 							<form method="post" action="<c:url value='/admin/landscape/image-fixed/delete'/>" class="mt-2">
-								<input type="hidden" name="filename" value="${fileVo.getFileName()}" />
+								<input type="hidden" name="filename" value="${portraitVo.getFileName()}" />
 								<button type="submit" class="btn btn-danger btn-sm">삭제</button>
 							</form>
 						</div>
