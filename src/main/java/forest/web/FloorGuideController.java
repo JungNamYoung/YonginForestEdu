@@ -23,10 +23,10 @@ public class FloorGuideController {
 	
 	@GetMapping("/forest/floor-guide")
 	public String floorGuide(Model model) {
-//		List<FileVo> listFileVo= Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
-//		
-//		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
+		List<FileVo> listFileVo= Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
 		
-		return "forest/floorGuide";
+		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
+		
+		return "forest/floor-guide";
 	}
 }

@@ -24,10 +24,10 @@ public class FacilityGuideController {
 	@GetMapping("/forest/facility-guide")
 	public String facilityGuide(Model model) {
 		
-//		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
-//		
-//		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
+		List<FileVo> listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_FOOTER);		
 		
-		return "forest/facilityGuide";
+		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
+		
+		return "forest/facility-guide";
 	}
 }
