@@ -23,6 +23,7 @@ public class RequestLoggingAspect {
 	public void log(JoinPoint joinPoint) {
 		ServletRequestAttributes attrs = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
 		String uri = "";
+		
 		if (attrs != null) {
 			HttpServletRequest req = attrs.getRequest();
 			uri = req.getRequestURI();
