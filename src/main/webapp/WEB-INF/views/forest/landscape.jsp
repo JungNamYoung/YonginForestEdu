@@ -93,7 +93,7 @@
                 prevEl: ".swiper-button-prev",
             },
             loop: true,
-            autoplay: false, // 시작 시 자동재생 비활성화
+            autoplay: true, // 시작 시 자동재생 비활성화
             on: {
                 init: function () {
                     updatePaginationNumbers(this);
@@ -144,14 +144,16 @@
         `;
 
         const autoplayToggleBtn = document.querySelector(".swiper-autoplay-toggle");
-        let isPlaying = false;
+        let isPlaying = true;
+        autoplayToggleBtn.innerHTML = pauseIcon;
+        autoplayToggleBtn.setAttribute('aria-label', '슬라이드 자동 재생 정지');
 
         // 자동 재생 토글 버튼 클릭 이벤트
         autoplayToggleBtn.addEventListener("click", function (e) {
             e.stopPropagation(); // ⭐ 중요: 이벤트 전파 중지
             autoplayToggleBtn.blur(); // 클릭 후 포커스 제거
 
-            if (isPlaying) {
+            if (!isPlaying) {
                 swiper.autoplay.stop();
                 autoplayToggleBtn.innerHTML = playIcon;
                 autoplayToggleBtn.setAttribute('aria-label', '슬라이드 자동 재생 시작');

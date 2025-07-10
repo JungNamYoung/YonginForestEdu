@@ -17,7 +17,7 @@
 <body class="main-body">
 	<div class="container page">
 		<header role="banner" aria-label="사이트 헤더">
-			<a href="<c:url value="/forest/main"/>" aria-label="메인 페이지로 이동"> <img class="header__logo" src="<c:url value="/forest/assets/images/용인시_심볼 1.png"/>" alt="용인시 로고" />
+			<a href="<c:url value="/forest/landscape"/>" aria-label="메인 페이지로 이동"> <img class="header__logo" src="<c:url value="/forest/assets/images/용인시_심볼 1.png"/>" alt="용인시 로고" />
 				<h1 class="header__title">용인산림교육센터</h1>
 			</a>
 			<p id="current-time" class="current-time" aria-live="polite"></p>
@@ -112,9 +112,9 @@
 				</article>
 				<div class="main__content--videoArea">
 					<video id="sign-video" class="sign-video" muted aria-label="수어 안내 영상">
-						<source src="<c:url value="/forest/assets/video/nhm_welcome.webm"/>" type="video/webm">
+						<source src="<c:url value="/forest/assets/video/ym_intro.mp4"/>" type="video/mp4">
 						<p>
-							현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="/assets/video/nhm_welcome.webm">영상 다운로드</a>
+							현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="<c:url value='/forest/assets/video/ym_intro.mp4'/>">영상 다운로드</a>
 						</p>
 					</video>
 				</div>

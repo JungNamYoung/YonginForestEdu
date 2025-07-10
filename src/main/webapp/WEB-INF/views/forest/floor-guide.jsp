@@ -45,13 +45,22 @@
 							</div>
 							<div class="main__content--tabArea">
 								<div id="eduPanel1" class="eduPanel1 main__contents--edu1Finfo active" role="tabpanel" tabindex="0" aria-labelledby="edu1F">
-									<h1 style="font-size: 100px;">교육관 1층</h1>
+                                    <video class="edu1Finfo-video" autoplay muted aria-label="교육관 1층 안내 영상">
+                                        <source src="<c:url value='/forest/assets/video/교육관1층_비상대피로.mp4'/>" type="video/mp4">
+                                        <p>현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="/assets/video/교육관1층_비상대피로.mp4">영상 다운로드</a></p>
+                                    </video>
 								</div>
 								<div id="eduPanel2" class="eduPanel2 main__contents--edu2Finfo" role="tabpanel" tabindex="0" aria-labelledby="edu2F" hidden>
-									<h1 style="font-size: 100px;">교육관 2층</h1>
+                                    <video class="edu2Finfo-video" autoplay muted aria-label="교육관 2층 안내 영상">
+                                        <source src="<c:url value='/forest/assets/video/교육관2층_비상대피로.mp4'/>" type="video/mp4">
+                                        <p>현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="/assets/video/교육관2층_비상대피로.mp4">영상 다운로드</a></p>
+                                    </video>
 								</div>
 								<div id="eduPanel3" class="eduPanel3 main__contents--edu3Finfo" role="tabpanel" tabindex="0" aria-labelledby="edu3F" hidden>
-									<h1 style="font-size: 100px;">교육관 3층</h1>
+                                    <video class="edu3Finfo-video" autoplay muted aria-label="교육관 3층 안내 영상">
+                                        <source src="<c:url value='/forest/assets/video/교육관3층_비상대피로.mp4'/>" type="video/mp4">
+                                        <p>현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="/assets/video/교육관3층_비상대피로.mp4">영상 다운로드</a></p>
+                                    </video>
 								</div>
 							</div>
 
@@ -64,10 +73,16 @@
 							</div>
 							<div class="main__content--tabArea">
 								<div id="accommodationPanel1" class="accommodationPanel1 main__contents--Accommodation1F active" role="tabpanel" tabindex="0" aria-labelledby="Accommodation1F">
-									<h1 style="font-size: 100px;">숙박동 1층</h1>
+                                    <video class="Accommodation1F-video" autoplay muted aria-label="숙박동 1층 안내 영상">
+                                        <source src="<c:url value='/forest/assets/video/숙박동1층_비상대피로.mp4'/>" type="video/mp4">
+                                        <p>현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="/assets/video/숙박동1층_비상대피로.mp4">영상 다운로드</a></p>
+                                    </video>
 								</div>
 								<div id="accommodationPanel2" class="accommodationPanel2 main__contents--Accommodation2F" role="tabpanel" tabindex="0" aria-labelledby="Accommodation2F" hidden>
-									<h1 style="font-size: 100px;">숙박동 2층</h1>
+                                    <video class="Accommodation2F-video" autoplay muted aria-label="숙박동 2층 안내 영상">
+                                        <source src="<c:url value='/forest/assets/video/숙박동2층_비상대피로.mp4'/>" type="video/mp4">
+                                        <p>현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="/assets/video/숙박동2층_비상대피로.mp4">영상 다운로드</a></p>
+                                    </video>
 								</div>
 							</div>
 
@@ -92,9 +107,7 @@
 				</button>
 				<button class="main__controls--reproductionBtn voice-replayBtn" aria-label="음성 안내 다시 재생">
 					<svg viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg" class="reproductionBtn-icon" aria-hidden="true" focusable="false">
-                        <path
-							d="M18 41.8593C15.5 41.8593 13.1583 41.3843 10.975 40.4343C8.79167 39.4843 6.89167 38.201 5.275 36.5843C3.65833 34.9676 2.375 33.0676 1.425 30.8843C0.475 28.7009 0 26.3593 0 23.8593C0 23.2926 0.191667 22.8176 0.575 22.4343C0.958333 22.0509 1.43333 21.8593 2 21.8593C2.56667 21.8593 3.04167 22.0509 3.425 22.4343C3.80833 22.8176 4 23.2926 4 23.8593C4 27.7593 5.35833 31.0676 8.075 33.7843C10.7917 36.5009 14.1 37.8593 18 37.8593C21.9 37.8593 25.2083 36.5009 27.925 33.7843C30.6417 31.0676 32 27.7593 32 23.8593C32 19.9593 30.6417 16.6509 27.925 13.9343C25.2083 11.2176 21.9 9.85928 18 9.85928H17.7L19.4 11.5593C19.8 11.9593 19.9917 12.4259 19.975 12.9593C19.9583 13.4926 19.7667 13.9593 19.4 14.3593C19 14.7593 18.525 14.9676 17.975 14.9843C17.425 15.0009 16.95 14.8093 16.55 14.4093L11.4 9.25928C11 8.85928 10.8 8.39261 10.8 7.85928C10.8 7.32594 11 6.85928 11.4 6.45928L16.55 1.30928C16.95 0.909276 17.425 0.71761 17.975 0.734276C18.525 0.750943 19 0.959276 19.4 1.35928C19.7667 1.75928 19.9583 2.22594 19.975 2.75928C19.9917 3.29261 19.8 3.75928 19.4 4.15928L17.7 5.85928H18C20.5 5.85928 22.8417 6.33428 25.025 7.28428C27.2083 8.23428 29.1083 9.51761 30.725 11.1343C32.3417 12.7509 33.625 14.6509 34.575 16.8343C35.525 19.0176 36 21.3593 36 23.8593C36 26.3593 35.525 28.7009 34.575 30.8843C33.625 33.0676 32.3417 34.9676 30.725 36.5843C29.1083 38.201 27.2083 39.4843 25.025 40.4343C22.8417 41.3843 20.5 41.8593 18 41.8593Z"
-							fill="#3C3F49" />
+                        <path d="M18 41.8593C15.5 41.8593 13.1583 41.3843 10.975 40.4343C8.79167 39.4843 6.89167 38.201 5.275 36.5843C3.65833 34.9676 2.375 33.0676 1.425 30.8843C0.475 28.7009 0 26.3593 0 23.8593C0 23.2926 0.191667 22.8176 0.575 22.4343C0.958333 22.0509 1.43333 21.8593 2 21.8593C2.56667 21.8593 3.04167 22.0509 3.425 22.4343C3.80833 22.8176 4 23.2926 4 23.8593C4 27.7593 5.35833 31.0676 8.075 33.7843C10.7917 36.5009 14.1 37.8593 18 37.8593C21.9 37.8593 25.2083 36.5009 27.925 33.7843C30.6417 31.0676 32 27.7593 32 23.8593C32 19.9593 30.6417 16.6509 27.925 13.9343C25.2083 11.2176 21.9 9.85928 18 9.85928H17.7L19.4 11.5593C19.8 11.9593 19.9917 12.4259 19.975 12.9593C19.9583 13.4926 19.7667 13.9593 19.4 14.3593C19 14.7593 18.525 14.9676 17.975 14.9843C17.425 15.0009 16.95 14.8093 16.55 14.4093L11.4 9.25928C11 8.85928 10.8 8.39261 10.8 7.85928C10.8 7.32594 11 6.85928 11.4 6.45928L16.55 1.30928C16.95 0.909276 17.425 0.71761 17.975 0.734276C18.525 0.750943 19 0.959276 19.4 1.35928C19.7667 1.75928 19.9583 2.22594 19.975 2.75928C19.9917 3.29261 19.8 3.75928 19.4 4.15928L17.7 5.85928H18C20.5 5.85928 22.8417 6.33428 25.025 7.28428C27.2083 8.23428 29.1083 9.51761 30.725 11.1343C32.3417 12.7509 33.625 14.6509 34.575 16.8343C35.525 19.0176 36 21.3593 36 23.8593C36 26.3593 35.525 28.7009 34.575 30.8843C33.625 33.0676 32.3417 34.9676 30.725 36.5843C29.1083 38.201 27.2083 39.4843 25.025 40.4343C22.8417 41.3843 20.5 41.8593 18 41.8593Z" fill="#3C3F49"/>
                     </svg>
 				</button>
 			</div>
@@ -104,9 +117,7 @@
                     <rect width="48" height="48" fill="#D9D9D9" />
                     </mask>
                     <g mask="url(#mask0_604_1013)">
-                    <path
-						d="M12 37.8141H18.6925V27.7371C18.6925 27.2251 18.8657 26.7957 19.212 26.4491C19.5587 26.1027 19.988 25.9296 20.5 25.9296H27.5C28.012 25.9296 28.4413 26.1027 28.788 26.4491C29.1343 26.7957 29.3075 27.2251 29.3075 27.7371V37.8141H36V20.1216C36 20.0192 35.9775 19.9264 35.9325 19.8431C35.8878 19.7597 35.827 19.6859 35.75 19.6216L24.3655 11.0641C24.2628 10.9744 24.141 10.9296 24 10.9296C23.859 10.9296 23.7372 10.9744 23.6345 11.0641L12.25 19.6216C12.173 19.6859 12.1122 19.7597 12.0675 19.8431C12.0225 19.9264 12 20.0192 12 20.1216V37.8141ZM9 37.8141V20.1216C9 19.5492 9.128 19.0071 9.384 18.4951C9.64033 17.9827 9.99433 17.5609 10.446 17.2296L21.831 8.65257C22.4627 8.17057 23.1847 7.92957 23.997 7.92957C24.8093 7.92957 25.5333 8.17057 26.169 8.65257L37.554 17.2296C38.0057 17.5609 38.3597 17.9827 38.616 18.4951C38.872 19.0071 39 19.5492 39 20.1216V37.8141C39 38.6321 38.7045 39.3366 38.1135 39.9276C37.5225 40.5186 36.818 40.8141 36 40.8141H28.1155C27.6032 40.8141 27.1738 40.6407 26.8275 40.2941C26.4808 39.9477 26.3075 39.5184 26.3075 39.0061V28.9296H21.6925V39.0061C21.6925 39.5184 21.5192 39.9477 21.1725 40.2941C20.8262 40.6407 20.3968 40.8141 19.8845 40.8141H12C11.182 40.8141 10.4775 40.5186 9.8865 39.9276C9.2955 39.3366 9 38.6321 9 37.8141Z"
-						fill="white" />
+                    <path d="M12 37.8141H18.6925V27.7371C18.6925 27.2251 18.8657 26.7957 19.212 26.4491C19.5587 26.1027 19.988 25.9296 20.5 25.9296H27.5C28.012 25.9296 28.4413 26.1027 28.788 26.4491C29.1343 26.7957 29.3075 27.2251 29.3075 27.7371V37.8141H36V20.1216C36 20.0192 35.9775 19.9264 35.9325 19.8431C35.8878 19.7597 35.827 19.6859 35.75 19.6216L24.3655 11.0641C24.2628 10.9744 24.141 10.9296 24 10.9296C23.859 10.9296 23.7372 10.9744 23.6345 11.0641L12.25 19.6216C12.173 19.6859 12.1122 19.7597 12.0675 19.8431C12.0225 19.9264 12 20.0192 12 20.1216V37.8141ZM9 37.8141V20.1216C9 19.5492 9.128 19.0071 9.384 18.4951C9.64033 17.9827 9.99433 17.5609 10.446 17.2296L21.831 8.65257C22.4627 8.17057 23.1847 7.92957 23.997 7.92957C24.8093 7.92957 25.5333 8.17057 26.169 8.65257L37.554 17.2296C38.0057 17.5609 38.3597 17.9827 38.616 18.4951C38.872 19.0071 39 19.5492 39 20.1216V37.8141C39 38.6321 38.7045 39.3366 38.1135 39.9276C37.5225 40.5186 36.818 40.8141 36 40.8141H28.1155C27.6032 40.8141 27.1738 40.6407 26.8275 40.2941C26.4808 39.9477 26.3075 39.5184 26.3075 39.0061V28.9296H21.6925V39.0061C21.6925 39.5184 21.5192 39.9477 21.1725 40.2941C20.8262 40.6407 20.3968 40.8141 19.8845 40.8141H12C11.182 40.8141 10.4775 40.5186 9.8865 39.9276C9.2955 39.3366 9 38.6321 9 37.8141Z" fill="white"/>
                     </g>
                 </svg>
 			</button>
@@ -120,7 +131,7 @@
 				<span class="lowScreenBtn-label">화면 높이 조절</span>
 			</button>
 		</aside>
-		<footer id="footer" role="contentinfo">
+        <footer id="footer">
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
 					<c:forEach var="img" items="${listFileVo}">
@@ -145,6 +156,7 @@
 
         // 하위 콘텐츠
         const FloorGuideArea = document.querySelectorAll(".main__content--tabArea > div");
+        const FloorGuideVideo = document.querySelectorAll(".main__content--tabArea > div video");
        
         const accessibilityAudio = document.getElementById("accessibilityAudio");
 
@@ -181,6 +193,12 @@
                 this.setAttribute("aria-selected", "true");
 
                 accessibilityAudio.src = `<c:url value='/forest/assets/mp3/\${this.dataset.area}.mp3'/>`;
+                //accessibilityAudio.src = `/assets/mp3/\${this.dataset.area}.mp3`;
+
+                document.querySelector(`.\${this.dataset.area}-video`).pause();
+                document.querySelector(`.\${this.dataset.area}-video`).currentTime = 0;
+                document.querySelector(`.\${this.dataset.area}-video`).play();
+                
 
                 voiceMode();
 
@@ -220,6 +238,11 @@
         });
 
         document.querySelector("#tab1").addEventListener("click", () => {
+
+            document.querySelector(".edu1Finfo-video").pause();
+            document.querySelector(".edu1Finfo-video").currentTime = 0;
+            document.querySelector(".edu1Finfo-video").play();
+
             resetBtn();
 
             document.querySelector("#edu1F").classList.add("active");
@@ -230,13 +253,13 @@
 
             function voiceMode() {
                 if (localStorage.getItem("voiceMode") === "voiceOffMode") {
-                    accessibilityAudio.src = "/assets/mp3/edu1Finfo.mp3";
+                    accessibilityAudio.src = "<c:url value='/forest/assets/mp3/edu1Finfo.mp3'/>";
                     accessibilityAudio.pause();
                     accessibilityAudio.currentTime = 0;
                     
 
                 } else {
-                    accessibilityAudio.src = "/assets/mp3/edu1Finfo.mp3";
+                    accessibilityAudio.src = "<c:url value='/forest/assets/mp3/edu1Finfo.mp3'/>";
                     accessibilityAudio.play();
                     
                 }
@@ -262,6 +285,10 @@
         });
 
         document.querySelector("#tab2").addEventListener("click", () => {
+            document.querySelector(".Accommodation1F-video").pause();
+            document.querySelector(".Accommodation1F-video").currentTime = 0;
+            document.querySelector(".Accommodation1F-video").play();
+
             resetBtn();
 
             document.querySelector("#Accommodation1F").classList.add("active");
@@ -273,12 +300,12 @@
 
             function voiceMode() {
                 if (localStorage.getItem("voiceMode") === "voiceOffMode") {
-                    accessibilityAudio.src = "/assets/mp3/Accommodation1F.mp3";
+                    accessibilityAudio.src = "<c:url value='/forest/assets/mp3/Accommodation1F.mp3'/>";
                     accessibilityAudio.pause();
                     accessibilityAudio.currentTime = 0;
 
                 } else {
-                    accessibilityAudio.src = "/assets/mp3/Accommodation1F.mp3";
+                    accessibilityAudio.src = "<c:url value='/forest/assets/mp3/Accommodation1F.mp3'/>";
                     accessibilityAudio.play();
                 }
                 }

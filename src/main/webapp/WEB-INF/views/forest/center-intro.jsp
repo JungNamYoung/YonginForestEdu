@@ -53,15 +53,18 @@
 								</div>
 							</div>
 							<div class="main__content--videoArea">
-								<video id="sign-video" class="sign-video" muted aria-label="수어 안내 영상">
-									<source src="<c:url value="/forest/assets/video/nhm_welcome.webm"/>" type="video/webm">
+								<video id="sign-video" class="sign-video center-sign-video" muted aria-label="수어 안내 영상">
+									<source src="<c:url value="/forest/assets/video/ym_intro.mp4"/>" type="video/mp4">
 									<p>
 										현재 사용하시는 브라우저는 비디오 재생을 지원하지 않습니다. <a href="<c:url value="/forest/assets/video/nhm_welcome.webm"/>" target="_blank" title="수어 안내 영상 다운로드">영상 다운로드</a>
 									</p>
 								</video>
 							</div>
 						</div>
+						
 						<div id="panel2" class="main__contents--facilities" role="tabpanel" tabindex="0" aria-labelledby="tab2" hidden>
+						
+						
 							<div class="main__contents--facilitiesArea" aria-label="시설개요">
 								<div class="main__contents--facilitiesText">
 									<p class="facilitiesTitle">용인산림교육센터는</p>
@@ -117,6 +120,7 @@
 									</div>
 								</div>
 							</div>
+							<audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/ym_intro2.mp3"/>" aria-label="사이트 음성 안내" hidden></audio>
 						</div>
 					</div>
 				</article>
@@ -178,7 +182,7 @@
 			</div>
 		</footer>
 	</div>
-	<audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/1.출생신고_13s.mp3"/>" aria-label="사이트 음성 안내" controls hidden></audio>
+	
 
 	<script src="<c:url value="/forest/js/swiper-bundle.min.js"/>"></script>
     <script src="<c:url value="/forest/js/footer-swiper.js"/>"></script>

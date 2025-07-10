@@ -360,7 +360,47 @@
     <script src="<c:url value="/forest/js/script.js"/>"></script>
     <script src="<c:url value="/forest/js/aside-accessibility.js"/>"></script>
     <script src="<c:url value="/forest/js/sub-page.js"/>"></script>
-    <script>
+    // <script>
+
+
+
+    //     const navBtns = document.querySelectorAll(".main__navigation > ul li button");
+    //     const accessibilityAudio = document.getElementById("accessibilityAudio");
+
+    //     navBtns.forEach(function (btn) {
+    //         btn.addEventListener("click", function () {
+    //             const tabSound = this.dataset.area;
+
+	// 			console.log(tabSound);
+
+    //             accessibilityAudio.src = `<c:url value="/forest/assets/mp3/${tabSound}.wav"/>`;
+
+    //             voiceMode();
+
+    //             function voiceMode() {
+    //                 if (localStorage.getItem("voiceMode") === "voiceOffMode") {
+    //                     accessibilityAudio.pause();
+    //                     accessibilityAudio.currentTime = 0;
+
+    //                 } else {
+    //                     accessibilityAudio.play();
+    //                 }
+    //             }                
+    //         });
+    //     });
+        
+    // </script>
+
+	<script>
+		// **이 부분이 핵심입니다.**
+        // JSP에서 웹 애플리케이션의 Context Path를 JavaScript 변수에 저장합니다.
+        // 예를 들어, 현재 웹 애플리케이션이 "YonginForestEdu"라는 이름으로 배포되었다면,
+        // contextPath 변수에는 "/YonginForestEdu"가 들어갑니다.
+		
+        //const contextPath = "${pageContext.request.contextPath}";
+
+		const contextPath = App.rootPath;
+
         const navBtns = document.querySelectorAll(".main__navigation > ul li button");
         const accessibilityAudio = document.getElementById("accessibilityAudio");
 
@@ -368,7 +408,13 @@
             btn.addEventListener("click", function () {
                 const tabSound = this.dataset.area;
 
-                accessibilityAudio.src = `/assets/mp3/${tabSound}.mp3`;
+                console.log("선택된 탭 사운드:", tabSound); // 어떤 tabSound 값이 찍히는지 다시 확인해 보세요.
+
+                // Context Path를 활용하여 오디오 파일의 전체 경로를 만듭니다.
+                // 예: "/YonginForestEdu/forest/assets/mp3/forestHealing.wav"
+                accessibilityAudio.src = `\${contextPath}/forest/assets/mp3/\${tabSound}.mp3`;
+                
+                console.log("새로운 오디오 src:", accessibilityAudio.src); // 실제로 설정되는 src 경로를 확인해 보세요.
 
                 voiceMode();
 
@@ -376,15 +422,14 @@
                     if (localStorage.getItem("voiceMode") === "voiceOffMode") {
                         accessibilityAudio.pause();
                         accessibilityAudio.currentTime = 0;
-
                     } else {
                         accessibilityAudio.play();
                     }
-                }                
+                }
             });
         });
-        
-    </script>
+        	
+	</script>
     
     <%@ include file="/cuda/jsp/js/tts.js.jsp" %>
     

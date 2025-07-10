@@ -102,8 +102,8 @@
   opacity: 0;
   visibility: hidden;
   transform: translateX(5.20833vh);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* 애니메이션 속성 추가 */
-  /* 기본적으로 숨겨진 상태 */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* ?�니메이???�성 추�? */
+  /* 기본?�으�??�겨�??�태 */
   position: absolute;
   left: 0;
   top: 0;
@@ -205,12 +205,13 @@
   flex: 1;
   position: relative;
 }
-.sub-body .container main .main__content article .main__contents > div .main__content--videoArea video {
-  max-width: 21.45832vh;
+.sub-body .container main .main__content article .main__contents > div .main__content--videoArea .center-sign-video {
+  max-width: 24vh;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--facilities {
   padding: 0 1.25vh;
@@ -319,13 +320,22 @@
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 위치 */
+  transform: translateX(5.20833vh); /* 초기 ?�치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div.active {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div.active video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation {
   padding: 2.083333vh 1.25vh;
@@ -379,13 +389,22 @@
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 위치 */
+  transform: translateX(5.20833vh); /* 초기 ?�치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div.active {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div.active video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea {
   padding: 2.083333vh 1.25vh;
@@ -688,25 +707,24 @@
 .sub-body .container footer {
   width: 100%;
   height: 40.8333vh;
-/*   background: url(/YonginForestEdu/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg) no-repeat; */
   background-position: center center;
   background-size: cover;
-  /* 원래 푸터 스타일 유지 */
-  transition: all 0.5s ease-in-out; /* 부드러운 전환 효과 */
-  opacity: 1; /* 기본 투명도 */
-  transform: translateY(0); /* 기본 위치 */
+  /* ?�래 ?�터 ?��????��? */
+  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
+  opacity: 1; /* 기본 ?�명??*/
+  transform: translateY(0); /* 기본 ?�치 */
   overflow: hidden;
 }
 .sub-body .container footer.moving-out {
   opacity: 0;
-  transform: translateY(100%); /* 아래로 이동하면서 사라짐 */
+  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
 }
 .sub-body .container footer.moving-in {
   opacity: 1;
-  transform: translateY(0); /* 아래로 이동하면서 사라짐 */
+  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
 }
 .sub-body .container footer .highScreenBtn-icon {
-  display: none; /* 초기에는 높은 화면 아이콘 숨김 */
+  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
 }
 
 /*# sourceMappingURL=sub.css.map */

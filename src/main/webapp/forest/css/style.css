@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* 폰트 설정 시작 */
-/* Pretendard GOV 글꼴 시작 */
+/* ?�트 ?�정 ?�작 */
+/* Pretendard GOV 글�??�작 */
 @font-face {
   font-family: "PretendardGOV";
   src: url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.woff2") format("woff2"), url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.woff") format("woff"), url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.ttf") format("truetype"), url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.otf") format("opentype");
@@ -64,14 +64,14 @@
   font-style: normal;
   font-display: swap;
 }
-/* PretendardGOV 글꼴 종료 */
+/* PretendardGOV 글�?종료 */
 body {
   font-family: "PretendardGOV", sans-serif;
   font-weight: 400;
 }
 
-/* 폰트 설정 종료 */
-/* reset.scss - 키오스크 전용, PretendardGOV 기준 */
+/* ?�트 ?�정 종료 */
+/* reset.scss - ?�오?�크 ?�용, PretendardGOV 기�? */
 *,
 *::before,
 *::after {
@@ -85,7 +85,7 @@ body {
 
 html, body {
   width: 100%;
-  height: calc(var(--vh) * 100); /* 스크립트에서 설정된 --vh 값 사용 */
+  height: calc(var(--vh) * 100); /* ?�크립트?�서 ?�정??--vh �??�용 */
   overflow: hidden;
   font-family: "PretendardGOV", sans-serif;
   font-weight: 400;
@@ -162,7 +162,7 @@ hr {
 }
 .page.fade-out, .nextPage.fade-out, .backPage.fade-out {
   opacity: 0;
-  transform: translateX(-200px); /* 페이지가 왼쪽으로 슬라이드 */
+  transform: translateX(-200px); /* ?�이지가 ?�쪽?�로 ?�라?�드 */
 }
 
 .touch-effect {
@@ -174,13 +174,8 @@ hr {
   z-index: 1000;
 }
 
-body.light-mode .touch-effect {
-  background: #0D63BF;
-}
-
-/* 다크모드 색상 */
-body.dark-mode .touch-effect {
-  background: #FDDE47;
+body .touch-effect {
+  background: #007C85;
 }
 
 @keyframes ripple {
@@ -388,6 +383,7 @@ body.dark-mode .touch-effect {
   font-size: 1.5625vh;
   color: #F4F5F6;
   margin-top: 1.25vh;
+  font-weight: 700;
 }
 
 .main-body {
@@ -543,7 +539,8 @@ body.dark-mode .touch-effect {
   position: relative;
 }
 .main-body .container main .main__content .main__content--videoArea .sign-video {
-  max-width: 21.45832vh;
+  max-width: 24vh;
+  z-index: -1;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -675,25 +672,24 @@ body.dark-mode .touch-effect {
 .main-body .container footer {
   width: 100%;
   height: 40.8333vh;
-/*   background: url(/YonginForestEdu/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg) no-repeat; */
   background-position: center center;
   background-size: cover;
-  /* 원래 푸터 스타일 유지 */
-  transition: all 0.5s ease-in-out; /* 부드러운 전환 효과 */
-  opacity: 1; /* 기본 투명도 */
-  transform: translateY(0); /* 기본 위치 */
+  /* ?�래 ?�터 ?��????��? */
+  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
+  opacity: 1; /* 기본 ?�명??*/
+  transform: translateY(0); /* 기본 ?�치 */
   overflow: hidden;
 }
 .main-body .container footer.moving-out {
   opacity: 0;
-  transform: translateY(100%); /* 아래로 이동하면서 사라짐 */
+  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
 }
 .main-body .container footer.moving-in {
   opacity: 1;
-  transform: translateY(0); /* 아래로 이동하면서 사라짐 */
+  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
 }
 .main-body .container footer .highScreenBtn-icon {
-  display: none; /* 초기에는 높은 화면 아이콘 숨김 */
+  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
 }
 
 .sub-body {
@@ -799,8 +795,8 @@ body.dark-mode .touch-effect {
   opacity: 0;
   visibility: hidden;
   transform: translateX(5.20833vh);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* 애니메이션 속성 추가 */
-  /* 기본적으로 숨겨진 상태 */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* ?�니메이???�성 추�? */
+  /* 기본?�으�??�겨�??�태 */
   position: absolute;
   left: 0;
   top: 0;
@@ -902,12 +898,13 @@ body.dark-mode .touch-effect {
   flex: 1;
   position: relative;
 }
-.sub-body .container main .main__content article .main__contents > div .main__content--videoArea video {
-  max-width: 21.45832vh;
+.sub-body .container main .main__content article .main__contents > div .main__content--videoArea .center-sign-video {
+  max-width: 24vh;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--facilities {
   padding: 0 1.25vh;
@@ -1016,13 +1013,22 @@ body.dark-mode .touch-effect {
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 위치 */
+  transform: translateX(5.20833vh); /* 초기 ?�치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div.active {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div.active video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation {
   padding: 2.083333vh 1.25vh;
@@ -1076,13 +1082,22 @@ body.dark-mode .touch-effect {
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 위치 */
+  transform: translateX(5.20833vh); /* 초기 ?�치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div.active {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div.active video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea {
   padding: 2.083333vh 1.25vh;
@@ -1385,25 +1400,24 @@ body.dark-mode .touch-effect {
 .sub-body .container footer {
   width: 100%;
   height: 40.8333vh;
-/*   background: url(/YonginForestEdu/forest/assets/images/40c2eb00d84955ae254b353d1e7d5177fc8e37c3.jpg) no-repeat; */
   background-position: center center;
   background-size: cover;
-  /* 원래 푸터 스타일 유지 */
-  transition: all 0.5s ease-in-out; /* 부드러운 전환 효과 */
-  opacity: 1; /* 기본 투명도 */
-  transform: translateY(0); /* 기본 위치 */
+  /* ?�래 ?�터 ?��????��? */
+  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
+  opacity: 1; /* 기본 ?�명??*/
+  transform: translateY(0); /* 기본 ?�치 */
   overflow: hidden;
 }
 .sub-body .container footer.moving-out {
   opacity: 0;
-  transform: translateY(100%); /* 아래로 이동하면서 사라짐 */
+  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
 }
 .sub-body .container footer.moving-in {
   opacity: 1;
-  transform: translateY(0); /* 아래로 이동하면서 사라짐 */
+  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
 }
 .sub-body .container footer .highScreenBtn-icon {
-  display: none; /* 초기에는 높은 화면 아이콘 숨김 */
+  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
 }
 
 .footer-bg{

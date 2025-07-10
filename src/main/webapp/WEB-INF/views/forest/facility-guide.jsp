@@ -157,7 +157,7 @@
 			</div>
 		</footer>
 	</div>
-    <audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/1.출생신고_13s.mp3"/>" aria-label="사이트 음성 안내"></audio> 
+    <audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/edu1F.mp3"/>" aria-label="사이트 음성 안내"></audio> 
 
     <script src="<c:url value="/forest/js/swiper-bundle.min.js"/>"></script>
     <script src="<c:url value="/forest/js/footer-swiper.js"/>"></script>
@@ -172,7 +172,7 @@
             btn.addEventListener("click", function () {
                 const tabSound = this.dataset.area;
 
-                accessibilityAudio.src = `/assets/mp3/${tabSound}.mp3`;
+                accessibilityAudio.src = App.rootPath + `/forest/assets/mp3/\${tabSound}.mp3`;
 
                 voiceMode();
 
