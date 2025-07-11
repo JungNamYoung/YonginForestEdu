@@ -67,6 +67,14 @@
 	<script src="<c:url value="/forest/js/script.js"/>"></script>
 
 	<script>
+		const swiperImg = document.querySelectorAll(".swiper-slide img");
+	
+	    swiperImg.forEach(function (img) {
+	        img.addEventListener("click", function (e) {
+	            e.stopPropagation(); // ⭐ 중요: 이벤트 전파 중지
+	        })
+	    });
+    
         window.addEventListener('load', function () {
             const introBody = document.querySelector('.intro__body');
             if (introBody) {

@@ -1025,6 +1025,7 @@ body .touch-effect {
   position: relative;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div.active video {
+  max-width: 60vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1114,7 +1115,7 @@ body .touch-effect {
   justify-content: space-between;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramTitleArea .main__contents--eduProgramPhotoTitle {
-  width: 44.16654vh;
+  flex: 1;
   height: 8.33333vh;
   padding: 1.25vh;
   border-radius: 0.625vh;
@@ -1162,6 +1163,7 @@ body .touch-effect {
   border: 0.0520833vh solid #CDD1D5;
   border-radius: 0.625vh;
   padding: 0.625vh;
+  margin-left: 1.25vh;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramTitleArea .main__contents--eduProgramQRcode .qrcodeArea {
   width: 100%;
