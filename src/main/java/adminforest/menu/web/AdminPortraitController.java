@@ -35,7 +35,19 @@ public class AdminPortraitController {
 	}
 	
 	@PostMapping("/admin/portrait/upload")
-	public String upload(@RequestParam("files") List<MultipartFile> files) {
+	public String upload(@RequestParam("files") List<MultipartFile> files, Model model) {
+		
+		List<FileVo> currentFiles = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
+		
+		if (!currentFiles.isEmpty()) {
+//			model.addAttribute("startPage", settingService.getDefaultPage());
+//			model.addAttribute("landScapeImages", settingService.getLandscapeType());
+//			model.addAttribute(AdminForest.LIST_FILE_VO, Util.getFiles(servletContext, AdminForest.UPLOAD_LANDSCAPE));
+			model.addAttribute(AdminForest.LIST_FILE_VO, currentFiles);
+			model.addAttribute("errorFixed", AdminForest.ERR_IMGS);
+			
+			return "/adminforest/portrait";
+		}
 		
 		Util.upload(files, servletContext, AdminForest.UPLOAD_PORTRAIT);
 		

@@ -16,6 +16,9 @@
 	<div class="container-fluid">
 		<div class="card mb-3">
 			<div class="card-body">
+				<c:if test="${not empty errorFixed}">
+					<div class="alert alert-danger" role="alert">${errorFixed}</div>
+				</c:if>
 				<form method="post" action="<c:url value='/admin/portrait/upload'/>" enctype="multipart/form-data">
 					<div class="form-group">
 						<label for="files"> 이미지 파일 선택</label> <input type="file" name="files" id="files" class="form-control-file" />

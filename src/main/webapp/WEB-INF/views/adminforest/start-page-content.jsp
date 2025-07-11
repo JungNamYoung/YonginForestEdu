@@ -12,7 +12,7 @@
 </div>
 <section class="content">
 	<div class="container-fluid">
-		<div class="card d-none">
+		<div class="card">
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/start-page'/>">
 					<div class="form-check">
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 
-		<div class="card">
+		<div class="card d-none">
 			<div class="card-header bg-info">이미지 설정</div>
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/landscape-image'/>">
@@ -41,7 +41,7 @@
 			</div>
 		</div>
 
-		<div class="card">
+		<div class="card d-none">
 			<div class="card-header bg-info">이미지 롤링</div>
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/landscape/images-rolling'/>" enctype="multipart/form-data">
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 
-		<div class="card">
+		<div class="card d-none">
 			<div class="card-header bg-info">이미지 고정형</div>
 			<div class="card-body">
 				<c:if test="${not empty errorFixed}">

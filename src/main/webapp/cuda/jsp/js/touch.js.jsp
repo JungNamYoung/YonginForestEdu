@@ -14,7 +14,7 @@ function resetInactivityTimer(){
 // 		}
 		
 		setTimeout(() => {
-			location.replace(App.rootPath + '/forest/landscape');
+			location.replace(App.rootPath + '/');
 		}, 500);
 	},30000);
 }

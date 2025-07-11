@@ -18,6 +18,8 @@ public class AdminForest {
 	public static String DB_USER="db.user";
 	public static String DB_PW="db.pw";
 	
+	public static String ERR_IMGS = "이미지는 한 장만 업로드할 수 있습니다.";
+	
 	// domain
 	public static String UPLOAD_LANDSCAPE = "/upload-files/image-landscape";
 	public static String UPLOAD_FOOTER= "/upload-files/image-footer";

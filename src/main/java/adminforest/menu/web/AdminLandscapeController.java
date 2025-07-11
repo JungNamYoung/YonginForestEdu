@@ -72,12 +72,13 @@ public class AdminLandscapeController {
 	public String imageFixed(@RequestParam("files") List<MultipartFile> files, Model model) {
 
 		List<FileVo> currentFiles = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
+		
 		if (!currentFiles.isEmpty()) {
 			model.addAttribute("startPage", settingService.getDefaultPage());
 			model.addAttribute("landScapeImages", settingService.getLandscapeType());
 			model.addAttribute(AdminForest.LIST_FILE_VO, Util.getFiles(servletContext, AdminForest.UPLOAD_LANDSCAPE));
 			model.addAttribute(AdminForest.LiST_PORTRAIT_VO, currentFiles);
-			model.addAttribute("errorFixed", "이미지는 한 장만 업로드할 수 있습니다.");
+			model.addAttribute("errorFixed", AdminForest.ERR_IMGS);
 			return "adminforest/start-page";
 		}
 
