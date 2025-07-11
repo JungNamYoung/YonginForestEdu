@@ -71,6 +71,9 @@
             const introBody = document.querySelector('.intro__body');
             if (introBody) {
                 introBody.classList.add('loaded');
+                localStorage.setItem("lowScreenState", "false");
+                localStorage.setItem("voiceMode", "voiceOnMode");
+                
             } else {
                 console.error('main-body 요소를 찾을 수 없습니다.');
             }

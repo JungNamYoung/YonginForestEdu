@@ -258,7 +258,7 @@ body .touch-effect {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .intro__body .container main .intro__main--area .intro__main--swiper .swiper-controls {
   width: 14.47916vh;
