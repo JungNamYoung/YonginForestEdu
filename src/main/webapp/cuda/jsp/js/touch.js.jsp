@@ -7,11 +7,11 @@ function resetInactivityTimer(){
 	clearTimeout(inactivityTimer);
 	
 	inactivityTimer = setTimeout(() => {
-		const page = document.querySelector('.page');
+// 		const page = document.querySelector('.page');
 		
-		if(page) {
-			page.classList.add('fade-out');
-		}
+// 		if(page) {
+// 			page.classList.add('fade-out');
+// 		}
 		
 		setTimeout(() => {
 			location.replace(App.rootPath + '/forest/landscape');
