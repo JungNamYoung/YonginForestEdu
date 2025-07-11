@@ -36,8 +36,8 @@ public class StartController {
 
 		model.addAttribute(AdminForest.LIST_FILE_VO, listFileVo);
 
-		listFileVo = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
-		model.addAttribute(AdminForest.PORTRAIT_VO, listFileVo);
+		List<FileVo> listPortraitVo = Util.getFiles(servletContext, AdminForest.UPLOAD_PORTRAIT);
+		model.addAttribute(AdminForest.LiST_PORTRAIT_VO, listPortraitVo);
 
 		return "adminforest/start-page";
 	}

@@ -76,7 +76,7 @@ public class AdminLandscapeController {
 			model.addAttribute("startPage", settingService.getDefaultPage());
 			model.addAttribute("landScapeImages", settingService.getLandscapeType());
 			model.addAttribute(AdminForest.LIST_FILE_VO, Util.getFiles(servletContext, AdminForest.UPLOAD_LANDSCAPE));
-			model.addAttribute(AdminForest.LIST_FILE_VO, currentFiles);
+			model.addAttribute(AdminForest.LiST_PORTRAIT_VO, currentFiles);
 			model.addAttribute("errorFixed", "이미지는 한 장만 업로드할 수 있습니다.");
 			return "adminforest/start-page";
 		}

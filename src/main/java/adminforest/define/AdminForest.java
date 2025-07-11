@@ -23,7 +23,7 @@ public class AdminForest {
 	public static String UPLOAD_FOOTER= "/upload-files/image-footer";
 	public static String UPLOAD_PORTRAIT = "/upload-files/image-portrait";
 	
-	public static String PORTRAIT_VO = "listPortraitVo";
+	public static String LiST_PORTRAIT_VO = "listPortraitVo";
 	
 	public static String VALUE_IMAGE_FIXED= "image-fixed";
 	public static String VALUE_IMAGES_ROLLING="images-rolling";
