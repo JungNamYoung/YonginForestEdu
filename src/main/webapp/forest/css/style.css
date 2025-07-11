@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* ?�트 ?�정 ?�작 */
-/* Pretendard GOV 글�??�작 */
+/* 폰트 설정 시작 */
+/* Pretendard GOV 글꼴 시작 */
 @font-face {
   font-family: "PretendardGOV";
   src: url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.woff2") format("woff2"), url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.woff") format("woff"), url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.ttf") format("truetype"), url("/YonginForestEdu/forest/assets/fonts/PretendardGOV-Thin.otf") format("opentype");
@@ -64,14 +64,14 @@
   font-style: normal;
   font-display: swap;
 }
-/* PretendardGOV 글�?종료 */
+/* PretendardGOV 글꼴 종료 */
 body {
   font-family: "PretendardGOV", sans-serif;
   font-weight: 400;
 }
 
-/* ?�트 ?�정 종료 */
-/* reset.scss - ?�오?�크 ?�용, PretendardGOV 기�? */
+/* 폰트 설정 종료 */
+/* reset.scss - 키오스크 전용, PretendardGOV 기준 */
 *,
 *::before,
 *::after {
@@ -85,7 +85,7 @@ body {
 
 html, body {
   width: 100%;
-  height: calc(var(--vh) * 100); /* ?�크립트?�서 ?�정??--vh �??�용 */
+  height: calc(var(--vh) * 100); /* 스크립트에서 설정된 --vh 값 사용 */
   overflow: hidden;
   font-family: "PretendardGOV", sans-serif;
   font-weight: 400;
@@ -162,7 +162,7 @@ hr {
 }
 .page.fade-out, .nextPage.fade-out, .backPage.fade-out {
   opacity: 0;
-  transform: translateX(-200px); /* ?�이지가 ?�쪽?�로 ?�라?�드 */
+  transform: translateX(-200px); /* 페이지가 왼쪽으로 슬라이드 */
 }
 
 .touch-effect {
@@ -240,6 +240,19 @@ body .touch-effect {
   flex-direction: column;
   align-items: center;
 }
+.intro__body .container main .intro__main--area .intro__main--imgArea {
+  width: 100%;
+  height: 53.75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro__body .container main .intro__main--area .intro__main--imgArea img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .intro__body .container main .intro__main--area .intro__main--swiper {
   width: 100%;
   position: relative;
@@ -249,7 +262,7 @@ body .touch-effect {
 }
 .intro__body .container main .intro__main--area .intro__main--swiper .swiper-slide {
   width: 100%;
-  height: 31.25vh;
+  height: 37.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -371,19 +384,18 @@ body .touch-effect {
 .intro__body .container main .intro__main--area .intro__main--touch {
   margin-top: 2.083333vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .intro__body .container main .intro__main--area .intro__main--touch svg {
-  width: 4.21874vh;
-  height: 4.16666vh;
+  width: 2.109374vh;
+  height: 2.083333vh;
 }
 .intro__body .container main .intro__main--area .intro__main--touch .intro__main--touchText {
   font-size: 1.5625vh;
   color: #F4F5F6;
-  margin-top: 1.25vh;
   font-weight: 700;
+  margin-left: 0.625vh;
 }
 
 .main-body {
@@ -674,22 +686,22 @@ body .touch-effect {
   height: 40.8333vh;
   background-position: center center;
   background-size: cover;
-  /* ?�래 ?�터 ?��????��? */
-  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
-  opacity: 1; /* 기본 ?�명??*/
-  transform: translateY(0); /* 기본 ?�치 */
+  /* 원래 푸터 스타일 유지 */
+  transition: all 0.5s ease-in-out; /* 부드러운 전환 효과 */
+  opacity: 1; /* 기본 투명도 */
+  transform: translateY(0); /* 기본 위치 */
   overflow: hidden;
 }
 .main-body .container footer.moving-out {
   opacity: 0;
-  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(100%); /* 아래로 이동하면서 사라짐 */
 }
 .main-body .container footer.moving-in {
   opacity: 1;
-  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(0); /* 아래로 이동하면서 사라짐 */
 }
 .main-body .container footer .highScreenBtn-icon {
-  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
+  display: none; /* 초기에는 높은 화면 아이콘 숨김 */
 }
 
 .sub-body {
@@ -795,8 +807,8 @@ body .touch-effect {
   opacity: 0;
   visibility: hidden;
   transform: translateX(5.20833vh);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* ?�니메이???�성 추�? */
-  /* 기본?�으�??�겨�??�태 */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* 애니메이션 속성 추가 */
+  /* 기본적으로 숨겨진 상태 */
   position: absolute;
   left: 0;
   top: 0;
@@ -1013,7 +1025,7 @@ body .touch-effect {
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 ?�치 */
+  transform: translateX(5.20833vh); /* 초기 위치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div.active {
@@ -1083,7 +1095,7 @@ body .touch-effect {
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 ?�치 */
+  transform: translateX(5.20833vh); /* 초기 위치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div.active {
@@ -1404,22 +1416,22 @@ body .touch-effect {
   height: 40.8333vh;
   background-position: center center;
   background-size: cover;
-  /* ?�래 ?�터 ?��????��? */
-  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
-  opacity: 1; /* 기본 ?�명??*/
-  transform: translateY(0); /* 기본 ?�치 */
+  /* 원래 푸터 스타일 유지 */
+  transition: all 0.5s ease-in-out; /* 부드러운 전환 효과 */
+  opacity: 1; /* 기본 투명도 */
+  transform: translateY(0); /* 기본 위치 */
   overflow: hidden;
 }
 .sub-body .container footer.moving-out {
   opacity: 0;
-  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(100%); /* 아래로 이동하면서 사라짐 */
 }
 .sub-body .container footer.moving-in {
   opacity: 1;
-  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(0); /* 아래로 이동하면서 사라짐 */
 }
 .sub-body .container footer .highScreenBtn-icon {
-  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
+  display: none;  /* 초기에는 높은 화면 아이콘 숨김 */
 }
 
 .footer-bg{
