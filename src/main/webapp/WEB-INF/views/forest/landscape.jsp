@@ -235,7 +235,7 @@
         }
     </script>
     
-    <%@ include file="/cuda/jsp/js/tts.js.jsp" %>
-    
+    <%@ include file="/cuda/jsp/js/voice.js.jsp" %>
+    <%@ include file="/cuda/jsp/js/touch.js.jsp" %>
 </body>
 </html>
