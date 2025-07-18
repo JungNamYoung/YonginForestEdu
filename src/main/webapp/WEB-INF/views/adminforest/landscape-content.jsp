@@ -6,7 +6,7 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1 class="m-0">가로형 이미지 설정</h1>
+				<h1 class="m-0">슬라이드 이미지 설정</h1>
 			</div>
 		</div>
 	</div>
@@ -17,7 +17,7 @@
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/landscape/upload'/>" enctype="multipart/form-data">
 					<div class="form-group">
-						<label for="files">이미지 파일 선택</label> 
+						<label for="files">이미지 파일 선택(가로:2064 x 세로:1440)</label> 
 						<input type="file" name="files" id="files" multiple class="form-control-file" />
 					</div>
 					<button type="submit" class="btn btn-primary">업로드</button>

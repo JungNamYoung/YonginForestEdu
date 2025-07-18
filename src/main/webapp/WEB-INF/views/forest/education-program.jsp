@@ -11,15 +11,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>용인산림교육센터</title>
-    <link rel="stylesheet" href="<c:url value="/forest/css/swiper-bundle.min.css"/>">
-    <link rel="stylesheet" href="<c:url value="/forest/css/style.css"/>">
+    <link rel="stylesheet" href="<c:url value='/forest/css/swiper-bundle.min.css'/>">
+    <link rel="stylesheet" href="<c:url value='/forest/css/style.css'/>">
 </head>
 <body class="sub-body">
 
 	<div class="container page">
-		<header role="banner" aria-label="사이트 헤더">
-			<h1>교육프로그램</h1>
-		</header>
+		<header role="banner">	<h1>교육프로그램</h1>	</header>
 
 		<main id="mainContent" tabindex="-1">
 			<section class="main__content">
@@ -55,39 +53,25 @@
 									<p>숲길등산</p>
 								</div>
 								<div class="main__contents--eduProgramQRcode">
-									<img src="<c:url value="/forest/assets/images/forestRoadQR.png"/>" alt="숲길등산 프로그램 QR 코드" class="qrcodeArea forestRoad-QRcode">
+									<img src="<c:url value='/forest/assets/images/forestRoadQR.png'/>" alt="숲길등산 프로그램 QR 코드" class="qrcodeArea forestRoad-QRcode">
 								</div>
 							</div>
 							<div class="main__contents--eduProgramContents">
-								<p class="main__contents--eduProgramContentsTitle">숲길등산이란?</p>
-								<p class="main__contents--eduProgramContentsExplanation">숲길을 통해 얻을 수 있는 산림생태자원을 바탕으로 한 경관적가치, 지리·지형적 가치, 자연요소적 가치 등과 지역의 역사적 의미, 지역생활의 의미를 느끼면서 안전하고 쾌적한 숲길에서 건강하고 행복하게 자연을 즐기는 활동입니다.</p>
-								<hr>
+                                <p class="main__contents--eduProgramContentsTitle">자연을 걷다, 용인을 느끼다</p>
+                                <p class="main__contents--eduProgramContentsExplanation">숲길을 따라 걸으며 용인의 풍부한 산림생태 자원과 지형·경관적 가치를 체험하고, 역사와 문화적 의미까지 함께 배울 수 있는 체험형 프로그램입니다. 다양한 활동을 통해 자연의 소중함을 느끼고, 타인의 생각을 존중하며 문제 해결 능력을 기를 수 있습니다.</p>
+							<div class="main__contents--imgList">
+                                    <img src="<c:url value='/forest/assets/images/program_01_01.png'/>" alt="숲길등산 이미지 01" />
+                                    <img src="<c:url value='/forest/assets/images/program_01_02.png'/>" alt="숲길등산 이미지 02" />
+                                    <img src="<c:url value='/forest/assets/images/program_01_03.png'/>" alt="숲길등산 이미지 03" />
+                                </div>
 
-								<ul>
-									<li>
-										<p>숲의 다양성을 직접 체험하면서 나와 다른 타인의 생각을 존중할 수 있는 프로그램입니다.</p>
-									</li>
-									<li>
-										<p>숲길에서 용인의 역사와 문화를 알 수 있는 프로그램입니다.</p>
-									</li>
-									<li>
-										<p>용인자연휴양림의 경관을 즐길 수 있는 프로그램입니다.</p>
-									</li>
-									<li>
-										<p>미션을 통해서 문제해결능력과 판단력을 향상시킬 수 있는 프로그램입니다.</p>
-									</li>
-								</ul>
 								<div class="main__contents--eduProgramInfoArea">
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>담당부서</span> : 산림과
-										</p>
+                                        <p><span>담당부서</span> : 산림과</p>
 									</div>
 									<div class="main__contents--eduProgramLine"></div>
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>문의</span> : 031-6193-3749/3356
-										</p>
+                                        <p><span>문의</span> : 031-6193-3749/3356</p>
 									</div>
 								</div>
 							</div>
@@ -98,36 +82,26 @@
 									<p>숲해설</p>
 								</div>
 								<div class="main__contents--eduProgramQRcode">
-									<img src="<c:url value="/forest/assets/images/forestCommentaryQR.png"/>" alt="숲해설 프로그램 QR 코드" class="qrcodeArea forestCommentary-QRcode">
+									<img src="<c:url value='/forest/assets/images/forestCommentaryQR.png'/>" alt="숲해설 프로그램 QR 코드" class="qrcodeArea forestCommentary-QRcode">
 								</div>
 							</div>
 							<div class="main__contents--eduProgramContents">
-								<p class="main__contents--eduProgramContentsTitle">숲해설이란?</p>
-								<p class="main__contents--eduProgramContentsExplanation">숲을 구성하고 있는 생물,무생물,문화적 요소에 관한 것과 숲에 대한 흥미를 갖도록 유도하고 체험하는 활동입니다.</p>
-								<hr>
+                                <p class="main__contents--eduProgramContentsTitle">숲이 들려주는 이야기에 귀 기울여요</p>
+                                <p class="main__contents--eduProgramContentsExplanation">숲에 존재하는 다양한 생물과 무생물, 문화적 요소에 대해 재미있는 해설과 체험을 통해 알아보는 참여형 프로그램입니다. 자연과 교감하며 생명의 가치와 자연 보호의 중요성을 배우는 의미 있는 시간이 됩니다.</p>
 
-								<ul>
-									<li>
-										<p>숲체험프로그램은 용인자연휴양림에서 운영하는 체험프로그램입니다.</p>
-									</li>
-									<li>
-										<p>자연의 소중함과 생명의 존귀함을 배우고 느끼게 하는 체험프로그램입니다.</p>
-									</li>
-									<li>
-										<p>다양한 생물을 체험할 수 있는 생태체험, 관찰학습 등을 통한 친자연적인 체험프로그램입니다.</p>
-									</li>
-								</ul>
+							                               <div class="main__contents--imgList">
+                                    <img src="<c:url value='/forest/assets/images/program_02_01.png'/>" alt="숲해설 이미지 01" />
+                                    <img src="<c:url value='/forest/assets/images/program_02_02.png'/>" alt="숲해설 이미지 02" />
+                                    <img src="<c:url value='/forest/assets/images/program_02_03.png'/>" alt="숲해설 이미지 03" />
+                                </div>
+
 								<div class="main__contents--eduProgramInfoArea">
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>담당부서</span> : 산림과
-										</p>
+                                        <p><span>담당부서</span> : 산림과</p>
 									</div>
 									<div class="main__contents--eduProgramLine"></div>
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>문의</span> : 031-6193-3748/3357/3358
-										</p>
+                                        <p><span>문의</span> : 031-6193-3748/3357/3358</p>
 									</div>
 								</div>
 							</div>
@@ -138,39 +112,26 @@
 									<p>산림치유</p>
 								</div>
 								<div class="main__contents--eduProgramQRcode">
-									<img src="<c:url value="/forest/assets/images/forestHealingQR.png"/>" alt="산림치유 프로그램 QR 코드" class="qrcodeArea forestHealing-QRcode">
+									<img src="<c:url value='/forest/assets/images/forestHealingQR.png'/>" alt="산림치유 프로그램 QR 코드" class="qrcodeArea forestHealing-QRcode">
 								</div>
 							</div>
 							<div class="main__contents--eduProgramContents">
-								<p class="main__contents--eduProgramContentsTitle">산림치유란?</p>
-								<p class="main__contents--eduProgramContentsExplanation">숲은 인간의 몸과 마음을 건강하게 합니다. 산림치유는 숲에 존재하는 다양한 환경요소를 활용하여 인체의 면역력을 높이고, 신체적 정신적 건강을 회복시키는 프로그램으로 질병의 치료행위가 아닌 건강의 유지를 돕고, 면역력을 높이는 활동입니다.</p>
-								<hr>
+                                <p class="main__contents--eduProgramContentsTitle">숲에서 쉬고, 숲으로 치유받다</p>
+                                <p class="main__contents--eduProgramContentsExplanation">숲이 가진 소리, 향기, 풍경 등 다양한 자연 요소를 활용해 신체적·정신적 면역력을 높이고, 건강한 삶을 돕는 웰빙형 프로그램입니다. 치료가 아닌 예방 중심의 건강 활동으로, 스트레스 해소와 심리적 안정을 돕습니다.</p>
 
-								<ul>
-									<li>
-										<p>스트레스 호르몬 ‘코티솔(CORTISOL)’ 감소</p>
-									</li>
-									<li>
-										<p>안정된 상태에서 많이 발생하는 뇌파'알파파'증가</p>
-									</li>
-									<li>
-										<p>면역력을 높이는 'NK세포' 증가</p>
-									</li>
-									<li>
-										<p>노화방지에 도움을 주는 '항산화효소'증가</p>
-									</li>
-								</ul>
+							                                <div class="main__contents--imgList">
+                                    <img src="<c:url value='/forest/assets/images/program_03_01.png'/>" alt="산림치유 이미지 01" />
+                                    <img src="<c:url value='/forest/assets/images/program_03_02.png'/>" alt="산림치유 이미지 02" />
+                                    <img src="<c:url value='/forest/assets/images/program_03_03.png'/>" alt="산림치유 이미지 03" />
+                                </div>
+
 								<div class="main__contents--eduProgramInfoArea">
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>담당부서</span> : 산림과
-										</p>
+                                        <p><span>담당부서</span> : 산림과</p>
 									</div>
 									<div class="main__contents--eduProgramLine"></div>
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>문의</span> : 031-6193-3747/3786
-										</p>
+                                        <p><span>문의</span> : 031-6193-3747/3786</p>
 									</div>
 								</div>
 							</div>
@@ -181,27 +142,21 @@
 									<p>목재문화체험</p>
 								</div>
 								<div class="main__contents--eduProgramQRcode">
-									<img src="<c:url value="/forest/assets/images/woodQR.png"/>" alt="목재문화체험 프로그램 QR 코드" class="qrcodeArea wood-QRcode">
+									<img src="<c:url value='/forest/assets/images/woodQR.png'/>" alt="목재문화체험 프로그램 QR 코드" class="qrcodeArea wood-QRcode">
 								</div>
 							</div>
 							<div class="main__contents--eduProgramContents">
-								<p class="main__contents--eduProgramContentsTitle">목재문화체험장이란?</p>
-								<p class="main__contents--eduProgramContentsExplanation">목재문화 진흥과 목재교육의 활성화를 위하여 교육 프로그램을 개발하여 다양한 체험기회를 제공하기 위한 시설입니다.</p>
-								<hr>
+                                <p class="main__contents--eduProgramContentsTitle">손으로 느끼는 나무의 따뜻함</p>
+                                <p class="main__contents--eduProgramContentsExplanation">자연 속 자원인 목재를 활용해 직접 만들고 꾸미는 창의적 목공체험 프로그램으로, 손으로 배우는 즐거움과 성취감을 느낄 수 있습니다. 아이부터 어른까지 누구나 참여할 수 있어 가족 단위 체험에도 적합합니다.</p>
 
-								<ul>
-									<li>
-										<p>위 치 : 경기도 용인시 처인구 모현면 초부로 220(용인자연휴양림 내)</p>
-									</li>
-								</ul>
-								<div class="main__contents--eduProgramContentsPhoto">
-									<img src="<c:url value="/forest/assets/images/6c626d0b7f5ab8a472644126cd617b3011291bc7.png"/>" alt="목재문화체험장 건물 외관 1" class="wood-buildingPhoto"> <img src="<c:url value="/forest/assets/images/c12ddea9e19e4702ca8a101679d330230f3827a7.png"/>" alt="목재문화체험장 내부 모습 2" class="wood-buildingPhoto"> <img src="<c:url value="/forest/assets/images/c89377560650b16c653297fac67b6727838a5c64.png"/>" alt="목재문화체험장 작업실 모습 3" class="wood-buildingPhoto">
+                                <div class="main__contents--imgList">
+                                    <img src="<c:url value='/forest/assets/images/program_04_01.png'/>" alt="목재문화체험 이미지 01" />
+                                    <img src="<c:url value='/forest/assets/images/program_04_02.png'/>" alt="목재문화체험 이미지 02" />
+                                    <img src="<c:url value='/forest/assets/images/program_04_03.png'/>" alt="목재문화체험 이미지 03" />
 								</div>
 								<div class="main__contents--eduProgramInfoArea">
 									<div class="main__contents--eduProgramInfo wood-Info">
-										<p>
-											<span>문의</span> : 031-6193-3747/3786
-										</p>
+                                        <p><span>문의</span> : 031-6193-3747/3786</p>
 									</div>
 								</div>
 							</div>
@@ -212,45 +167,24 @@
 									<p>행복한 숲, 너의 숲</p>
 								</div>
 								<div class="main__contents--eduProgramQRcode">
-									<img src="<c:url value="/forest/assets/images/youForestQR.png"/>" alt="행복한 숲, 너의 숲 프로그램 QR 코드" class="qrcodeArea youForest-QRcode">
+									<img src="<c:url value='/forest/assets/images/youForestQR.png'/>" alt="행복한 숲, 너의 숲 프로그램 QR 코드" class="qrcodeArea youForest-QRcode">
 								</div>
 							</div>
 							<div class="main__contents--eduProgramContents">
-								<p class="main__contents--eduProgramContentsTitle">행복한 숲, 너의 숲 이란?</p>
-								<p class="main__contents--eduProgramContentsExplanation">학교·법인·단체를 대상으로 진행하는 용인산림교육센터의 자체프로그램입니다.</p>
-								<hr>
+                                <p class="main__contents--eduProgramContentsTitle">자연 속 배움, 함께하는 즐거움</p>
+                                <p class="main__contents--eduProgramContentsExplanation">유치원, 학교, 법인 등 다양한 단체를 대상으로 운영되는 용인산림교육센터의 대표 산림교육 프로그램입니다. 천연염색, 생태놀이, 숲 멍때리기, 목공체험 등을 통해 자연과 교감하고 창의력과 협동심을 키울 수 있습니다.</p>
 
-								<ul>
-									<li>
-										<p>교육명 : 행복한 숲, 너의 숲</p>
-									</li>
-									<li>
-										<p>강사진 : 산림 ·목재교육 전문가</p>
-									</li>
-									<li>
-										<p>교육대상 : 유치원·학교·법인·단체(정원 30명)</p>
-									</li>
-									<li>
-										<p>교육내용 : 산림교육프로그램(손수건 천연염색, 생태놀이, 숲멍때리기 등)과 목공체험</p>
-									</li>
-									<li>
-										<p>교육형태 : 당일형, 숙박형(1박 2일)</p>
-									</li>
-									<li>
-										<p>교육비 : 당일형, 숙박형, 목공체험품목에 따라 상이함</p>
-									</li>
-								</ul>
+                                <div class="main__contents--imgList">
+                                    <img src="<c:url value='/forest/assets/images/program_05_01.png'/>" alt="행복한 숲 너의 숲 이미지 01" />
+                                    <img src="<c:url value='/forest/assets/images/program_05_02.png'/>" alt="행복한 숲 너의 숲 이미지 02" />
+                                </div>
 								<div class="main__contents--eduProgramInfoArea">
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>담당부서</span> : 산림과
-										</p>
+                                        <p><span>담당부서</span> : 산림과</p>
 									</div>
 									<div class="main__contents--eduProgramLine"></div>
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>문의</span> : 031-6193-3353
-										</p>
+                                        <p><span>문의</span> : 031-6193-3353</p>
 									</div>
 								</div>
 							</div>
@@ -261,35 +195,25 @@
 									<p>유아숲체험</p>
 								</div>
 								<div class="main__contents--eduProgramQRcode">
-									<img src="<c:url value="/forest/assets/images/infantQR.png"/>" alt="유아숲체험 프로그램 QR 코드" class="qrcodeArea infant-QRcode">
+									<img src="<c:url value='/forest/assets/images/infantQR.png'/>" alt="유아숲체험 프로그램 QR 코드" class="qrcodeArea infant-QRcode">
 								</div>
 							</div>
 							<div class="main__contents--eduProgramContents">
-								<p class="main__contents--eduProgramContentsTitle">유아숲체험이란?</p>
-								<p class="main__contents--eduProgramContentsExplanation">유아가 숲에서 맘껏 뛰놀고 오감을 통해 자연과 교감하는 등 전인적 성장을 위해 제공되는 공간입니다.</p>
-								<hr>
+                                <p class="main__contents--eduProgramContentsTitle">숲이 교실이 되는 시간</p>
+                                <p class="main__contents--eduProgramContentsExplanation">유아가 자연 속에서 뛰놀며 오감을 자극하고, 놀이를 통해 배움을 경험할 수 있도록 조성된 열린 체험 공간입니다. 형식보다 경험과 감성을 중시하며, 유아의 창의력·모험심·자연친화력을 자연스럽게 길러줍니다.</p>
 
-								<ul>
-									<li>
-										<p>숲이 교과서가 되고, 놀이 자체가 배움이 되는 교육의 장을 말합니다.</p>
-									</li>
-									<li>
-										<p>
-											'유아숲체험원'의 법적 정의에는 '시설'이라는 표현을 쓰고 있지만 그 본질은 시설보다는 공간의 의미가 더 큽니다.<br>(물론 유아숲체험원에는 대피소 등 시설물도 포함되지만 '야외체험학습장' 같이 공간의 비중이 큰 것을 의미합니다.)
-										</p>
-									</li>
-								</ul>
+                               <div class="main__contents--imgList">
+                                    <img src="<c:url value='/forest/assets/images/program_06_01.png'/>" alt="유아숲체험 이미지 01" />
+                                    <img src="<c:url value='/forest/assets/images/program_06_02.png'/>" alt="유아숲체험 이미지 02" />
+                                    <img src="<c:url value='/forest/assets/images/program_06_03.png'/>" alt="유아숲체험 이미지 03" />
+                                </div>
 								<div class="main__contents--eduProgramInfoArea">
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>담당부서</span> : 산림과
-										</p>
+                                        <p><span>담당부서</span> : 산림과</p>
 									</div>
 									<div class="main__contents--eduProgramLine"></div>
 									<div class="main__contents--eduProgramInfo">
-										<p>
-											<span>문의</span> : 031-6193-3353
-										</p>
+                                        <p><span>문의</span> : 031-6193-3353</p>
 									</div>
 								</div>
 							</div>
@@ -314,9 +238,7 @@
 				</button>
 				<button class="main__controls--reproductionBtn voice-replayBtn" aria-label="음성 안내 다시 재생">
 					<svg viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg" class="reproductionBtn-icon" aria-hidden="true" focusable="false">
-                        <path
-							d="M18 41.8593C15.5 41.8593 13.1583 41.3843 10.975 40.4343C8.79167 39.4843 6.89167 38.201 5.275 36.5843C3.65833 34.9676 2.375 33.0676 1.425 30.8843C0.475 28.7009 0 26.3593 0 23.8593C0 23.2926 0.191667 22.8176 0.575 22.4343C0.958333 22.0509 1.43333 21.8593 2 21.8593C2.56667 21.8593 3.04167 22.0509 3.425 22.4343C3.80833 22.8176 4 23.2926 4 23.8593C4 27.7593 5.35833 31.0676 8.075 33.7843C10.7917 36.5009 14.1 37.8593 18 37.8593C21.9 37.8593 25.2083 36.5009 27.925 33.7843C30.6417 31.0676 32 27.7593 32 23.8593C32 19.9593 30.6417 16.6509 27.925 13.9343C25.2083 11.2176 21.9 9.85928 18 9.85928H17.7L19.4 11.5593C19.8 11.9593 19.9917 12.4259 19.975 12.9593C19.9583 13.4926 19.7667 13.9593 19.4 14.3593C19 14.7593 18.525 14.9676 17.975 14.9843C17.425 15.0009 16.95 14.8093 16.55 14.4093L11.4 9.25928C11 8.85928 10.8 8.39261 10.8 7.85928C10.8 7.32594 11 6.85928 11.4 6.45928L16.55 1.30928C16.95 0.909276 17.425 0.71761 17.975 0.734276C18.525 0.750943 19 0.959276 19.4 1.35928C19.7667 1.75928 19.9583 2.22594 19.975 2.75928C19.9917 3.29261 19.8 3.75928 19.4 4.15928L17.7 5.85928H18C20.5 5.85928 22.8417 6.33428 25.025 7.28428C27.2083 8.23428 29.1083 9.51761 30.725 11.1343C32.3417 12.7509 33.625 14.6509 34.575 16.8343C35.525 19.0176 36 21.3593 36 23.8593C36 26.3593 35.525 28.7009 34.575 30.8843C33.625 33.0676 32.3417 34.9676 30.725 36.5843C29.1083 38.201 27.2083 39.4843 25.025 40.4343C22.8417 41.3843 20.5 41.8593 18 41.8593Z"
-							fill="#3C3F49" />
+                        <path d="M18 41.8593C15.5 41.8593 13.1583 41.3843 10.975 40.4343C8.79167 39.4843 6.89167 38.201 5.275 36.5843C3.65833 34.9676 2.375 33.0676 1.425 30.8843C0.475 28.7009 0 26.3593 0 23.8593C0 23.2926 0.191667 22.8176 0.575 22.4343C0.958333 22.0509 1.43333 21.8593 2 21.8593C2.56667 21.8593 3.04167 22.0509 3.425 22.4343C3.80833 22.8176 4 23.2926 4 23.8593C4 27.7593 5.35833 31.0676 8.075 33.7843C10.7917 36.5009 14.1 37.8593 18 37.8593C21.9 37.8593 25.2083 36.5009 27.925 33.7843C30.6417 31.0676 32 27.7593 32 23.8593C32 19.9593 30.6417 16.6509 27.925 13.9343C25.2083 11.2176 21.9 9.85928 18 9.85928H17.7L19.4 11.5593C19.8 11.9593 19.9917 12.4259 19.975 12.9593C19.9583 13.4926 19.7667 13.9593 19.4 14.3593C19 14.7593 18.525 14.9676 17.975 14.9843C17.425 15.0009 16.95 14.8093 16.55 14.4093L11.4 9.25928C11 8.85928 10.8 8.39261 10.8 7.85928C10.8 7.32594 11 6.85928 11.4 6.45928L16.55 1.30928C16.95 0.909276 17.425 0.71761 17.975 0.734276C18.525 0.750943 19 0.959276 19.4 1.35928C19.7667 1.75928 19.9583 2.22594 19.975 2.75928C19.9917 3.29261 19.8 3.75928 19.4 4.15928L17.7 5.85928H18C20.5 5.85928 22.8417 6.33428 25.025 7.28428C27.2083 8.23428 29.1083 9.51761 30.725 11.1343C32.3417 12.7509 33.625 14.6509 34.575 16.8343C35.525 19.0176 36 21.3593 36 23.8593C36 26.3593 35.525 28.7009 34.575 30.8843C33.625 33.0676 32.3417 34.9676 30.725 36.5843C29.1083 38.201 27.2083 39.4843 25.025 40.4343C22.8417 41.3843 20.5 41.8593 18 41.8593Z" fill="#3C3F49"/>
                     </svg>
 				</button>
 			</div>
@@ -326,9 +248,7 @@
                     <rect width="48" height="48" fill="#D9D9D9" />
                     </mask>
                     <g mask="url(#mask0_604_1013)">
-                    <path
-						d="M12 37.8141H18.6925V27.7371C18.6925 27.2251 18.8657 26.7957 19.212 26.4491C19.5587 26.1027 19.988 25.9296 20.5 25.9296H27.5C28.012 25.9296 28.4413 26.1027 28.788 26.4491C29.1343 26.7957 29.3075 27.2251 29.3075 27.7371V37.8141H36V20.1216C36 20.0192 35.9775 19.9264 35.9325 19.8431C35.8878 19.7597 35.827 19.6859 35.75 19.6216L24.3655 11.0641C24.2628 10.9744 24.141 10.9296 24 10.9296C23.859 10.9296 23.7372 10.9744 23.6345 11.0641L12.25 19.6216C12.173 19.6859 12.1122 19.7597 12.0675 19.8431C12.0225 19.9264 12 20.0192 12 20.1216V37.8141ZM9 37.8141V20.1216C9 19.5492 9.128 19.0071 9.384 18.4951C9.64033 17.9827 9.99433 17.5609 10.446 17.2296L21.831 8.65257C22.4627 8.17057 23.1847 7.92957 23.997 7.92957C24.8093 7.92957 25.5333 8.17057 26.169 8.65257L37.554 17.2296C38.0057 17.5609 38.3597 17.9827 38.616 18.4951C38.872 19.0071 39 19.5492 39 20.1216V37.8141C39 38.6321 38.7045 39.3366 38.1135 39.9276C37.5225 40.5186 36.818 40.8141 36 40.8141H28.1155C27.6032 40.8141 27.1738 40.6407 26.8275 40.2941C26.4808 39.9477 26.3075 39.5184 26.3075 39.0061V28.9296H21.6925V39.0061C21.6925 39.5184 21.5192 39.9477 21.1725 40.2941C20.8262 40.6407 20.3968 40.8141 19.8845 40.8141H12C11.182 40.8141 10.4775 40.5186 9.8865 39.9276C9.2955 39.3366 9 38.6321 9 37.8141Z"
-						fill="white" />
+                    <path d="M12 37.8141H18.6925V27.7371C18.6925 27.2251 18.8657 26.7957 19.212 26.4491C19.5587 26.1027 19.988 25.9296 20.5 25.9296H27.5C28.012 25.9296 28.4413 26.1027 28.788 26.4491C29.1343 26.7957 29.3075 27.2251 29.3075 27.7371V37.8141H36V20.1216C36 20.0192 35.9775 19.9264 35.9325 19.8431C35.8878 19.7597 35.827 19.6859 35.75 19.6216L24.3655 11.0641C24.2628 10.9744 24.141 10.9296 24 10.9296C23.859 10.9296 23.7372 10.9744 23.6345 11.0641L12.25 19.6216C12.173 19.6859 12.1122 19.7597 12.0675 19.8431C12.0225 19.9264 12 20.0192 12 20.1216V37.8141ZM9 37.8141V20.1216C9 19.5492 9.128 19.0071 9.384 18.4951C9.64033 17.9827 9.99433 17.5609 10.446 17.2296L21.831 8.65257C22.4627 8.17057 23.1847 7.92957 23.997 7.92957C24.8093 7.92957 25.5333 8.17057 26.169 8.65257L37.554 17.2296C38.0057 17.5609 38.3597 17.9827 38.616 18.4951C38.872 19.0071 39 19.5492 39 20.1216V37.8141C39 38.6321 38.7045 39.3366 38.1135 39.9276C37.5225 40.5186 36.818 40.8141 36 40.8141H28.1155C27.6032 40.8141 27.1738 40.6407 26.8275 40.2941C26.4808 39.9477 26.3075 39.5184 26.3075 39.0061V28.9296H21.6925V39.0061C21.6925 39.5184 21.5192 39.9477 21.1725 40.2941C20.8262 40.6407 20.3968 40.8141 19.8845 40.8141H12C11.182 40.8141 10.4775 40.5186 9.8865 39.9276C9.2955 39.3366 9 38.6321 9 37.8141Z" fill="white"/>
                     </g>
                 </svg>
 			</button>
@@ -343,7 +263,7 @@
 			</button>
 		</aside>
 		<footer id="footer">
-			<div class="swiper mySwiper">
+            <div class="swiper mySwiper1">
 				<div class="swiper-wrapper">
 					<c:forEach var="img" items="${listFileVo}">
 						<div class="swiper-slide">
@@ -354,52 +274,15 @@
 			</div>
 		</footer>
 	</div>
-	<audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/forestRoad.mp3"/>" aria-label="사이트 음성 안내"></audio> 
-    <script src="<c:url value="/forest/js/swiper-bundle.min.js"/>"></script>
-    <script src="<c:url value="/forest/js/footer-swiper.js"/>"></script>
-    <script src="<c:url value="/forest/js/script.js"/>"></script>
-    <script src="<c:url value="/forest/js/aside-accessibility.js"/>"></script>
-    <script src="<c:url value="/forest/js/sub-page.js"/>"></script>
-    // <script>
-
-
-
-    //     const navBtns = document.querySelectorAll(".main__navigation > ul li button");
-    //     const accessibilityAudio = document.getElementById("accessibilityAudio");
-
-    //     navBtns.forEach(function (btn) {
-    //         btn.addEventListener("click", function () {
-    //             const tabSound = this.dataset.area;
-
-	// 			console.log(tabSound);
-
-    //             accessibilityAudio.src = `<c:url value="/forest/assets/mp3/${tabSound}.wav"/>`;
-
-    //             voiceMode();
-
-    //             function voiceMode() {
-    //                 if (localStorage.getItem("voiceMode") === "voiceOffMode") {
-    //                     accessibilityAudio.pause();
-    //                     accessibilityAudio.currentTime = 0;
-
-    //                 } else {
-    //                     accessibilityAudio.play();
-    //                 }
-    //             }                
-    //         });
-    //     });
-        
-    // </script>
+	<audio id="accessibilityAudio" src="<c:url value='/forest/assets/mp3/forestRoad.mp3'/>" aria-label="사이트 음성 안내"></audio> 
+    <script src="<c:url value='/forest/js/swiper-bundle.min.js'/>"></script>
+    <script src="<c:url value='/forest/js/footer-swiper.js'/>"></script>
+    <script src="<c:url value='/forest/js/script.js'/>"></script>
+    <script src="<c:url value='/forest/js/aside-accessibility.js'/>"></script>
+    <script src="<c:url value='/forest/js/sub-page.js'/>"></script>
 
 	<script>
-		// **이 부분이 핵심입니다.**
-        // JSP에서 웹 애플리케이션의 Context Path를 JavaScript 변수에 저장합니다.
-        // 예를 들어, 현재 웹 애플리케이션이 "YonginForestEdu"라는 이름으로 배포되었다면,
-        // contextPath 변수에는 "/YonginForestEdu"가 들어갑니다.
-		
-        //const contextPath = "${pageContext.request.contextPath}";
-
-		const contextPath = App.rootPath;
+	const contextPath = App.rootPath;
 
         const navBtns = document.querySelectorAll(".main__navigation > ul li button");
         const accessibilityAudio = document.getElementById("accessibilityAudio");
@@ -408,20 +291,15 @@
             btn.addEventListener("click", function () {
                 const tabSound = this.dataset.area;
 
-                console.log("선택된 탭 사운드:", tabSound); // 어떤 tabSound 값이 찍히는지 다시 확인해 보세요.
-
-                // Context Path를 활용하여 오디오 파일의 전체 경로를 만듭니다.
-                // 예: "/YonginForestEdu/forest/assets/mp3/forestHealing.wav"
                 accessibilityAudio.src = `\${contextPath}/forest/assets/mp3/\${tabSound}.mp3`;
                 
-                console.log("새로운 오디오 src:", accessibilityAudio.src); // 실제로 설정되는 src 경로를 확인해 보세요.
-
                 voiceMode();
 
                 function voiceMode() {
                     if (localStorage.getItem("voiceMode") === "voiceOffMode") {
                         accessibilityAudio.pause();
                         accessibilityAudio.currentTime = 0;
+
                     } else {
                         accessibilityAudio.play();
                     }

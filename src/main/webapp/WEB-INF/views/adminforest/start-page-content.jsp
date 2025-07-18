@@ -16,10 +16,10 @@
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/start-page'/>">
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="page" id="pageIndex" value="/forest/landscape" ${startPage == '/forest/landscape' ? 'checked' : ''}> <label class="form-check-label" for="pageIndex">가로형(여러 이미지 롤링)</label>
+						<input class="form-check-input" type="radio" name="page" id="pageIndex" value="/forest/landscape" ${startPage == '/forest/landscape' ? 'checked' : ''}> <label class="form-check-label" for="pageIndex">슬라이드 이미지</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="page" id="pageEvent" value="/forest/portrait" ${startPage == '/forest/portrait' ? 'checked' : ''}> <label class="form-check-label" for="pageEvent">세로형(하나의 이미지 고정)</label>
+						<input class="form-check-input" type="radio" name="page" id="pageEvent" value="/forest/portrait" ${startPage == '/forest/portrait' ? 'checked' : ''}> <label class="form-check-label" for="pageEvent">1장 이미지</label>
 					</div>
 					<button type="submit" class="btn btn-primary mt-3">선택</button>
 				</form>

@@ -132,7 +132,7 @@
 			</button>
 		</aside>
         <footer id="footer">
-			<div class="swiper mySwiper">
+			<div class="swiper mySwiper1">
 				<div class="swiper-wrapper">
 					<c:forEach var="img" items="${listFileVo}">
 						<div class="swiper-slide">

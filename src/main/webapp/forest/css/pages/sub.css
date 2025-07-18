@@ -102,8 +102,8 @@
   opacity: 0;
   visibility: hidden;
   transform: translateX(5.20833vh);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* ?�니메이???�성 추�? */
-  /* 기본?�으�??�겨�??�태 */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s; /* 애니메이션 속성 추가 */
+  /* 기본적으로 숨겨진 상태 */
   position: absolute;
   left: 0;
   top: 0;
@@ -142,33 +142,6 @@
   background: url(/YonginForestEdu/forest/assets/images/5b8ed1becbdc1c84a1fa727f798cc2170c152658.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
-}
-.sub-body .container main .main__content article .main__contents > div .main__contents--contentArea {
-  margin-top: 1.25vh;
-  width: 35.4166vh;
-  min-height: 13.38411vh;
-  padding: 1.25vh;
-  background-color: #FFFFFF;
-  border: 0.0520833vh solid #CDD1D5;
-  border-radius: 0.625vh;
-}
-.sub-body .container main .main__content article .main__contents > div .main__contents--contentArea .main__contents--title {
-  color: #035A63;
-  font-weight: 700;
-  font-size: 1.875vh;
-}
-.sub-body .container main .main__content article .main__contents > div .main__contents--contentArea .main__contents--explanation {
-  margin-top: 0.833333vh;
-  padding-left: 1.875vh;
-}
-.sub-body .container main .main__content article .main__contents > div .main__contents--contentArea .main__contents--explanation li {
-  list-style: disc;
-  font-size: 1.354166vh;
-  color: #1E2124;
-}
-.sub-body .container main .main__content article .main__contents > div .main__contents--contentArea .main__contents--explanation li p {
-  font-size: 1.458332vh;
-  color: #1E2124;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--greetings {
   flex-direction: row;
@@ -320,7 +293,7 @@
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 ?�치 */
+  transform: translateX(5.20833vh); /* 초기 위치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div.active {
@@ -332,6 +305,7 @@
   position: relative;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--educationCenter .main__content--tabArea > div.active video {
+  max-width: 60vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -389,7 +363,7 @@
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(5.20833vh); /* 초기 ?�치 */
+  transform: translateX(5.20833vh); /* 초기 위치 */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation .main__content--tabArea > div.active {
@@ -406,6 +380,346 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities {
+  padding: 2.083333vh 1.25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabBtn button {
+  width: 8.33333vh;
+  height: 2.916654vh;
+  padding: 1.041666vh 0;
+  border-radius: 0.416666vh;
+  border: 0.0520833vh solid #B1B8BE;
+  background-color: #FFFFFF;
+  color: #464C53;
+  font-weight: 700;
+  font-size: 1.354166vh;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.625vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabBtn button.active {
+  background-color: #007C85;
+  border: 0.0520833vh solid #007C85;
+  color: #FFFFFF;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabBtn button.pressed {
+  transition: all 0.5s ease-in-out;
+  background-color: #E6EEEF;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabBtn button:focus-visible {
+  outline: 0.2083333vh solid #1E2124;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabBtn button:last-child {
+  margin-right: 0;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea {
+  border-radius: 0.625vh;
+  width: 100%;
+  height: 34.16654vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(5.20833vh); /* 초기 위치 */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer .facilities--swiper {
+  width: 35.4166vh;
+  border-radius: 0.625vh;
+  position: relative;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer .facilities--swiper .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 0.833333vh;
+  transform: translateX(-50%);
+  width: auto;
+  height: 2.5vh;
+  padding: 0 1.041666vh;
+  border-radius: 52.0833vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer .facilities--swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 0.416666vh;
+  height: 0.416666vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer .facilities--swiper .swiper-pagination .swiper-pagination-bullet:focus-visible {
+  outline: 0.2083333vh solid #1E2124;
+  opacity: 1;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer .facilities--swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 1.041666vh;
+  height: 0.416666vh;
+  border-radius: 52.0833vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer > button {
+  width: 3.33333vh;
+  height: 3.33333vh;
+  border: 0.0520833vh solid #CDD1D5;
+  border-radius: 52.0833vh;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer > button.pressed {
+  transition: all 0.5s ease-in-out;
+  background-color: #E6E8EA;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer > button:focus-visible {
+  outline: 0.2083333vh solid #1E2124;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer > button.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer > button.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer > button:after {
+  color: #33363D;
+  font-weight: bolder;
+  font-size: 1.25vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer > button.swiper-button-disabled {
+  border: 0.0520833vh solid #E6E8EA;
+  background-color: #E6E8EA;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .swiper-wrapper-outer > button.swiper-button-disabled:after {
+  color: #6D7882;
+  font-weight: bolder;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .main__contents--contentArea {
+  margin-top: 1.25vh;
+  width: 35.4166vh;
+  height: 12.5vh;
+  padding: 1.25vh;
+  background-color: #FFFFFF;
+  border: 0.0520833vh solid #CDD1D5;
+  border-radius: 0.625vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .main__contents--contentArea .main__contents--title {
+  color: #035A63;
+  font-weight: 700;
+  font-size: 1.875vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .main__contents--contentArea .main__contents--explanation {
+  padding-left: 1.875vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .main__contents--contentArea .main__contents--explanation li {
+  list-style: disc;
+  font-size: 1.354166vh;
+  color: #1E2124;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--educationalFacilities .main__content--tabArea > div.active .main__contents--contentArea .main__contents--explanation li p {
+  font-size: 1.458332vh;
+  color: #1E2124;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 {
+  padding: 2.083333vh 1.25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabBtn button {
+  width: 8.33333vh;
+  height: 2.916654vh;
+  padding: 1.041666vh 0;
+  border-radius: 0.416666vh;
+  border: 0.0520833vh solid #B1B8BE;
+  background-color: #FFFFFF;
+  color: #464C53;
+  font-weight: 700;
+  font-size: 1.354166vh;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.625vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabBtn button.active {
+  background-color: #007C85;
+  border: 0.0520833vh solid #007C85;
+  color: #FFFFFF;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabBtn button.pressed {
+  transition: all 0.5s ease-in-out;
+  background-color: #E6EEEF;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabBtn button:focus-visible {
+  outline: 0.2083333vh solid #1E2124;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabBtn button:last-child {
+  margin-right: 0;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea {
+  border-radius: 0.625vh;
+  width: 100%;
+  height: 34.16654vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(5.20833vh); /* 초기 위치 */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer .facilities--swiper {
+  width: 35.4166vh;
+  border-radius: 0.625vh;
+  position: relative;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer .facilities--swiper .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 0.833333vh;
+  transform: translateX(-50%);
+  width: auto;
+  height: 2.5vh;
+  padding: 0 1.041666vh;
+  border-radius: 52.0833vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer .facilities--swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 0.416666vh;
+  height: 0.416666vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer .facilities--swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 1.041666vh;
+  height: 0.416666vh;
+  border-radius: 52.0833vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer > button {
+  width: 3.33333vh;
+  height: 3.33333vh;
+  border: 0.0520833vh solid #CDD1D5;
+  border-radius: 52.0833vh;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer > button.pressed {
+  transition: all 0.5s ease-in-out;
+  background-color: #E6E8EA;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer > button:focus-visible {
+  outline: 0.2083333vh solid #1E2124;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer > button.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer > button.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer > button:after {
+  color: #33363D;
+  font-weight: bolder;
+  font-size: 1.25vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer > button.swiper-button-disabled {
+  border: 0.0520833vh solid #E6E8EA;
+  background-color: #E6E8EA;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .swiper-wrapper-outer > button.swiper-button-disabled:after {
+  color: #6D7882;
+  font-weight: bolder;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .main__contents--contentArea {
+  margin-top: 1.25vh;
+  width: 35.4166vh;
+  height: 12.5vh;
+  padding: 1.25vh;
+  background-color: #FFFFFF;
+  border: 0.0520833vh solid #CDD1D5;
+  border-radius: 0.625vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .main__contents--contentArea .main__contents--title {
+  color: #035A63;
+  font-weight: 700;
+  font-size: 1.875vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .main__contents--contentArea .main__contents--explanation {
+  padding-left: 1.875vh;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .main__contents--contentArea .main__contents--explanation li {
+  list-style: disc;
+  font-size: 1.354166vh;
+  color: #1E2124;
+}
+.sub-body .container main .main__content article .main__contents > div.main__contents--Accommodation02 .main__content--tabArea > div.active .main__contents--contentArea .main__contents--explanation li p {
+  font-size: 1.458332vh;
+  color: #1E2124;
+}
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea {
   padding: 2.083333vh 1.25vh;
   width: 100%;
@@ -421,7 +735,7 @@
   justify-content: space-between;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramTitleArea .main__contents--eduProgramPhotoTitle {
-  width: 44.16654vh;
+  flex: 1;
   height: 8.33333vh;
   padding: 1.25vh;
   border-radius: 0.625vh;
@@ -469,6 +783,7 @@
   border: 0.0520833vh solid #CDD1D5;
   border-radius: 0.625vh;
   padding: 0.625vh;
+  margin-left: 1.25vh;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramTitleArea .main__contents--eduProgramQRcode .qrcodeArea {
   width: 100%;
@@ -494,56 +809,31 @@
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents {
   width: 100%;
-  height: 1136px;
+  height: 29.5833vh;
   padding: 1.25vh;
   border: 0.0520833vh solid #CDD1D5;
   background-color: #FFFFFF;
   border-radius: 0.625vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents .main__contents--eduProgramContentsTitle {
   color: #035A63;
   font-weight: 700;
   font-size: 1.875vh;
-  margin-bottom: 1.25vh;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents .main__contents--eduProgramContentsExplanation {
   color: #1E2124;
-  font-weight: 700;
   font-size: 1.354166vh;
 }
-.sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents hr {
-  width: 100%;
-  height: 0.0520833vh;
-  background-color: #CDD1D5;
-  margin: 1.25vh 0;
-}
-.sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents ul {
-  flex: 1;
-  padding-left: 1.875vh;
-}
-.sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents ul li {
-  list-style: disc;
-  font-size: 1.354166vh;
-  color: #1E2124;
-}
-.sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents ul li p {
-  font-size: 1.354166vh;
-  color: #1E2124;
-}
-.sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents .main__contents--eduProgramContentsPhoto {
-  width: 100%;
-  height: 8.64583vh;
+.sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents .main__contents--imgList {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.25vh;
 }
-.sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents .main__contents--eduProgramContentsPhoto > img {
+.sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents .main__contents--imgList img {
   border-radius: 0.416666vh;
-  width: 16.24999vh;
-  height: 100%;
 }
 .sub-body .container main .main__content article .main__contents > div.main__contents--eduProgramArea .main__contents--eduProgramContents .main__contents--eduProgramInfoArea {
   border: 0.0520833vh solid #CDD1D5;
@@ -709,22 +999,22 @@
   height: 40.8333vh;
   background-position: center center;
   background-size: cover;
-  /* ?�래 ?�터 ?��????��? */
-  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
-  opacity: 1; /* 기본 ?�명??*/
-  transform: translateY(0); /* 기본 ?�치 */
+  /* 원래 푸터 스타일 유지 */
+  transition: all 0.5s ease-in-out; /* 부드러운 전환 효과 */
+  opacity: 1; /* 기본 투명도 */
+  transform: translateY(0); /* 기본 위치 */
   overflow: hidden;
 }
 .sub-body .container footer.moving-out {
   opacity: 0;
-  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(100%); /* 아래로 이동하면서 사라짐 */
 }
 .sub-body .container footer.moving-in {
   opacity: 1;
-  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(0); /* 아래로 이동하면서 사라짐 */
 }
 .sub-body .container footer .highScreenBtn-icon {
-  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
+  display: none; /* 초기에는 높은 화면 아이콘 숨김 */
 }
 
 /*# sourceMappingURL=sub.css.map */

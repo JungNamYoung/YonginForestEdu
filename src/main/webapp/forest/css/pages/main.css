@@ -287,22 +287,22 @@
   height: 40.8333vh;
   background-position: center center;
   background-size: cover;
-  /* ?�래 ?�터 ?��????��? */
-  transition: all 0.5s ease-in-out; /* 부?�러???�환 ?�과 */
-  opacity: 1; /* 기본 ?�명??*/
-  transform: translateY(0); /* 기본 ?�치 */
+  /* 원래 푸터 스타일 유지 */
+  transition: all 0.5s ease-in-out; /* 부드러운 전환 효과 */
+  opacity: 1; /* 기본 투명도 */
+  transform: translateY(0); /* 기본 위치 */
   overflow: hidden;
 }
 .main-body .container footer.moving-out {
   opacity: 0;
-  transform: translateY(100%); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(100%); /* 아래로 이동하면서 사라짐 */
 }
 .main-body .container footer.moving-in {
   opacity: 1;
-  transform: translateY(0); /* ?�래�??�동?�면???�라�?*/
+  transform: translateY(0); /* 아래로 이동하면서 사라짐 */
 }
 .main-body .container footer .highScreenBtn-icon {
-  display: none; /* 초기?�는 ?��? ?�면 ?�이�??��? */
+  display: none; /* 초기에는 높은 화면 아이콘 숨김 */
 }
 
 /*# sourceMappingURL=main.css.map */

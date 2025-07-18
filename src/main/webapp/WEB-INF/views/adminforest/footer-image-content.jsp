@@ -18,7 +18,9 @@
 			<div class="card-body">
 				<form method="post" action="<c:url value='/admin/footer-image/upload'/>" enctype="multipart/form-data">
 					<div class="form-group">
-						<label for="files"> 이미지 파일 선택</label> <input type="file" name="files" id="files" class="form-control-file" />
+						<label for="files"> 이미지 파일 선택(가로:2160 x 세로:1568)</label> 
+						
+						<input type="file" name="files" id="files" class="form-control-file" />
 					</div>
 					<button type="submit" class="btn btn-primary">업로드</button>
 				</form>

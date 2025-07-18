@@ -7,7 +7,7 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1 class="m-0">세로형 이미지 설정</h1>
+				<h1 class="m-0">1장 이미지 설정</h1>
 			</div>
 		</div>
 	</div>
@@ -21,7 +21,7 @@
 				</c:if>
 				<form method="post" action="<c:url value='/admin/portrait/upload'/>" enctype="multipart/form-data">
 					<div class="form-group">
-						<label for="files"> 이미지 파일 선택</label> <input type="file" name="files" id="files" class="form-control-file" />
+						<label for="files"> 이미지 파일 선택(가로:2064 x 세로:3000)</label> <input type="file" name="files" id="files" class="form-control-file" />
 					</div>
 					<button type="submit" class="btn btn-primary">업로드</button>
 				</form>

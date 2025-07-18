@@ -22,84 +22,250 @@
             <h1>시설안내</h1>
         </header>
 
-        <main id="mainContent" tabindex="-1">
+        <main id="mainContent">
             <section class="main__content">
-                <h1 class="sr-only">용인산림교육센터 시설안내 상세 정보</h1>
+                <h1 class="sr-only" aria-hidden="true">용인산림교육센터 시설안내 상세 정보</h1>
                 <article>
                     <nav class="main__navigation" aria-label="시설 안내 탭 메뉴">
                         <ul role="tablist">
                             <li role="presentation">
-                                <button class="active" data-area="edu1F" id="tab1" role="tab" aria-controls="panel1" aria-selected="true">교육관 1층</button>
+                                <button class="active" data-area="educationalFacilities" id="tab1" role="tab" aria-controls="panel1" aria-selected="true">교육시설</button>
                             </li>
                             <li role="presentation">
-                                <button id="tab2" data-area="edu2F" role="tab" aria-controls="panel2" aria-selected="false">교육관 2층</button>
-                            </li>
-                            <li role="presentation">
-                                <button id="tab3" data-area="edu3F" role="tab" aria-controls="panel3" aria-selected="false">교육관 3층</button>
-                            </li>
-                            <li role="presentation">
-                                <button id="tab4" data-area="accommodation" role="tab" aria-controls="panel4" aria-selected="false">숙박동</button>
-                            </li>
-                            <li role="presentation">
-                                <button id="tab5" data-area="welfare" role="tab" aria-controls="panel5" aria-selected="false">나눔숲복지센터</button>
+                                <button id="tab2" data-area="Accommodation02" role="tab" aria-controls="panel2" aria-selected="false">숙박시설</button>
                             </li>
                         </ul>
                     </nav>
 
                     <div class="main__contents">
-                        <div id="panel1" class="main__contents--edu1F active" role="tabpanel" tabindex="0" aria-labelledby="tab1">
-                            <div class="main__contents--photoArea main__contents--photoEdu1F" role="img" aria-label="교육관 1층 내부 사진"></div>
+                        <div id="panel1" class="main__contents--educationalFacilities active" role="tabpanel" tabindex="0" aria-labelledby="tab1" aria-live="polite">
+                            <div class="main__content--tabBtn" role="tablist">
+                                <button class="active" data-area="auditorium" id="auditorium" role="tab" aria-controls="auditoriumPanel1" aria-selected="true">대강당</button>
+                                <button data-area="classroom" id="classroom" role="tab" aria-controls="classroomPanel2" aria-selected="false">강의실</button>
+                                <button data-area="ExperienceRoom01" id="ExperienceRoom01" role="tab" aria-controls="ExperienceRoom01Panel3" aria-selected="false">체험실1</button>
+                                <button data-area="ExperienceRoom02" id="ExperienceRoom02" role="tab" aria-controls="ExperienceRoom02Panel4" aria-selected="false">체험실2</button>
+                                <button data-area="ExperienceRoom03" id="ExperienceRoom03" role="tab" aria-controls="ExperienceRoom03Panel5" aria-selected="false">체험실3</button>
+                                <button data-area="library" id="library" role="tab" aria-controls="libraryPanel6" aria-selected="false">도서실</button>
+                            </div>
+
+                            <div class="main__content--tabArea">
+                                <div id="auditoriumPanel1" class="auditoriumPanel1 main__contents--auditoriumInfo active" role="tabpanel" tabindex="0" aria-labelledby="auditorium">
+                                    <div class="swiper-wrapper-outer">
+                                        <div class="swiper mySwiper2 facilities--swiper" role="region" aria-label="대강당 이미지 슬라이드" aria-live="polite">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_01_01.png'/>" alt="대강당 이미지 01"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_01_02.png'/>" alt="대강당 이미지 02"></div>
+                                            </div>
+                                            <div class="swiper-pagination mySwiper2-pagination"></div>
+                                        </div>
+                                        <button class="swiper-button-prev mySwiper2-button-prev" aria-label="대강당 이전 이미지 보기"></button>
+                                        <button class="swiper-button-next mySwiper2-button-next" aria-label="대강당 다음 이미지 보기"></button>
+                                    </div>
+                                    <div class="main__contents--contentArea">
+                                        <h2 class="main__contents--title">대강당</h2>
+                                        <ul class="main__contents--explanation">
+                                            <li><p>위치: 교육관 1층</p></li>
+                                            <li><p>면적: 256㎡ / 수용인원: 130명</p></li>
+                                            <li><p>이용료: 160,000원 (4시간/회 기준)</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="classroomPanel2" class="classroomPanel2 main__contents--classroomInfo" role="tabpanel" tabindex="0" aria-labelledby="classroom" hidden inert>
+                                    <div class="swiper-wrapper-outer">
+                                        <div class="swiper mySwiper3 facilities--swiper" role="region" aria-label="강의실 이미지 슬라이드" aria-live="polite">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_02_01.png'/>" alt="강의실 이미지 01"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_02_02.png'/>" alt="강의실 이미지 02"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_02_03.png'/>" alt="강의실 이미지 03"></div>
+                                            </div>
+                                            <div class="swiper-pagination mySwiper3-pagination"></div>
+                                        </div>
+                                        <button class="swiper-button-prev mySwiper3-button-prev" aria-label="강의실 이전 이미지 보기"></button>
+                                        <button class="swiper-button-next mySwiper3-button-next" aria-label="강의실 다음 이미지 보기"></button>
+                                    </div>
                             <div class="main__contents--contentArea">
-                                <h2 class="main__contents--title">교육관 1층</h2>
+                                        <h2 class="main__contents--title">강의실</h2>
                                 <ul class="main__contents--explanation">
-                                    <li><p>면적 - 256㎡</p></li>
-                                    <li><p>수용인원 - 130명</p></li>
-                                    <li><p>주요시설 – 대강당 / 양호실</p></li>
+                                            <li><p>위치: 교육관 2층</p></li>
+                                            <li><p>면적: 91㎡ / 수용인원: 63명</p></li>
+                                            <li><p>이용료: 100,000원 (4시간/회 기준)</p></li>
                                 </ul>
                             </div>
                         </div>
-                        <div id="panel2" class="main__contents--edu2F" role="tabpanel" tabindex="0" aria-labelledby="tab2" hidden>
-                            <div class="main__contents--photoArea main__contents--photoEdu2F" role="img" aria-label="교육관 2층 내부 사진"></div>
+
+                                <div id="ExperienceRoom01Panel3" class="ExperienceRoom01Panel3 main__contents--ExperienceRoom01Info" role="tabpanel" tabindex="0" aria-labelledby="ExperienceRoom01" hidden inert>
+                                    <div class="swiper-wrapper-outer">
+                                        <div class="swiper mySwiper4 facilities--swiper" role="region" aria-label="체험실1 이미지 슬라이드" aria-live="polite">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_03_01.png'/>" alt="체험실1 이미지 01"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_03_02.png'/>" alt="체험실1 이미지 02"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_03_03.png'/>" alt="체험실1 이미지 03"></div>
+                                            </div>
+                                            <div class="swiper-pagination mySwiper4-pagination"></div>
+                                        </div>
+                                        <button class="swiper-button-prev mySwiper4-button-prev" aria-label="체험실1 이전 이미지 보기"></button>
+                                        <button class="swiper-button-next mySwiper4-button-next" aria-label="체험실1 다음 이미지 보기"></button>
+                                    </div>
                             <div class="main__contents--contentArea">
-                                <h2 class="main__contents--title">교육관 2층</h2>
+                                        <h2 class="main__contents--title">체험실1</h2>
+                                        <ul class="main__contents--explanation">
+                                            <li><p>위치: 교육관 2층</p></li>
+                                            <li><p>면적: 65㎡ / 수용인원: 30명</p></li>
+                                            <li><p>이용료: 60,000원 (4시간/회 기준)</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="ExperienceRoom02Panel4" class="ExperienceRoom02Panel4 main__contents--ExperienceRoom02Info" role="tabpanel" tabindex="0" aria-labelledby="ExperienceRoom02" hidden inert>
+                                    <div class="swiper-wrapper-outer">
+                                        <div class="swiper mySwiper5 facilities--swiper" role="region" aria-label="체험실2 이미지 슬라이드" aria-live="polite">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_04_01.png'/>" alt="체험실2 이미지 01"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_04_02.png'/>" alt="체험실2 이미지 02"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_04_03.png'/>" alt="체험실2 이미지 03"></div>
+                                            </div>
+                                            <div class="swiper-pagination mySwiper5-pagination"></div>
+                                        </div>
+                                        <button class="swiper-button-prev mySwiper5-button-prev" aria-label="체험실2 이전 이미지 보기"></button>
+                                        <button class="swiper-button-next mySwiper5-button-next" aria-label="체험실2 다음 이미지 보기"></button>
+                                    </div>
+                                    <div class="main__contents--contentArea">
+                                        <h2 class="main__contents--title">체험실2</h2>
+                                        <ul class="main__contents--explanation">
+                                            <li><p>위치: 교육관 2층</p></li>
+                                            <li><p>면적: 77㎡ / 수용인원: 42명</p></li>
+                                            <li><p>이용료: 80,000원 (4시간/회 기준)</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="ExperienceRoom03Panel5" class="ExperienceRoom03Panel5 main__contents--ExperienceRoom03Info" role="tabpanel" tabindex="0" aria-labelledby="ExperienceRoom03" hidden inert>
+                                    <div class="swiper-wrapper-outer">
+                                        <div class="swiper mySwiper6 facilities--swiper" role="region" aria-label="체험실3 이미지 슬라이드" aria-live="polite">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_05_01.png'/>" alt="체험실3 이미지 01"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_05_02.png'/>" alt="체험실3 이미지 02"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_05_03.png'/>" alt="체험실3 이미지 03"></div>
+                                            </div>
+                                            <div class="swiper-pagination mySwiper6-pagination"></div>
+                                        </div>
+                                        <button class="swiper-button-prev mySwiper6-button-prev" aria-label="체험실3 이전 이미지 보기"></button>
+                                        <button class="swiper-button-next mySwiper6-button-next" aria-label="체험실3 다음 이미지 보기"></button>
+                                    </div>
+                                    <div class="main__contents--contentArea">
+                                        <h2 class="main__contents--title">체험실3</h2>
+                                        <ul class="main__contents--explanation">
+                                            <li><p>위치: 교육관 2층</p></li>
+                                            <li><p>면적: 78㎡ / 수용인원: 42명</p></li>
+                                            <li><p>이용료: 80,000원 (4시간/회 기준)</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="libraryPanel6" class="libraryPanel6 main__contents--libraryInfo" role="tabpanel" tabindex="0" aria-labelledby="library" hidden inert>
+                                    <div class="swiper-wrapper-outer">
+                                        <div class="swiper mySwiper7 facilities--swiper" role="region" aria-label="도서실 이미지 슬라이드" aria-live="polite">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_06_01.png'/>" alt="도서실 이미지 01"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/edu_06_02.png'/>" alt="도서실 이미지 02"></div>
+                                            </div>
+                                            <div class="swiper-pagination mySwiper7-pagination"></div>
+                                        </div>
+                                        <button class="swiper-button-prev mySwiper7-button-prev" aria-label="도서실 이전 이미지 보기"></button>
+                                        <button class="swiper-button-next mySwiper7-button-next" aria-label="도서실 다음 이미지 보기"></button>
+                                    </div>
+                                    <div class="main__contents--contentArea">
+                                        <h2 class="main__contents--title">도서실</h2>
                                 <ul class="main__contents--explanation">
-                                    <li><p>면적 - 91㎡</p></li>
-                                    <li><p>수용인원 - 63명</p></li>
-                                    <li><p>주요시설 – 강의실/체험실/도서실</p></li>
+                                            <li><p>위치: 교육관 2층</p></li>
+                                            <li><p>면적: 45㎡ / 수용인원: 12명</p></li>
+                                            <li><p>이용료: 무료</p></li>
                                 </ul>
                             </div>
                         </div>
-                        <div id="panel3" class="main__contents--edu3F" role="tabpanel" tabindex="0" aria-labelledby="tab3" hidden>
-                            <div class="main__contents--photoArea main__contents--photoEdu3F" role="img" aria-label="교육관 3층 내부 사진"></div>
+                            </div>
+                        </div>
+
+                        <div id="panel2" class="main__contents--Accommodation02" role="tabpanel" tabindex="0" aria-labelledby="tab2" hidden inert aria-live="polite">
+                            <div class="main__content--tabBtn" role="tablist">
+                                <button class="active" data-area="twoPersonRoom" id="twoPersonRoom" role="tab" aria-controls="twoPersonRoomPanel1" aria-selected="true">2인실</button>
+                                <button data-area="fivePersonRoom" id="fivePersonRoom" role="tab" aria-controls="fivePersonRoomPanel2" aria-selected="false">5인실</button>
+                                <button data-area="twelvePersonRoom" id="twelvePersonRoom" role="tab" aria-controls="twelvePersonRoomPanel3" aria-selected="false">12인실</button>
+                            </div>
+
+                            <div class="main__content--tabArea">
+                                <div id="twoPersonRoomPanel1" class="twoPersonRoomPanel1 main__contents--twoPersonRoomInfo active" role="tabpanel" tabindex="0" aria-labelledby="twoPersonRoom">
+                                    <div class="swiper-wrapper-outer">
+                                        <div class="swiper mySwiper8 facilities--swiper" role="region" aria-label="숙박시설 2인실 이미지 슬라이드" aria-live="polite">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_01_01.png'/>" alt="숙박시설 2인실 이미지 01"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_01_02.png'/>" alt="숙박시설 2인실 이미지 02"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_01_03.png'/>" alt="숙박시설 2인실 이미지 03"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_01_04.png'/>" alt="숙박시설 2인실 이미지 04"></div>
+                                            </div>
+                                            <div class="swiper-pagination mySwiper8-pagination"></div>
+                                        </div>
+                                        <button class="swiper-button-prev mySwiper8-button-prev" aria-label="숙박시설 2인실 이전 이미지 보기"></button>
+                                        <button class="swiper-button-next mySwiper8-button-next" aria-label="숙박시설 2인실 다음 이미지 보기"></button>
+                                    </div>
                             <div class="main__contents--contentArea">
-                                <h2 class="main__contents--title">교육관 3층</h2>
+                                        <h2 class="main__contents--title">숙박실 - 2인실</h2>
                                 <ul class="main__contents--explanation">
-                                    <li><p>면적 - 60㎡</p></li>
-                                    <li><p>시설구분 – 숙박실(301~313호)</p></li>
-                                    <li><p>주요시설 – 2인실(5실) / 5인실(7실)</p></li>
+                                            <li><p>위치: 교육관 3층</p></li>
+                                            <li><p>호실: 303,304,308~311호 / 면적: 21㎡</p></li>
+                                            <li><p>이용료: 50,000원 (입실: 14시 / 퇴실: 11시)</p></li>
                                 </ul>
                             </div>
                         </div>
-                        <div id="panel4" class="main__contents--accommodation" role="tabpanel" tabindex="0" aria-labelledby="tab4" hidden>
-                            <div class="main__contents--photoArea main__contents--photoAccommodation" role="img" aria-label="숙박동 내부 사진"></div>
+
+                                <div id="fivePersonRoomPanel2" class="fivePersonRoomPanel2 main__contents--fivePersonRoomInfo" role="tabpanel" tabindex="0" aria-labelledby="fivePersonRoom" hidden inert>
+                                    <div class="swiper-wrapper-outer">
+                                        <div class="swiper mySwiper9 facilities--swiper" role="region" aria-label="숙박시설 5인실 이미지 슬라이드" aria-live="polite">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_02_01.png'/>" alt="숙박시설 5인실 이미지 01"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_02_02.png'/>" alt="숙박시설 5인실 이미지 02"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_02_03.png'/>" alt="숙박시설 5인실 이미지 03"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_02_04.png'/>" alt="숙박시설 5인실 이미지 04"></div>
+                                            </div>
+                                            <div class="swiper-pagination mySwiper9-pagination"></div>
+                                        </div>
+                                        <button class="swiper-button-prev mySwiper9-button-prev" aria-label="숙박시설 5인실 이전 이미지 보기"></button>
+                                        <button class="swiper-button-next mySwiper9-button-next" aria-label="숙박시설 5인실 다음 이미지 보기"></button>
+                                    </div>
                             <div class="main__contents--contentArea">
-                                <h2 class="main__contents--title">숙박동</h2>
+                                        <h2 class="main__contents--title">숙박실 - 5인실</h2>
                                 <ul class="main__contents--explanation">
-                                    <li><p>면적 - 87㎡</p></li>
-                                    <li><p>시설구분 – 숙박동(101,102,201,202호)</p></li>
-                                    <li><p>주요시설 – 12인실(4실)</p></li>
+                                            <li><p>위치: 교육관 3층</p></li>
+                                            <li><p>호실: 301,302,305~307,312,313호 / 면적: 39㎡</p></li>
+                                            <li><p>이용료: 100,000원 (입실: 14시 / 퇴실: 11시)</p></li>
                                 </ul>
                             </div>
                         </div>
-                        <div id="panel5" class="main__contents--welfare" role="tabpanel" tabindex="0" aria-labelledby="tab5" hidden>
-                            <div class="main__contents--photoArea main__contents--photoWelfare" role="img" aria-label="나눔숲복지센터 내부 사진"></div>
+
+                                <div id="twelvePersonRoomPanel3" class="twelvePersonRoomPanel3 main__contents--twelvePersonRoomInfo" role="tabpanel" tabindex="0" aria-labelledby="twelvePersonRoom" hidden inert>
+                                    <div class="swiper-wrapper-outer">
+                                        <div class="swiper mySwiper10 facilities--swiper" role="region" aria-label="숙박시설 12인실 이미지 슬라이드" aria-live="polite">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_03_01.png'/>" alt="숙박시설 12인실 이미지 01"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_03_02.png'/>" alt="숙박시설 12인실 이미지 02"></div>
+                                                <div class="swiper-slide"><img src="<c:url value='/forest/assets/images/room_03_03.png'/>" alt="숙박시설 12인실 이미지 03"></div>
+                                            </div>
+                                            <div class="swiper-pagination mySwiper10-pagination"></div>
+                                        </div>
+                                        <button class="swiper-button-prev mySwiper10-button-prev" aria-label="숙박시설 12인실 이전 이미지 보기"></button>
+                                        <button class="swiper-button-next mySwiper10-button-next" aria-label="숙박시설 12인실 다음 이미지 보기"></button>
+                                    </div>
                             <div class="main__contents--contentArea">
-                                <h2 class="main__contents--title">나눔숲복지센터</h2>
+                                        <h2 class="main__contents--title">숙박실 - 12인실</h2>
                                 <ul class="main__contents--explanation">
-                                    <li><p>면적 - 180㎡ (주차장 29대)</p></li>
-                                    <li><p>운영 - 실내 산림교육센터프로그램 진행</p></li>
+                                            <li><p>위치: 숙박동</p></li>
+                                            <li><p>호실: 101,102,201,202호 / 면적: 87㎡</p></li>
+                                            <li><p>이용료: 150,000원 (입실: 14시 / 퇴실: 11시)</p></li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
                         </div>
                     </div>
                 </article>
@@ -107,8 +273,8 @@
         </main>
 
         <aside class="main__controls" role="complementary" aria-label="보조 기능 컨트롤">
-            <div class="main__controls--control main__controls--voice">
-                <p>음성 안내</p>
+            <div class="main__controls--control main__controls--voice" aria-labelledby="voiceGuideTitle">
+                <p id="voiceGuideTitle">음성 안내</p>
                 <button class="main__controls--pauseBtn voice-pauseBtn" aria-label="음성 안내 일시정지">
                     <svg viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="pauseBtn-icon" aria-hidden="true" focusable="false">
                         <path d="M20 28C18.9 28 17.9583 27.6083 17.175 26.825C16.3917 26.0417 16 25.1 16 24V4C16 2.9 16.3917 1.95833 17.175 1.175C17.9583 0.391667 18.9 0 20 0C21.1 0 22.0417 0.391667 22.825 1.175C23.6083 1.95833 24 2.9 24 4V24C24 25.1 23.6083 26.0417 22.825 26.825C22.0417 27.6083 21.1 28 20 28ZM4 28C2.9 28 1.95833 27.6083 1.175 26.825C0.391667 26.0417 0 25.1 0 24V4C0 2.9 0.391667 1.95833 1.175 1.175C1.95833 0.391667 2.9 0 4 0C5.1 0 6.04167 0.391667 6.825 1.175C7.60833 1.95833 8 2.9 8 4V24C8 25.1 7.60833 26.0417 6.825 26.825C6.04167 27.6083 5.1 28 4 28Z" fill="#3C3F49"/>
@@ -146,7 +312,7 @@
             </button>
         </aside>
 		<footer id="footer">
-			<div class="swiper mySwiper">
+            <div class="swiper mySwiper1" role="region" aria-label="용인산림교육센터 전경 이미지 슬라이더">
 				<div class="swiper-wrapper">
 					<c:forEach var="img" items="${listFileVo}">
 						<div class="swiper-slide">
@@ -157,7 +323,7 @@
 			</div>
 		</footer>
 	</div>
-    <audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/edu1F.mp3"/>" aria-label="사이트 음성 안내"></audio> 
+    <audio id="accessibilityAudio" src="<c:url value="/forest/assets/mp3/auditorium.mp3"/>" aria-label="사이트 음성 안내"></audio> 
 
     <script src="<c:url value="/forest/js/swiper-bundle.min.js"/>"></script>
     <script src="<c:url value="/forest/js/footer-swiper.js"/>"></script>
@@ -165,14 +331,50 @@
     <script src="<c:url value="/forest/js/aside-accessibility.js"/>"></script>
     <script src="<c:url value="/forest/js/sub-page.js"/>"></script>
  <script>
-        const navBtns = document.querySelectorAll(".main__navigation > ul li button");
+        // 대강당, 강의실 등 하위 탭메뉴
+        const FloorGuideButton = document.querySelectorAll(".main__content--tabBtn > button");     
+        console.log(FloorGuideButton);
+        
+        // 하위 콘텐츠
+        const FloorGuideArea = document.querySelectorAll(".main__content--tabArea > div");
+       
         const accessibilityAudio = document.getElementById("accessibilityAudio");
 
-        navBtns.forEach(function (btn) {
-            btn.addEventListener("click", function () {
-                const tabSound = this.dataset.area;
+        function resetBtn() {
+            FloorGuideButton.forEach(function (btn) {
+                btn.classList.remove("active");
+                btn.setAttribute("aria-selected", "false");
+            });
+        }
+        function resetArea() {
+            FloorGuideArea.forEach(function (area) {
+                area.classList.remove("active");
+                area.setAttribute("aria-hidden", "true");
+                area.setAttribute("hidden", "");
+                area.setAttribute("inert", "");
+                area.style.opacity = "0";
+                area.style.visibility = "hidden";
+            });
 
-                accessibilityAudio.src = App.rootPath + `/forest/assets/mp3/\${tabSound}.mp3`;
+            FloorGuideArea.forEach(function (area) {
+                area.style.opacity = "0";
+                area.style.transform = "translateX(5.20833vh)";
+            });
+        }
+
+        FloorGuideButton.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                if (this.classList.contains("active")) return;
+
+                // 하위 탭메뉴 초기화
+                resetBtn();
+
+                this.classList.add("active");
+                this.setAttribute("aria-selected", "true");
+
+                accessibilityAudio.src = App.rootPath + `/forest/assets/mp3/\${this.dataset.area}.mp3`;
+
+                //accessibilityAudio.src = App.rootPath + `/forest/assets/mp3/\${tabSound}.mp3`;
 
                 voiceMode();
 
@@ -185,9 +387,223 @@
                         accessibilityAudio.play();
                     }
                 }                 
+
+                // 하단 콘텐츠 영역 초기화
+                resetArea();
+
+                const target = document.querySelector(`.main__contents--\${this.dataset.area}Info`);
+
+                 if (target) {
+                    // 우선 숨긴 상태로 DOM에 보이게만 하기
+                    target.classList.add("active");
+                    target.removeAttribute("aria-hidden");
+                    target.removeAttribute("inert");
+                    target.removeAttribute("hidden");
+                    target.style.opacity = "0";
+                    target.style.visibility = "hidden";
+
+                    // 타겟 콘텐츠 보이게 전환 (애니메이션 유도)
+                    setTimeout(() => {
+                        target.style.opacity = "1";
+                        target.style.visibility = "visible";
+                        target.style.transform = "translateX(0)";
+
+                    }, 50);
+                }
             });
+            });
+
+        document.querySelector("#tab1").addEventListener("click", () => {
+
+            resetBtn();
+
+            document.querySelector("#auditorium").classList.add("active");
+
+            resetArea();
+
+            voiceMode();
+
+            function voiceMode() {
+                if (localStorage.getItem("voiceMode") === "voiceOffMode") {
+                    accessibilityAudio.src = "/assets/mp3/auditorium.mp3";
+                    accessibilityAudio.pause();
+                    accessibilityAudio.currentTime = 0;
+                    
+
+                } else {
+                    accessibilityAudio.src = "/assets/mp3/auditorium.mp3";
+                    accessibilityAudio.play();
+                    
+                }
+            }  
+
+            if (document.querySelector(".main__contents--auditoriumInfo")) {
+                // 우선 숨긴 상태로 DOM에 보이게만 하기
+                document.querySelector(".main__contents--auditoriumInfo").classList.add("active");
+                document.querySelector(".main__contents--auditoriumInfo").removeAttribute("aria-hidden");
+                document.querySelector(".main__contents--auditoriumInfo").removeAttribute("inert");
+                document.querySelector(".main__contents--auditoriumInfo").removeAttribute("hidden");
+                document.querySelector(".main__contents--auditoriumInfo").style.opacity = "0";
+                document.querySelector(".main__contents--auditoriumInfo").style.visibility = "hidden";
+
+                // 타겟 콘텐츠 보이게 전환 (애니메이션 유도)
+                setTimeout(() => {
+                    document.querySelector(".main__contents--auditoriumInfo").style.opacity = "1";
+                    document.querySelector(".main__contents--auditoriumInfo").style.visibility = "visible";
+                    document.querySelector(".main__contents--auditoriumInfo").style.transform = "translateX(0)";
+
+                }, 50);
+            }
+        });
+
+        document.querySelector("#tab2").addEventListener("click", () => {
+
+            resetBtn();
+
+            document.querySelector("#twoPersonRoom").classList.add("active");
+
+            resetArea();
+
+
+            voiceMode();
+
+            function voiceMode() {
+                if (localStorage.getItem("voiceMode") === "voiceOffMode") {
+                    accessibilityAudio.src = "/assets/mp3/twoPersonRoom.mp3";
+                    accessibilityAudio.pause();
+                    accessibilityAudio.currentTime = 0;
+
+                } else {
+                    accessibilityAudio.src = "/assets/mp3/twoPersonRoom.mp3";
+                    accessibilityAudio.play();
+                }
+            }  
+
+            if (document.querySelector(".main__contents--twoPersonRoomInfo")) {
+                // 우선 숨긴 상태로 DOM에 보이게만 하기
+                document.querySelector(".main__contents--twoPersonRoomInfo").classList.add("active");
+                document.querySelector(".main__contents--twoPersonRoomInfo").removeAttribute("aria-hidden");
+                document.querySelector(".main__contents--twoPersonRoomInfo").removeAttribute("inert");
+                document.querySelector(".main__contents--twoPersonRoomInfo").removeAttribute("hidden");
+                document.querySelector(".main__contents--twoPersonRoomInfo").style.opacity = "0";
+                document.querySelector(".main__contents--twoPersonRoomInfo").style.visibility = "hidden";
+
+                // 타겟 콘텐츠 보이게 전환 (애니메이션 유도)
+                setTimeout(() => {
+                    document.querySelector(".main__contents--twoPersonRoomInfo").style.opacity = "1";
+                    document.querySelector(".main__contents--twoPersonRoomInfo").style.visibility = "visible";
+                    document.querySelector(".main__contents--twoPersonRoomInfo").style.transform = "translateX(0)";
+
+                }, 50);
+            }
+        });
+
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".mySwiper2-pagination", // 클래스 이름 변경
+                clickable: true,
+            },
+            navigation: { // navigation 객체 추가
+                nextEl: ".mySwiper2-button-next",
+                prevEl: ".mySwiper2-button-prev",
+            },
+        });
+        var swiper3 = new Swiper(".mySwiper3", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".mySwiper3-pagination", // 클래스 이름 변경
+                clickable: true,
+            },
+            navigation: { // navigation 객체 추가
+                nextEl: ".mySwiper3-button-next",
+                prevEl: ".mySwiper3-button-prev",
+            },
         });
         
+        var swiper4 = new Swiper(".mySwiper4", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".mySwiper4-pagination", // 클래스 이름 변경
+                clickable: true,
+            },
+            navigation: { // navigation 객체 추가
+                nextEl: ".mySwiper4-button-next",
+                prevEl: ".mySwiper4-button-prev",
+            },
+        });
+
+        var swiper5 = new Swiper(".mySwiper5", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".mySwiper5-pagination", // 클래스 이름 변경
+                clickable: true,
+            },
+            navigation: { // navigation 객체 추가
+                nextEl: ".mySwiper5-button-next",
+                prevEl: ".mySwiper5-button-prev",
+            },
+        });
+
+        var swiper6 = new Swiper(".mySwiper6", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".mySwiper6-pagination", // 클래스 이름 변경
+                clickable: true,
+            },
+            navigation: { // navigation 객체 추가
+                nextEl: ".mySwiper6-button-next",
+                prevEl: ".mySwiper6-button-prev",
+            },
+        });
+
+        var swiper7 = new Swiper(".mySwiper7", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".mySwiper7-pagination", // 클래스 이름 변경
+                clickable: true,
+            },
+            navigation: { // navigation 객체 추가
+                nextEl: ".mySwiper7-button-next",
+                prevEl: ".mySwiper7-button-prev",
+            },
+        });
+
+        var swiper8 = new Swiper(".mySwiper8", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".mySwiper8-pagination", // 클래스 이름 변경
+                clickable: true,
+            },
+            navigation: { // navigation 객체 추가
+                nextEl: ".mySwiper8-button-next",
+                prevEl: ".mySwiper8-button-prev",
+            },
+        });
+
+        var swiper9 = new Swiper(".mySwiper9", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".mySwiper9-pagination", // 클래스 이름 변경
+                clickable: true,
+            },
+            navigation: { // navigation 객체 추가
+                nextEl: ".mySwiper9-button-next",
+                prevEl: ".mySwiper9-button-prev",
+            },
+        });
+
+        var swiper10 = new Swiper(".mySwiper10", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".mySwiper10-pagination", // 클래스 이름 변경
+                clickable: true,
+            },
+            navigation: { // navigation 객체 추가
+                nextEl: ".mySwiper10-button-next",
+                prevEl: ".mySwiper10-button-prev",
+            },
+        });
     </script>
     
     <%@ include file="/cuda/jsp/js/voice.js.jsp" %>

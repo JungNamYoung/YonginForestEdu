@@ -1,4 +1,4 @@
- var swiper = new Swiper(".mySwiper", {
+ var swiper = new Swiper(".mySwiper1", {
     // 여기에 Swiper 옵션을 추가합니다.
     loop: true, // 무한 루프
     autoplay: {
@@ -14,8 +14,8 @@
       clickable: true, // 페이지네이션 클릭 가능
     },
     navigation: {
-      nextEl: ".swiper-button-next", // 다음 버튼
-      prevEl: ".swiper-button-prev", // 이전 버튼
+      nextEl: ".mySwiper1-button-next", // 다음 버튼
+      prevEl: ".mySwiper1-button-prev", // 이전 버튼
     },
     // 페이드 효과를 사용할 때는 보통 slidesPerView를 1로 설정합니다.
     slidesPerView: 1, 

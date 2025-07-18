@@ -40,10 +40,10 @@
 								<p>Kiosk</p>
 						</a></li>
 						<li class="nav-item"><a href="<c:url value='/admin/landscape'/>" class="nav-link ${param.menu eq 'landscape' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>
-								<p>시작화면(가로형)</p>
+								<p>시작화면(슬라이드)</p>
 						</a></li>
 						<li class="nav-item"><a href="<c:url value='/admin/portrait'/>" class="nav-link ${param.menu eq 'portrait' ? 'active' : ''}"> <i class="nav-icon fas fa-image"></i>
-								<p>시작화면(세로형)</p>
+								<p>시작화면(1장)</p>
 						</a></li>
 						
 						<li class="nav-item"><a href="<c:url value='/admin/start-page'/>" class="nav-link ${param.menu eq 'start-page' ? 'active' : '' }"> <i class="nav-icon fas fa-home"></i>
