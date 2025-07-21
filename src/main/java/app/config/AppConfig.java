@@ -17,7 +17,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import adminforest.interceptor.LoginInterceptor;
 
 @Configuration
-@ComponentScan(basePackages = { "adminforest", "cuda", "forest" })
+@ComponentScan(basePackages = { "adminforest", "cuda", "forest", "app.handler" })
 @EnableWebMvc
 @Import(MyBatisConfig.class)
 @EnableTransactionManagement

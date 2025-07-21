@@ -30,6 +30,8 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	@Override
 	protected void customizeRegistration(ServletRegistration.Dynamic registration) {
 
+        registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
+        
 		TokenEx tokenEx = new TokenEx(AdminForest.CONFIG_TXT);
 
 		String dir = tokenEx.get(AdminForest.UPLOAD_DIR);
