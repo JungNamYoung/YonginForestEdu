@@ -15,22 +15,21 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class UserController {
 
-    @Autowired
-    UserService userService;
+	@Autowired
+	UserService userService;
 
-    @GetMapping("/admin/users")
-    public String list(@RequestParam(name = "page", defaultValue = "1") int page,
-                       Model model) {
-            
-        int pageSize = 10;
-        int offset = (page - 1) * pageSize;
-        List<UserVo> users = userService.selectUserList(offset, pageSize);
-        int total = userService.countUsers();
-        int totalPages = (int) Math.ceil((double) total / pageSize);
+	@GetMapping("/admin/users")
+	public String list(@RequestParam(name = "page", defaultValue = "1") int page, Model model) {
 
-        model.addAttribute("users", users);
-        model.addAttribute("currentPage", page);
-        model.addAttribute("totalPages", totalPages);
-        return "adminforest/user";
-    }
+		int pageSize = 10;
+		int offset = (page - 1) * pageSize;
+		List<UserVo> users = userService.selectUserList(offset, pageSize);
+		int total = userService.countUsers();
+		int totalPages = (int) Math.ceil((double) total / pageSize);
+
+		model.addAttribute("users", users);
+		model.addAttribute("currentPage", page);
+		model.addAttribute("totalPages", totalPages);
+		return "adminforest/user";
+	}
 }

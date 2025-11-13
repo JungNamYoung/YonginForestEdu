@@ -33,7 +33,13 @@ public class AppConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/**").addResourceLocations("/");
+		//registry.addResourceHandler("/**").addResourceLocations("/");
+		
+//		registry.addResourceHandler("/admin-forest/**", "/AdminLTE-3.2.0/**", "/AdminLTE-3.2.0-custom/**", "/cuda/**", "/forest/**", "/upload-files/**")
+//		.addResourceLocations("classpath:/admin-forest/", "classpath:/AdminLTE-3.2.0/", "classpath:/AdminLTE-3.2.0-custom/", "classpath:/cuda/", "classpath:/forest/", "classpath:/upload-files/");
+		
+		registry.addResourceHandler("/admin-forest/**", "/AdminLTE-3.2.0/**", "/AdminLTE-3.2.0-custom/**", "/cuda/**", "/upload-files/**")
+		.addResourceLocations("classpath:/admin-forest/", "classpath:/AdminLTE-3.2.0/", "classpath:/AdminLTE-3.2.0-custom/", "classpath:/cuda/", "classpath:/upload-files/");
 	}
 
 	@Override
